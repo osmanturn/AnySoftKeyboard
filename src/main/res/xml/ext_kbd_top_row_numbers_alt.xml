@@ -2,18 +2,59 @@
 
 <!-- generic top row -->
 <Row xmlns:android="http://schemas.android.com/apk/res/android"
-     xmlns:ask="http://schemas.android.com/apk/res-auto" android:rowEdgeFlags="top"
-     android:keyHeight="@integer/key_normal_height">
-    <Key android:keyWidth="10%p" android:codes="49" ask:longPressCode="@integer/key_code_arrow_left"
-         ask:hintLabel="&lt;━&lt;" android:keyEdgeFlags="left"/>
-    <Key android:keyWidth="10%p" android:codes="50" android:popupCharacters="₁₂₃₄¹²³⁴ªⁿ" ask:hintLabel="₁₂³ⁿ"/>
-    <Key android:keyWidth="10%p" android:codes="51" android:popupCharacters="⅛¼⅜½⅝¾⅞⅓⅔" ask:hintLabel="¼ ½"/>
-    <Key android:keyWidth="10%p" android:codes="52" android:popupCharacters="αδελπρστφω" ask:hintLabel="π σ"/>
-    <Key android:keyWidth="10%p" android:codes="53" android:popupCharacters="=≠≈≅≡∝≤≥≮≯" ask:hintLabel="= ≠"/>
-    <Key android:keyWidth="10%p" android:codes="54" android:popupCharacters="+−±×·*÷/√∞" ask:hintLabel="+ ×"/>
-    <Key android:keyWidth="10%p" android:codes="55" android:popupCharacters="⊕|~!\u0027¬∧∨()" ask:hintLabel="⊕"/>
-    <Key android:keyWidth="10%p" android:codes="56" android:popupCharacters="∫∮∂∆∇∀∃∅∩∪" ask:hintLabel="∫ ∀"/>
-    <Key android:keyWidth="10%p" android:codes="57" android:popupCharacters="∈∉∋∌⊂⊃⊄⊅⊆⊇" ask:hintLabel="∈"/>
-    <Key android:keyWidth="10%p" android:codes="48" ask:longPressCode="@integer/key_code_arrow_right"
-         ask:hintLabel="&gt;━&gt;" android:keyEdgeFlags="right"/>
+    xmlns:ask="http://schemas.android.com/apk/res-auto"
+    android:keyHeight="@integer/key_normal_height"
+    android:rowEdgeFlags="top">
+    <Key
+        android:codes="49"
+        android:keyEdgeFlags="left"
+        android:keyWidth="10%p"
+        ask:hintLabel="&lt;━&lt;"
+        ask:longPressCode="@integer/key_code_arrow_left" />
+    <Key
+        android:codes="50"
+        android:keyWidth="10%p"
+        android:popupCharacters="₁₂₃₄¹²³⁴ªⁿ"
+        ask:hintLabel="₁₂³ⁿ" />
+    <Key
+        android:codes="51"
+        android:keyWidth="10%p"
+        android:popupCharacters="⅛¼⅜½⅝¾⅞⅓⅔"
+        ask:hintLabel="¼ ½" />
+    <Key
+        android:codes="52"
+        android:keyWidth="10%p"
+        android:popupCharacters="αδελπρστφω"
+        ask:hintLabel="π σ" />
+    <Key
+        android:codes="53"
+        android:keyWidth="10%p"
+        android:popupCharacters="=≠≈≅≡∝≤≥≮≯"
+        ask:hintLabel="= ≠" />
+    <Key
+        android:codes="54"
+        android:keyWidth="10%p"
+        android:popupCharacters="+−±×·*÷/√∞"
+        ask:hintLabel="+ ×" />
+    <Key
+        android:codes="55"
+        android:keyWidth="10%p"
+        android:popupCharacters="⊕|~!\u0027¬∧∨()"
+        ask:hintLabel="⊕" />
+    <Key
+        android:codes="56"
+        android:keyWidth="10%p"
+        android:popupCharacters="∫∮∂∆∇∀∃∅∩∪"
+        ask:hintLabel="∫ ∀" />
+    <Key
+        android:codes="57"
+        android:keyWidth="10%p"
+        android:popupCharacters="∈∉∋∌⊂⊃⊄⊅⊆⊇"
+        ask:hintLabel="∈" />
+    <Key
+        android:codes="48"
+        android:keyEdgeFlags="right"
+        android:keyWidth="10%p"
+        ask:hintLabel="&gt;━&gt;"
+        ask:longPressCode="@integer/key_code_arrow_right" />
 </Row>
