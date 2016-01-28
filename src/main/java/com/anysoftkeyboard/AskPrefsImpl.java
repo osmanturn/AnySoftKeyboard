@@ -202,7 +202,10 @@ public class AskPrefsImpl implements AskPrefs, OnSharedPreferenceChangeListener 
 
         Editor e = sp.edit();
         e.putBoolean(mContext.getString(R.string.settings_key_workaround_disable_rtl_fix), drawType);
-        e.commit();
+        if (Build.VERSION.SDK_INT > 8)
+            e.apply();
+        else
+            e.commit();
     }
 
     private void upgradeSettingsValues(SharedPreferences sp) {
@@ -301,7 +304,10 @@ public class AskPrefsImpl implements AskPrefs, OnSharedPreferenceChangeListener 
         //saving config level
         Editor e = sp.edit();
         e.putInt(CONFIGURATION_VERSION, 8);
-        e.commit();
+        if (Build.VERSION.SDK_INT > 8)
+            e.apply();
+        else
+            e.commit();
     }
 
     public void addChangedListener(OnSharedPreferenceChangeListener listener) {
