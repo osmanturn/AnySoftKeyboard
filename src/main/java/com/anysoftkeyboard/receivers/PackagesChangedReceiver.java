@@ -24,7 +24,7 @@ import android.content.IntentFilter;
 import com.anysoftkeyboard.AnySoftKeyboard;
 import com.anysoftkeyboard.addons.AddOnsFactory;
 import com.anysoftkeyboard.utils.Log;
-import com.menny.android.anysoftkeyboard.FeaturesSet;
+import com.yek.keyboard.FeaturesSet;
 
 public class PackagesChangedReceiver extends BroadcastReceiver {
 

@@ -24,7 +24,7 @@ import android.view.textservice.SuggestionsInfo;
 import android.view.textservice.TextInfo;
 
 import com.anysoftkeyboard.utils.Log;
-import com.menny.android.anysoftkeyboard.FeaturesSet;
+import com.yek.keyboard.FeaturesSet;
 
 /**
  * Service for spell checking, using ASK dictionaries and mechanisms.

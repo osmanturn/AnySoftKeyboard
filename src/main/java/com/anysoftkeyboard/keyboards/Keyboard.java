@@ -32,7 +32,7 @@ import com.anysoftkeyboard.addons.AddOn;
 import com.anysoftkeyboard.api.KeyCodes;
 import com.anysoftkeyboard.keyboards.views.KeyDrawableStateProvider;
 import com.anysoftkeyboard.utils.Log;
-import com.menny.android.anysoftkeyboard.R;
+import com.yek.keyboard.R;
 
 import org.xmlpull.v1.XmlPullParserException;
 

@@ -7,7 +7,7 @@ import android.widget.TextView;
 import com.anysoftkeyboard.keyboards.views.AnyKeyboardView;
 import com.anysoftkeyboard.keyboards.views.CandidateView;
 import com.menny.android.anysoftkeyboard.AskGradleTestRunner;
-import com.menny.android.anysoftkeyboard.R;
+import com.yek.keyboard.R;
 
 import org.junit.After;
 import org.junit.Assert;

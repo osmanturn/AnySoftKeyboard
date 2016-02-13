@@ -15,7 +15,7 @@ import com.anysoftkeyboard.keyboards.views.OnKeyboardActionListener;
 import com.anysoftkeyboard.keyboards.views.QuickKeysKeyboardView;
 import com.anysoftkeyboard.quicktextkeys.HistoryQuickTextKey;
 import com.anysoftkeyboard.quicktextkeys.QuickTextKey;
-import com.menny.android.anysoftkeyboard.R;
+import com.yek.keyboard.R;
 
 import java.util.List;
 

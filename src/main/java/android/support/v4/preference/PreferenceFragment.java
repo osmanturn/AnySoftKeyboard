@@ -33,7 +33,7 @@ import android.view.View.OnKeyListener;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-import com.menny.android.anysoftkeyboard.R;
+import com.yek.keyboard.R;
 
 import java.lang.ref.WeakReference;
 

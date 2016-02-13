@@ -40,8 +40,8 @@ import com.anysoftkeyboard.dictionaries.TextEntryState;
 import com.anysoftkeyboard.theme.KeyboardTheme;
 import com.anysoftkeyboard.theme.KeyboardThemeFactory;
 import com.anysoftkeyboard.utils.Log;
-import com.menny.android.anysoftkeyboard.AnyApplication;
-import com.menny.android.anysoftkeyboard.R;
+import com.yek.keyboard.AnyApplication;
+import com.yek.keyboard.R;
 
 import java.util.ArrayList;
 import java.util.Arrays;

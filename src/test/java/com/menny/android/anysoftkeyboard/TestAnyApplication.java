@@ -17,6 +17,8 @@
 package com.menny.android.anysoftkeyboard;
 
 
+import com.yek.keyboard.AnyApplication;
+
 public class TestAnyApplication extends AnyApplication {
 
 }

@@ -34,7 +34,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.menny.android.anysoftkeyboard.R;
+import com.yek.keyboard.R;
 
 import java.util.Calendar;
 

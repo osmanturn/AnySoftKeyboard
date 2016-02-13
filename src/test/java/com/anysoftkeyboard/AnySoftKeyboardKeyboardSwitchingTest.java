@@ -10,7 +10,7 @@ import com.anysoftkeyboard.keyboards.AnyKeyboard;
 import com.anysoftkeyboard.keyboards.KeyboardAddOnAndBuilder;
 import com.anysoftkeyboard.keyboards.KeyboardSwitcher;
 import com.menny.android.anysoftkeyboard.AskGradleTestRunner;
-import com.menny.android.anysoftkeyboard.R;
+import com.yek.keyboard.R;
 
 import org.junit.After;
 import org.junit.Assert;

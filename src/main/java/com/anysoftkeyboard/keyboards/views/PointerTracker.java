@@ -24,7 +24,7 @@ import com.anysoftkeyboard.api.KeyCodes;
 import com.anysoftkeyboard.keyboards.AnyKeyboard.AnyKey;
 import com.anysoftkeyboard.keyboards.Keyboard.Key;
 import com.anysoftkeyboard.keyboards.views.AnyKeyboardBaseView.UIHandler;
-import com.menny.android.anysoftkeyboard.AnyApplication;
+import com.yek.keyboard.AnyApplication;
 
 public class PointerTracker {
     public static class SharedPointerTrackersData {

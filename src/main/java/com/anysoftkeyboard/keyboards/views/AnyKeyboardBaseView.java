@@ -76,9 +76,9 @@ import com.anysoftkeyboard.theme.KeyboardTheme;
 import com.anysoftkeyboard.theme.KeyboardThemeFactory;
 import com.anysoftkeyboard.utils.CompatUtils;
 import com.anysoftkeyboard.utils.Log;
-import com.menny.android.anysoftkeyboard.AnyApplication;
-import com.menny.android.anysoftkeyboard.BuildConfig;
-import com.menny.android.anysoftkeyboard.R;
+import com.yek.keyboard.AnyApplication;
+import com.yek.keyboard.BuildConfig;
+import com.yek.keyboard.R;
 
 import java.lang.ref.WeakReference;
 import java.util.HashSet;

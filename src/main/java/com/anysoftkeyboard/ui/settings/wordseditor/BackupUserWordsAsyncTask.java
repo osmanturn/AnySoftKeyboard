@@ -27,7 +27,7 @@ import com.anysoftkeyboard.base.dictionaries.WordsCursor;
 import com.anysoftkeyboard.dictionaries.UserDictionary;
 import com.anysoftkeyboard.utils.Log;
 import com.anysoftkeyboard.utils.XmlWriter;
-import com.menny.android.anysoftkeyboard.R;
+import com.yek.keyboard.R;
 
 import java.io.File;
 import java.util.ArrayList;

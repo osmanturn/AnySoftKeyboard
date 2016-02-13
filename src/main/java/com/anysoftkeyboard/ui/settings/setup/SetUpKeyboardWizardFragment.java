@@ -16,7 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
-import com.menny.android.anysoftkeyboard.R;
+import com.yek.keyboard.R;
 
 import java.lang.ref.WeakReference;
 

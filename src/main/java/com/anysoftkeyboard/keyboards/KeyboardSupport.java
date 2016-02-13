@@ -7,7 +7,7 @@ import android.support.annotation.NonNull;
 import android.util.TypedValue;
 
 import com.anysoftkeyboard.utils.Log;
-import com.menny.android.anysoftkeyboard.AnyApplication;
+import com.yek.keyboard.AnyApplication;
 
 import java.util.StringTokenizer;
 

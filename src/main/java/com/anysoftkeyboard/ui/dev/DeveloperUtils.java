@@ -29,8 +29,8 @@ import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 
 import com.anysoftkeyboard.utils.Log;
-import com.menny.android.anysoftkeyboard.AnyApplication;
-import com.menny.android.anysoftkeyboard.R;
+import com.yek.keyboard.AnyApplication;
+import com.yek.keyboard.R;
 
 import java.io.File;
 import java.io.IOException;

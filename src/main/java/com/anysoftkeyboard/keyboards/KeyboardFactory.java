@@ -23,8 +23,8 @@ import android.util.AttributeSet;
 import com.anysoftkeyboard.addons.AddOn;
 import com.anysoftkeyboard.addons.AddOnsFactory;
 import com.anysoftkeyboard.utils.Log;
-import com.menny.android.anysoftkeyboard.FeaturesSet;
-import com.menny.android.anysoftkeyboard.R;
+import com.yek.keyboard.FeaturesSet;
+import com.yek.keyboard.R;
 
 import java.util.ArrayList;
 import java.util.List;

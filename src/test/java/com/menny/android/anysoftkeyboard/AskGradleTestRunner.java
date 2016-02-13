@@ -1,5 +1,7 @@
 package com.menny.android.anysoftkeyboard;
 
+import com.yek.keyboard.BuildConfig;
+
 import org.junit.runners.model.InitializationError;
 import org.robolectric.RobolectricGradleTestRunner;
 import org.robolectric.annotation.Config;

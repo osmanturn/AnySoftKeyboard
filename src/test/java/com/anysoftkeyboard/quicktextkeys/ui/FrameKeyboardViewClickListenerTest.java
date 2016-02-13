@@ -5,7 +5,7 @@ import android.view.View;
 import com.anysoftkeyboard.api.KeyCodes;
 import com.anysoftkeyboard.keyboards.views.OnKeyboardActionListener;
 import com.menny.android.anysoftkeyboard.AskGradleTestRunner;
-import com.menny.android.anysoftkeyboard.R;
+import com.yek.keyboard.R;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

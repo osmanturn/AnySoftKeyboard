@@ -61,7 +61,7 @@ android {
     buildToolsVersion androidBuildTools
 
     defaultConfig {
-        applicationId 'com.menny.android.anysoftkeyboard'
+        applicationId 'com.yek.keyboard'
         versionCode versionbuilder.VersionBuilder.buildGitVersionNumber()
         versionName project.version
 

@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.menny.android.anysoftkeyboard">
+    package="com.yek.keyboard">
 
     <supports-screens
         android:anyDensity="true"
@@ -28,7 +28,7 @@
         android:required="false" />
 
     <application
-        android:name=".AnyApplication"
+        android:name="com.yek.keyboard.AnyApplication"
         android:allowBackup="true"
         android:backupAgent="com.anysoftkeyboard.backup.AnyBackupAgent"
         android:fullBackupContent="true"
@@ -47,7 +47,7 @@
 
         <!-- this is the IME with the pointer to the settings ui (xml/method) -->
         <service
-            android:name=".SoftKeyboard"
+            android:name="com.yek.keyboard.SoftKeyboard"
             android:permission="android.permission.BIND_INPUT_METHOD">
             <intent-filter>
                 <action android:name="android.view.InputMethod" />
@@ -63,7 +63,7 @@
         <!-- this is just a proxy activity, it does nothing but direct to the actual setting ativity
         I use this, so I can 'disable' this activity at runtime, and so remove ASK from the launcher's icons -->
         <activity
-            android:name="com.menny.android.anysoftkeyboard.LauncherSettingsActivity"
+            android:name="com.yek.keyboard.LauncherSettingsActivity"
             android:icon="@drawable/ic_launcher_settings"
             android:label="@string/ime_name"
             android:launchMode="singleTop"

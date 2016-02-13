@@ -23,7 +23,7 @@ import android.preference.PreferenceManager;
 import android.util.AttributeSet;
 import com.anysoftkeyboard.addons.AddOnsFactory;
 import com.anysoftkeyboard.utils.Log;
-import com.menny.android.anysoftkeyboard.R;
+import com.yek.keyboard.R;
 
 import java.util.List;
 import java.util.Locale;

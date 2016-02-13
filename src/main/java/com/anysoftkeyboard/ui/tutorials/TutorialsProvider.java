@@ -28,8 +28,8 @@ import android.support.v4.app.NotificationCompat;
 import android.support.v4.content.ContextCompat;
 
 import com.anysoftkeyboard.utils.Log;
-import com.menny.android.anysoftkeyboard.BuildConfig;
-import com.menny.android.anysoftkeyboard.R;
+import com.yek.keyboard.BuildConfig;
+import com.yek.keyboard.R;
 
 public class TutorialsProvider {
     private static final String TAG = "ASK Tutorial";

@@ -8,7 +8,7 @@ import android.text.TextUtils;
 
 import com.anysoftkeyboard.quicktextkeys.QuickTextKey;
 import com.anysoftkeyboard.utils.Log;
-import com.menny.android.anysoftkeyboard.R;
+import com.yek.keyboard.R;
 
 import java.util.List;
 

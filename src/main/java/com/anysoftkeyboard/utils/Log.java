@@ -22,7 +22,7 @@ import android.support.annotation.NonNull;
 
 import java.util.ArrayList;
 
-import static com.menny.android.anysoftkeyboard.BuildConfig.DEBUG;
+import static com.yek.keyboard.BuildConfig.DEBUG;
 
 public class Log {
     public static final String NEW_LINE = System.getProperty("line.separator");

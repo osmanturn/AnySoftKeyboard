@@ -23,7 +23,7 @@ import android.view.inputmethod.InputMethodManager;
 
 import com.anysoftkeyboard.AnySoftKeyboard;
 import com.anysoftkeyboard.api.KeyCodes;
-import com.menny.android.anysoftkeyboard.FeaturesSet;
+import com.yek.keyboard.FeaturesSet;
 
 import java.util.ArrayList;
 

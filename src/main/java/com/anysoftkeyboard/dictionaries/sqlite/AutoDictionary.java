@@ -20,7 +20,7 @@ import android.content.Context;
 import com.anysoftkeyboard.AnySoftKeyboard;
 import com.anysoftkeyboard.base.dictionaries.WordComposer;
 import com.anysoftkeyboard.utils.Log;
-import com.menny.android.anysoftkeyboard.AnyApplication;
+import com.yek.keyboard.AnyApplication;
 
 /**
  * Stores new words temporarily until they are promoted to the user dictionary

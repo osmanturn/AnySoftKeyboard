@@ -23,7 +23,7 @@ import com.anysoftkeyboard.keyboards.KeyboardAddOnAndBuilder;
 import com.anysoftkeyboard.keyboards.KeyboardSwitcher;
 import com.anysoftkeyboard.keyboards.views.AnyKeyboardView;
 import com.anysoftkeyboard.keyboards.views.CandidateView;
-import com.menny.android.anysoftkeyboard.R;
+import com.yek.keyboard.R;
 
 import org.junit.Assert;
 import org.mockito.Mockito;

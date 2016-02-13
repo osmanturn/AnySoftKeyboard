@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.menny.android.anysoftkeyboard;
+package com.yek.keyboard;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -30,6 +30,8 @@ import android.text.format.DateFormat;
 import com.anysoftkeyboard.ui.SendBugReportUiActivity;
 import com.anysoftkeyboard.ui.dev.DeveloperUtils;
 import com.anysoftkeyboard.utils.Log;
+import com.yek.keyboard.BuildConfig;
+import com.yek.keyboard.R;
 
 import java.io.File;
 import java.lang.Thread.UncaughtExceptionHandler;

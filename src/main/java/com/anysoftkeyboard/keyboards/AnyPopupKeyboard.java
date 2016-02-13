@@ -20,7 +20,7 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 
 import com.anysoftkeyboard.addons.AddOn;
-import com.menny.android.anysoftkeyboard.R;
+import com.yek.keyboard.R;
 
 import java.util.Collections;
 import java.util.List;

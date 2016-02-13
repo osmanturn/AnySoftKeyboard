@@ -4,7 +4,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 
 import com.menny.android.anysoftkeyboard.AskGradleTestRunner;
-import com.menny.android.anysoftkeyboard.R;
+import com.yek.keyboard.R;
 
 import org.junit.Assert;
 import org.junit.Test;

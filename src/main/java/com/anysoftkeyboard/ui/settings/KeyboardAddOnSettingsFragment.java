@@ -24,7 +24,7 @@ import android.support.v4.preference.PreferenceFragment;
 import com.anysoftkeyboard.keyboards.KeyboardAddOnAndBuilder;
 import com.anysoftkeyboard.keyboards.KeyboardFactory;
 import com.anysoftkeyboard.ui.settings.widget.AddOnCheckBoxPreference;
-import com.menny.android.anysoftkeyboard.R;
+import com.yek.keyboard.R;
 
 
 import java.util.List;

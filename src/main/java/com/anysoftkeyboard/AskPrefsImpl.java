@@ -27,9 +27,9 @@ import android.view.Gravity;
 
 import com.anysoftkeyboard.api.KeyCodes;
 import com.anysoftkeyboard.utils.Log;
-import com.menny.android.anysoftkeyboard.BuildConfig;
-import com.menny.android.anysoftkeyboard.FeaturesSet;
-import com.menny.android.anysoftkeyboard.R;
+import com.yek.keyboard.BuildConfig;
+import com.yek.keyboard.FeaturesSet;
+import com.yek.keyboard.R;
 
 import java.util.LinkedList;
 

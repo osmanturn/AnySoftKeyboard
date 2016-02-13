@@ -23,7 +23,7 @@ import android.preference.Preference;
 import android.support.v4.preference.PreferenceFragment;
 
 import com.anysoftkeyboard.ui.dev.DeveloperToolsFragment;
-import com.menny.android.anysoftkeyboard.R;
+import com.yek.keyboard.R;
 
 import net.evendanan.chauffeur.lib.FragmentChauffeurActivity;
 import net.evendanan.chauffeur.lib.experiences.TransitionExperiences;

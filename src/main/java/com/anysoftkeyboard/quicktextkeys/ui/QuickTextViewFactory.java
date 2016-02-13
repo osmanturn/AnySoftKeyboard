@@ -13,7 +13,7 @@ import com.anysoftkeyboard.keyboards.views.MiniKeyboardActionListener;
 import com.anysoftkeyboard.quicktextkeys.QuickTextKey;
 import com.anysoftkeyboard.quicktextkeys.QuickTextKeyFactory;
 import com.anysoftkeyboard.quicktextkeys.HistoryQuickTextKey;
-import com.menny.android.anysoftkeyboard.R;
+import com.yek.keyboard.R;
 
 import java.util.ArrayList;
 import java.util.List;
