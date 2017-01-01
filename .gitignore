@@ -11,3 +11,7 @@ local.extra.properties
 /gen/
 /obj/
 /buildSrc/build
+/kurdi-klavye.jks
+key/
+kurdi-klavye.jks
+projectFilesBackup/
