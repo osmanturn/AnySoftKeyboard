@@ -188,6 +188,9 @@ public class AskPrefsImpl implements AskPrefs, OnSharedPreferenceChangeListener 
 //              e.putInt(CUSTOMIZATION_LEVEL, 1);
 //              e.commit();
 //          }
+
+
+
     }
 
     /**
