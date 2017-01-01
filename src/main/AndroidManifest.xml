@@ -74,6 +74,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
         <activity
             android:name="com.anysoftkeyboard.ui.settings.MainSettingsActivity"
             android:icon="@drawable/ic_launcher_settings"
@@ -88,6 +90,8 @@
             android:label="@string/testers_version"
             android:launchMode="singleTop"
             android:theme="@style/Theme.AskApp.Popup" />
+
+
         <!-- ui when a crash happens -->
         <activity
             android:name="com.anysoftkeyboard.ui.SendBugReportUiActivity"

@@ -73,12 +73,15 @@ public class MainSettingsActivity extends FragmentChauffeurActivity {
 
             /** Called when a drawer has settled in a completely closed state. */
             public void onDrawerClosed(View view) {
+                assert getSupportActionBar() != null;
+
                 getSupportActionBar().setTitle(mTitle);
                 ActivityCompat.invalidateOptionsMenu(MainSettingsActivity.this);// creates call to onPrepareOptionsMenu()
             }
 
             /** Called when a drawer has settled in a completely open state. */
             public void onDrawerOpened(View drawerView) {
+                assert getSupportActionBar() != null;
                 getSupportActionBar().setTitle(mDrawerTitle);
                 ActivityCompat.invalidateOptionsMenu(MainSettingsActivity.this);// creates call to onPrepareOptionsMenu()
             }
@@ -86,6 +89,7 @@ public class MainSettingsActivity extends FragmentChauffeurActivity {
 
         // Set the drawer toggle as the DrawerListener
         mDrawerRootLayout.setDrawerListener(mDrawerToggle);
+        assert getSupportActionBar() != null;
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
 
@@ -216,9 +220,11 @@ public class MainSettingsActivity extends FragmentChauffeurActivity {
 
     public void setFullScreen(boolean fullScreen) {
         if (fullScreen) {
+            assert getSupportActionBar() != null;
             getSupportActionBar().hide();
             mDrawerRootLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
         } else {
+            assert getSupportActionBar() != null;
             getSupportActionBar().show();
             mDrawerRootLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED);
         }

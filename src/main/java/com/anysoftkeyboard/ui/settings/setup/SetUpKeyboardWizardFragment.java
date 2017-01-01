@@ -28,6 +28,7 @@ import java.lang.ref.WeakReference;
  * 3) additional settings (and saying 'Thank You' for switching to).
  */
 public class SetUpKeyboardWizardFragment extends Fragment {
+
     private static class WizardHandler extends Handler {
 
         private final WeakReference<SetUpKeyboardWizardFragment> mWeakFragment;

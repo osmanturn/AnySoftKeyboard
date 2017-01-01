@@ -44,10 +44,12 @@ public class LauncherSettingsActivity extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
+
+
         if (mLaunched)
             finish();
         else
-            startActivity(new Intent(this, MainSettingsActivity.class));
+            startActivity(new Intent(this, MainSettingsActivity.class));/**/
 
         mLaunched = true;
     }

@@ -14,7 +14,7 @@
 
     <Keyboard
         defaultDictionaryLocale="tr"
-        defaultEnabled="false"
+        defaultEnabled="true"
         description="Turkish Keyboard"
         iconResId="@drawable/ic_stat_en"
         id="34CC76A3-91B3-4204-BB1B-421BA8FC8430"
