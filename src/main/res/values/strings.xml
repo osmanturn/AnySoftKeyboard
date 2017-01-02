@@ -4,6 +4,9 @@
     <string name="keyboard_ku">Kürtçe</string>
     <string name="keyboard_tr">Türkçe</string>
     <string name="keyboard_ing">İngilizce</string>
+    <string name="eng_dictionary">English</string>
+    <string name="ku_dictionary">Kurdish</string>
+    <string name="tr_dictionary">Turkish</string>
     <string name="ime_name">Kurdî Keyboard</string>
     <string name="spell_checker_settings">AnySoftKeyboard Speller Settings</string>
     <string name="copyright_text">Copyright\u0020©\u0020<xliff:g id="year">%d</xliff:g>\u0020<xliff:g id="owner">%s</xliff:g></string>
@@ -336,7 +339,7 @@
     <string name="change_lang_regular">ABC</string>
     <string name="change_symbols_regular">123</string>
     <string name="select_keyboard_popup_title">Select keyboard</string>
-    <string name="eng_dictionary">English</string>
+
     <string name="simley_key_name">Smiley key</string>
     <string name="history_quick_text_key_name">History</string>
     <string name="default_quick_text_key_name">Simple Emoticons</string>

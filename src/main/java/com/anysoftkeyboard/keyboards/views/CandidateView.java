@@ -46,6 +46,10 @@ import com.yek.keyboard.R;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+/**
+ * Otomatik tamamlama işlemi için arayüz elemanı burada yaratılıyor.
+ * 
+ * */
 
 public class CandidateView extends View {
 

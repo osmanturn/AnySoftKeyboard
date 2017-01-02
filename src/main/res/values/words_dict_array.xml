@@ -3,4 +3,11 @@
     <array name="words_dict_array">
         <item>@raw/words</item>
     </array>
+    <array name="word_dict_array_tr">
+        <item>@raw/words_1</item>
+    </array>
+
+    <array name="word_dict_array_ku">
+        <item>@raw/words_1_2</item>
+    </array>
 </resources>

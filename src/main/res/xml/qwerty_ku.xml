@@ -77,14 +77,15 @@
             android:codes="117" />
         <Key
             android:codes="105" />
-        <Key
-            android:codes="234"/>
+
         <Key
             android:codes="111" />
         <Key
             android:codes="112"
             android:keyEdgeFlags="right"
             android:popupCharacters="0" />
+        <Key
+            android:codes="234"/>
 
     </Row>
 
@@ -116,11 +117,12 @@
             android:codes="107"
             android:keyLabel="k" />
         <Key
-            android:codes="238"
-            android:keyLabel="î" />
-        <Key
             android:codes="108"
             android:keyLabel="l" />
+        <Key
+            android:codes="238"
+            android:keyLabel="î" />
+
         <Key
             android:codes="251"
             android:keyEdgeFlags="right"
