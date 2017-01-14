@@ -30,10 +30,7 @@ import com.anysoftkeyboard.backup.CloudBackupRequester;
 import com.anysoftkeyboard.backup.CloudBackupRequesterDiagram;
 import com.anysoftkeyboard.devicespecific.DeviceSpecific;
 import com.anysoftkeyboard.devicespecific.StrictModeAble;
-import com.anysoftkeyboard.ui.tutorials.TutorialsProvider;
 import com.anysoftkeyboard.utils.Log;
-import com.yek.keyboard.BuildConfig;
-import com.yek.keyboard.R;
 
 import net.evendanan.frankenrobot.FrankenRobot;
 import net.evendanan.frankenrobot.Lab;
@@ -70,7 +67,7 @@ public class AnyApplication extends Application implements OnSharedPreferenceCha
 
         msCloudBackupRequester = msFrank.embody(new CloudBackupRequesterDiagram(getApplicationContext()));
 
-        TutorialsProvider.showDragonsIfNeeded(getApplicationContext());
+       // TutorialsProvider.showDragonsIfNeeded(getApplicationContext());
     }
 
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {

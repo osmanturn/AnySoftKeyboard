@@ -5,7 +5,9 @@ class VersionBuilder {
     static final int GIT_COMMIT_COUNT_MINOR_NORMALIZE = 140+50+38;
 
     static def buildGitVersionNumber() {
-        int  versionNumber=Integer.parseInt('git rev-list --count HEAD'.execute().text.trim()) - GIT_COMMIT_COUNT_NORMALIZE;
+        int k=Integer.parseInt('git rev-list --count HEAD'.execute().text.trim());
+
+        int  versionNumber= k- GIT_COMMIT_COUNT_NORMALIZE;
         println("versionNumber="+versionNumber);
         return versionNumber;
     }
