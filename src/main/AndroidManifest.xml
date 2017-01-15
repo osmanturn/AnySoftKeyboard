@@ -64,7 +64,7 @@
         I use this, so I can 'disable' this activity at runtime, and so remove ASK from the launcher's icons -->
         <activity
             android:name="com.yek.keyboard.ui.LauncherSettingsActivity"
-            android:icon="@drawable/ic_launcher_settings"
+            android:icon="@drawable/yek_icon"
             android:label="@string/ime_name"
             android:launchMode="singleTop"
             android:theme="@style/Theme.AskApp">

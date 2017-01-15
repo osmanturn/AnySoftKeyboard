@@ -53,6 +53,7 @@
                 android:padding="6dp"/>
 
             <ImageView
+                android:id="@+id/right_most_indicator"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/indicator_empty"

@@ -41,13 +41,13 @@
         android:gravity="center"
         android:visibility="gone" />
 
-    <RelativeLayout
+    <RelativeLayout android:id="@+id/button_bar"
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
         android:layout_weight="0"
         android:visibility="gone">
 
-        <Button
+        <Button android:id="@+id/back_button"
             android:layout_width="150dip"
             android:layout_height="wrap_content"
             android:layout_margin="5dip"
@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true">
 
-            <Button
+            <Button android:id="@+id/skip_button"
                 android:layout_width="150dip"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dip"
@@ -68,7 +68,7 @@
                 android:visibility="gone"
                 />
 
-            <Button
+            <Button android:id="@+id/next_button"
                 android:layout_width="150dip"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dip"

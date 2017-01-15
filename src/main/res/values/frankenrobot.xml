@@ -8,4 +8,9 @@
         <item>com.anysoftkeyboard.devicespecific.StrictModeAble is @string/frankenrobot_strict_mode_implementation</item>
     </string-array>
 
+    <string name="frankenrobot_device_specific_implementation" translatable="false">com.anysoftkeyboard.devicespecific.DeviceSpecific_V3</string>
+    <string name="frankenrobot_cloud_backup_implementation" translatable="false">@null</string>
+    <string name="frankenrobot_dictionary_observer_implementation" translatable="false">com.anysoftkeyboard.dictionaries.DictionaryContentObserver</string>
+    <string name="frankenrobot_clipboard_implementation" translatable="false">com.anysoftkeyboard.devicespecific.ClipboardV3</string>
+    <string name="frankenrobot_strict_mode_implementation" translatable="false">com.anysoftkeyboard.devicespecific.StrictModeEmptyImpl</string>
 </resources>
