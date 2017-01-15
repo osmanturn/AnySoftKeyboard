@@ -24,7 +24,6 @@
         android:text="@string/voice_input_not_installed_text"/>
 
     <LinearLayout
-        android:id="@+id/close_button_layout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="#555"

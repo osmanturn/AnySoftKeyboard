@@ -91,7 +91,6 @@ import com.anysoftkeyboard.theme.KeyboardTheme;
 import com.anysoftkeyboard.theme.KeyboardThemeFactory;
 import com.anysoftkeyboard.ui.VoiceInputNotInstalledActivity;
 import com.anysoftkeyboard.ui.dev.DeveloperUtils;
-import com.anysoftkeyboard.ui.settings.MainSettingsActivity;
 import com.anysoftkeyboard.utils.Log;
 import com.anysoftkeyboard.utils.ModifierKeyState;
 import com.anysoftkeyboard.utils.Workarounds;
@@ -100,6 +99,7 @@ import com.yek.keyboard.AnyApplication;
 import com.yek.keyboard.BuildConfig;
 import com.yek.keyboard.FeaturesSet;
 import com.yek.keyboard.R;
+import com.yek.keyboard.ui.MainActivity;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -538,8 +538,8 @@ public class AnySoftKeyboard extends InputMethodService implements
                 final int textFlag = attribute.inputType & EditorInfo.TYPE_MASK_FLAGS;
                 if ((textFlag & EditorInfo.TYPE_TEXT_FLAG_NO_SUGGESTIONS) == EditorInfo.TYPE_TEXT_FLAG_NO_SUGGESTIONS ||
                         (textFlag & EditorInfo.TYPE_TEXT_FLAG_AUTO_COMPLETE) == EditorInfo.TYPE_TEXT_FLAG_AUTO_COMPLETE) {
-                        Log.d(TAG, "Input requested NO_SUGGESTIONS, or it is AUTO_COMPLETE by itself.");
-                        mPredictionOn = false;
+                    Log.d(TAG, "Input requested NO_SUGGESTIONS, or it is AUTO_COMPLETE by itself.");
+                    mPredictionOn = false;
                 }
 
                 break;
@@ -1660,7 +1660,7 @@ public class AnySoftKeyboard extends InputMethodService implements
             showToastMessage(R.string.clipboard_is_empty_toast, true);
         } else {
             final CharSequence[] entries = new CharSequence[clipboard.getClipboardEntriesCount()];
-            for (int entryIndex=0; entryIndex<entries.length; entryIndex++) {
+            for (int entryIndex = 0; entryIndex < entries.length; entryIndex++) {
                 entries[entryIndex] = clipboard.getText(entryIndex);
             }
             showOptionsDialogWithData(getText(R.string.clipboard_paste_entries_title), R.drawable.ic_clipboard_paste_light,
@@ -1722,7 +1722,7 @@ public class AnySoftKeyboard extends InputMethodService implements
         EditorInfo ei = getCurrentInputEditorInfo();
         if (ei == null) return false;
 
-        switch(ei.packageName) {
+        switch (ei.packageName) {
             case "org.connectbot":
             case "org.woltage.irssiconnectbot":
             case "com.pslib.connectbot":
@@ -1773,7 +1773,7 @@ public class AnySoftKeyboard extends InputMethodService implements
     }
 
     private void showOptionsDialogWithData(CharSequence title, @DrawableRes int iconRedId,
-                                    final CharSequence[] entries, final DialogInterface.OnClickListener listener) {
+                                           final CharSequence[] entries, final DialogInterface.OnClickListener listener) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setCancelable(true);
         builder.setIcon(iconRedId);
@@ -2144,7 +2144,7 @@ public class AnySoftKeyboard extends InputMethodService implements
         Log.d(TAG, "handleSeparator: " + primaryCode);
 
         //will not show next-word suggestion in case of a new line or if the separator is a sentence separator.
-        boolean isEndOfSentence = (primaryCode == KeyCodes.ENTER || mSentenceSeparators.contains(Character.valueOf((char)primaryCode)));
+        boolean isEndOfSentence = (primaryCode == KeyCodes.ENTER || mSentenceSeparators.contains(Character.valueOf((char) primaryCode)));
 
         // Should dismiss the "Touch again to save" message when handling
         // separator
@@ -2562,25 +2562,29 @@ public class AnySoftKeyboard extends InputMethodService implements
     public void onSwipeDown(boolean onSpaceBar) {
         final int keyCode = mAskPrefs.getGestureSwipeDownKeyCode();
         Log.d(TAG, "onSwipeDown " + ((onSpaceBar) ? " + space" : "") + " => code " + keyCode);
-        if (keyCode != 0) onKey(keyCode, null, -1, new int[]{keyCode}, false/*not directly pressed the UI key*/);
+        if (keyCode != 0)
+            onKey(keyCode, null, -1, new int[]{keyCode}, false/*not directly pressed the UI key*/);
     }
 
     public void onSwipeUp(boolean onSpaceBar) {
         final int keyCode = mAskPrefs.getGestureSwipeUpKeyCode(onSpaceBar);
         Log.d(TAG, "onSwipeUp " + ((onSpaceBar) ? " + space" : "") + " => code " + keyCode);
-        if (keyCode != 0) onKey(keyCode, null, -1, new int[]{keyCode}, false/*not directly pressed the UI key*/);
+        if (keyCode != 0)
+            onKey(keyCode, null, -1, new int[]{keyCode}, false/*not directly pressed the UI key*/);
     }
 
     public void onPinch() {
         final int keyCode = mAskPrefs.getGesturePinchKeyCode();
         Log.d(TAG, "onPinch => code " + keyCode);
-        if (keyCode != 0) onKey(keyCode, null, -1, new int[]{keyCode}, false/*not directly pressed the UI key*/);
+        if (keyCode != 0)
+            onKey(keyCode, null, -1, new int[]{keyCode}, false/*not directly pressed the UI key*/);
     }
 
     public void onSeparate() {
         final int keyCode = mAskPrefs.getGestureSeparateKeyCode();
         Log.d(TAG, "onSeparate => code " + keyCode);
-        if (keyCode != 0) onKey(keyCode, null, -1, new int[]{keyCode}, false/*not directly pressed the UI key*/);
+        if (keyCode != 0)
+            onKey(keyCode, null, -1, new int[]{keyCode}, false/*not directly pressed the UI key*/);
     }
 
     private void sendKeyDown(InputConnection ic, int key) {
@@ -2827,7 +2831,7 @@ public class AnySoftKeyboard extends InputMethodService implements
     private void launchSettings() {
         handleClose();
         Intent intent = new Intent();
-        intent.setClass(AnySoftKeyboard.this, MainSettingsActivity.class);
+        intent.setClass(AnySoftKeyboard.this, MainActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }
@@ -2896,7 +2900,7 @@ public class AnySoftKeyboard extends InputMethodService implements
     }
 
     private void showOptionsMenu() {
-        showOptionsDialogWithData(getText(R.string.ime_name), R.drawable.ic_launcher,
+        showOptionsDialogWithData(getText(R.string.ime_name), R.drawable.yek_icon,
                 new CharSequence[]{
                         getText(R.string.ime_settings),
                         getText(R.string.override_dictionary),

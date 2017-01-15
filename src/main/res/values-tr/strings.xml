@@ -474,11 +474,6 @@ bulamıyorum. Maalesef bu özellik cihazınızda çalışmıyor.</string>
     <string name="clipboard_paste_entries_title">Yapıştırmak için metin seçin</string>
 
 
-    <string-array name="physical_keyboard_change_notification_types">
-        <item>Yerleşim simgesini her zaman göster</item>
-        <item>Gerçek klavye değişiminde</item>
-        <item>Bildirim yok</item>
-    </string-array>
     <string-array name="vibrate_on_key_press_types">
         <item>Hiçbiri</item>
         <item>Hafif</item>

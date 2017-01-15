@@ -33,7 +33,7 @@
         android:backupAgent="com.anysoftkeyboard.backup.AnyBackupAgent"
         android:fullBackupContent="true"
         android:hardwareAccelerated="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/yek_icon"
         android:installLocation="internalOnly"
         android:label="@string/ime_name"
         android:restoreAnyVersion="true"
@@ -63,7 +63,7 @@
         <!-- this is just a proxy activity, it does nothing but direct to the actual setting ativity
         I use this, so I can 'disable' this activity at runtime, and so remove ASK from the launcher's icons -->
         <activity
-            android:name="com.yek.keyboard.LauncherSettingsActivity"
+            android:name="com.yek.keyboard.ui.LauncherSettingsActivity"
             android:icon="@drawable/ic_launcher_settings"
             android:label="@string/ime_name"
             android:launchMode="singleTop"
@@ -74,7 +74,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity
+            android:name="com.yek.keyboard.ui.MainActivity"
+            android:icon="@drawable/ic_launcher_settings"
+            android:label="@string/ime_name"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.AskApp"
+            android:windowSoftInputMode="adjustPan" />
 
         <activity
             android:name="com.anysoftkeyboard.ui.settings.MainSettingsActivity"
@@ -86,7 +92,7 @@
 
         <activity
             android:name="com.anysoftkeyboard.ui.tutorials.TestersNoticeActivity"
-            android:icon="@drawable/ic_launcher"
+            android:icon="@drawable/yek_icon"
             android:label="@string/testers_version"
             android:launchMode="singleTop"
             android:theme="@style/Theme.AskApp.Popup" />
@@ -95,7 +101,7 @@
         <!-- ui when a crash happens -->
         <activity
             android:name="com.anysoftkeyboard.ui.SendBugReportUiActivity"
-            android:icon="@drawable/ic_launcher"
+            android:icon="@drawable/yek_icon"
             android:label="@string/ime_name"
             android:theme="@style/Theme.AskApp.NoTitle" />
         <!-- for voice -->
@@ -113,7 +119,7 @@
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name="com.anysoftkeyboard.ui.VoiceInputNotInstalledActivity"
-            android:icon="@drawable/ic_launcher"
+            android:icon="@drawable/yek_icon"
             android:label="@string/ime_name"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
     </application>

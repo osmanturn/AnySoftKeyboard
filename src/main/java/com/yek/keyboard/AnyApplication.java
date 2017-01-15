@@ -31,6 +31,7 @@ import com.anysoftkeyboard.backup.CloudBackupRequesterDiagram;
 import com.anysoftkeyboard.devicespecific.DeviceSpecific;
 import com.anysoftkeyboard.devicespecific.StrictModeAble;
 import com.anysoftkeyboard.utils.Log;
+import com.yek.keyboard.ui.LauncherSettingsActivity;
 
 import net.evendanan.frankenrobot.FrankenRobot;
 import net.evendanan.frankenrobot.Lab;
@@ -72,7 +73,7 @@ public class AnyApplication extends Application implements OnSharedPreferenceCha
 
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
         ((AskPrefsImpl) msConfig).onSharedPreferenceChanged(sharedPreferences, key);
-        //should we disable the Settings App? com.yek.keyboard.LauncherSettingsActivity
+        //should we disable the Settings App? com.yek.keyboard.ui.LauncherSettingsActivity
         if (key.equals(getString(R.string.settings_key_show_settings_app))) {
             PackageManager pm = getPackageManager();
             boolean showApp = sharedPreferences.getBoolean(key, getResources().getBoolean(R.bool.settings_default_show_settings_app));

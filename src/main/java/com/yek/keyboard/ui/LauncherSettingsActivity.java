@@ -14,13 +14,11 @@
  * limitations under the License.
  */
 
-package com.yek.keyboard;
+package com.yek.keyboard.ui;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-
-import com.anysoftkeyboard.ui.settings.MainSettingsActivity;
 
 /*
  * Why is this class exists?
@@ -49,7 +47,7 @@ public class LauncherSettingsActivity extends Activity {
         if (mLaunched)
             finish();
         else
-            startActivity(new Intent(this, MainSettingsActivity.class));/**/
+            startActivity(new Intent(this, MainActivity.class));/**/
 
         mLaunched = true;
     }

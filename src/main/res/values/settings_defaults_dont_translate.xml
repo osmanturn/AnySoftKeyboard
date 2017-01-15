@@ -2,8 +2,8 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation,TypographyDashes">
     <!-- DO NOT TRANSLATE -->
     <!-- Default settings values -->
-    <string name="settings_default_physical_keyboard_change_notification_type">2</string>
-    <string name="settings_default_vibrate_on_key_press_duration">0</string>
+    <string name="settings_default_physical_keyboard_change_notification_type" translatable="false">2</string>
+    <string name="settings_default_vibrate_on_key_press_duration" translatable="false">0</string>
     <bool name="settings_default_sound_on">false</bool>
     <bool name="settings_default_lang_key_shows_popup">false</bool>
     <bool name="settings_default_show_settings_app">true</bool>
@@ -45,7 +45,7 @@
 
     <string name="settings_default_multitap_timeout">700</string>
     <string name="settings_default_long_press_timeout">350</string>
-
+    <!-- Klavyenin default ayarları-->
     <string name="settings_default_top_row_key">1fae0220-ded6-11e0-9572-0800200c9a66</string>
     <string name="settings_default_keyboard_theme_key">ac8ea510-ca66-11e1-9b23-0800200c9a66</string>
     <string name="settings_default_ext_keyboard_key">6f1ecea0-dee2-11e0-9572-0800200c9a66</string>
