@@ -4,7 +4,7 @@ AnySoftKeyboard
 
 Android (f/w 1.5+) on screen keyboard for multiple languages.
 
-<a href="https://play.google.com/store/apps/details?id=com.menny.android.anysoftkeyboard&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-AC-global-none-all-co-pr-py-PartBadges-Oct1515-1"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge.png" height="80pt"/></a>
+<a href="https://play.google.com/store/apps/details?id=com.yek.keyboard"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge.png" height="80pt"/></a>
 
 # Features
  * All kinds of keyboards:
