@@ -1,4 +1,4 @@
-package com.anysoftkeyboard.ui.settings;
+package com.yek.keyboard.ui.fragment.settings;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;

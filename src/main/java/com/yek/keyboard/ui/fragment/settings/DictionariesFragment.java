@@ -15,13 +15,15 @@
  * limitations under the License.
  */
 
-package com.anysoftkeyboard.ui.settings;
+package com.yek.keyboard.ui.fragment.settings;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.support.v4.preference.PreferenceFragment;
 
+import com.anysoftkeyboard.ui.settings.MainSettingsActivity;
+import com.anysoftkeyboard.ui.settings.NextWordSettingsFragment;
 import com.anysoftkeyboard.ui.settings.wordseditor.AbbreviationDictionaryEditorFragment;
 import com.anysoftkeyboard.ui.settings.wordseditor.UserDictionaryEditorFragment;
 import com.yek.keyboard.R;

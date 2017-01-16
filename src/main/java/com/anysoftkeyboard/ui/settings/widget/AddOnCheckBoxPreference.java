@@ -94,7 +94,7 @@ public class AddOnCheckBoxPreference extends Preference implements
             return;// view is not ready yet.
         setKey(mAddOn.getId());
         mName.setText(mAddOn.getName());
-        mDescription.setText(mAddOn.getDescription());
+       // mDescription.setText(mAddOn.getDescription());
         Drawable icon = null;
         if (mAddOn instanceof IconHolder) {
             IconHolder addOn = (IconHolder) mAddOn;

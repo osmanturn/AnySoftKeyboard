@@ -1,7 +1,7 @@
 package versionbuilder
 
 class VersionBuilder {
-    static final int GIT_COMMIT_COUNT_NORMALIZE = 2728;
+    static final int GIT_COMMIT_COUNT_NORMALIZE = 2733;
     static final int GIT_COMMIT_COUNT_MINOR_NORMALIZE = 1;
 
     static def buildGitVersionNumber() {

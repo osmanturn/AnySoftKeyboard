@@ -55,13 +55,13 @@
         android:summary="@string/use_auto_dictionary_summary"
         android:title="@string/use_auto_dictionary"
         android:dependency="candidates_on"/>
-    <CheckBoxPreference
+    <!--<CheckBoxPreference
         android:key="@string/settings_key_use_contacts_dictionary"
         android:title="@string/use_contacts_dictionary"
         android:persistent="true"
         android:defaultValue="@bool/settings_default_contacts_dictionary"
         android:summaryOn="@string/use_contacts_dictionary_on_summary"
         android:summaryOff="@string/use_contacts_dictionary_off_summary"
-        android:dependency="candidates_on"/>
+        android:dependency="candidates_on"/>-->
 
 </PreferenceScreen>

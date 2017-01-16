@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/changeTheme"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="4dp">
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgCover"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_gravity="fill"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            app:cardCornerRadius="0dp"
+            app:layout_aspectRatio="160%"
+            app:layout_widthPercent="100%" />
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/txtTitle"
+            android:checked="true"
+            style="@style/AppTheme.TextApprance.List.Desctiption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgCover"
+            android:layout_margin="@dimen/window_popup_corner_radius"
+            android:text="@string/keyboard_theme_dialog_title"
+            android:textStyle="bold" />
+
+
+
+
+    </android.support.percent.PercentRelativeLayout>
+
+</android.support.v7.widget.CardView>

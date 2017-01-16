@@ -21,6 +21,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.util.AttributeSet;
+
 import com.anysoftkeyboard.addons.AddOnsFactory;
 import com.anysoftkeyboard.utils.Log;
 import com.yek.keyboard.R;
@@ -65,6 +66,16 @@ public class KeyboardThemeFactory extends AddOnsFactory<KeyboardTheme> {
         return selectedTheme;
     }
 
+    public static void setCurrentKeyboardTheme(Context context, String themeId) {
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+        String settingKey = context.getString(R.string.settings_key_keyboard_theme_key);
+
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(settingKey, themeId);
+        editor.apply();
+
+    }
+
 
     public static List<KeyboardTheme> getAllAvailableThemes(Context applicationContext) {
         return msInstance.getAllAddOns(applicationContext);
@@ -94,7 +105,7 @@ public class KeyboardThemeFactory extends AddOnsFactory<KeyboardTheme> {
 
         if (keyboardThemeResId == -1) {
             String detailMessage = String.format(Locale.US, "Missing details for creating Keyboard theme! prefId %s, " +
-                    "keyboardThemeResId: %d, keyboardThemeScreenshotResId: %d",
+                            "keyboardThemeResId: %d, keyboardThemeScreenshotResId: %d",
                     prefId, keyboardThemeResId, keyboardThemeScreenshotResId);
 
             throw new RuntimeException(detailMessage);

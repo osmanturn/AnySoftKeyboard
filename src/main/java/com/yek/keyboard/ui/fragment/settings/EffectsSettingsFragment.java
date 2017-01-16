@@ -15,11 +15,12 @@
  * limitations under the License.
  */
 
-package com.anysoftkeyboard.ui.settings;
+package com.yek.keyboard.ui.fragment.settings;
 
 import android.os.Bundle;
 import android.support.v4.preference.PreferenceFragment;
 
+import com.anysoftkeyboard.ui.settings.MainSettingsActivity;
 import com.yek.keyboard.R;
 
 public class EffectsSettingsFragment extends PreferenceFragment {

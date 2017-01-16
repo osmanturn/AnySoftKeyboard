@@ -26,6 +26,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
@@ -36,6 +37,10 @@ import com.anysoftkeyboard.theme.KeyboardTheme;
 import com.anysoftkeyboard.theme.KeyboardThemeFactory;
 import com.yek.keyboard.AnyApplication;
 import com.yek.keyboard.R;
+import com.yek.keyboard.ui.fragment.settings.AboutAnySoftKeyboardFragment;
+import com.yek.keyboard.ui.fragment.settings.DictionariesFragment;
+import com.yek.keyboard.ui.fragment.settings.EffectsSettingsFragment;
+import com.yek.keyboard.ui.fragment.settings.KeyboardAddOnSettingsFragment;
 
 import net.evendanan.chauffeur.lib.FragmentChauffeurActivity;
 import net.evendanan.chauffeur.lib.experiences.TransitionExperiences;
@@ -59,6 +64,7 @@ public class MainSettingsActivity extends FragmentChauffeurActivity {
     protected void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         setContentView(R.layout.main_ui);
+        setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
 
         mTitle = mDrawerTitle = getTitle();
 

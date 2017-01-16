@@ -5,7 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.anysoftkeyboard.ui.settings.KeyboardAddOnSettingsFragment;
+import com.yek.keyboard.ui.fragment.settings.KeyboardAddOnSettingsFragment;
 import com.anysoftkeyboard.ui.settings.KeyboardThemeSelectorFragment;
 import com.anysoftkeyboard.ui.settings.MainSettingsActivity;
 import com.yek.keyboard.R;

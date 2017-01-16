@@ -23,7 +23,7 @@
             ask:longPressCode="-98" />
 
         <Key
-            android:codes="-4"
+            android:codes="@integer/key_code_quick_text"
             android:keyWidth="10%p"
             ask:isFunctional="true" />
 

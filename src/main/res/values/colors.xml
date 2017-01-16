@@ -73,4 +73,14 @@
 
     <color name="notification_background_error">#F33</color>
     <color name="notification_background_debug_version">#FF3399</color>
+
+    <color name="colorPrimary">#009688</color>
+    <color name="colorPrimaryDark">#006c62</color>
+    <color name="colorPrimaryLight">#00c1af</color>
+    <color name="colorAccent">#F5A623</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#BDBDBD</color>
+
 </resources>

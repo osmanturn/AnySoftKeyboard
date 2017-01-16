@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.anysoftkeyboard.ui.settings;
+package com.yek.keyboard.ui.fragment.settings;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -25,7 +25,6 @@ import com.anysoftkeyboard.keyboards.KeyboardAddOnAndBuilder;
 import com.anysoftkeyboard.keyboards.KeyboardFactory;
 import com.anysoftkeyboard.ui.settings.widget.AddOnCheckBoxPreference;
 import com.yek.keyboard.R;
-
 
 import java.util.List;
 
@@ -43,14 +42,14 @@ public class KeyboardAddOnSettingsFragment extends PreferenceFragment {
 
         PreferenceCategory keyboardsGroup = (PreferenceCategory) findPreference("keyboard_addons_group");
         Activity activity = getActivity();
-        MainSettingsActivity.setActivityTitle(this, getString(R.string.keyboards_group));
+        getActivity().setTitle(getString(R.string.keyboards_group));
         // getting all keyboards
         final List<KeyboardAddOnAndBuilder> creators = KeyboardFactory.getAllAvailableKeyboards(activity.getApplicationContext());
 
         keyboardsGroup.removeAll();
 
         for (final KeyboardAddOnAndBuilder creator : creators) {
-            final AddOnCheckBoxPreference checkBox = new AddOnCheckBoxPreference(activity, null, R.style.Theme_AppCompat_Light);
+            final AddOnCheckBoxPreference checkBox = new AddOnCheckBoxPreference(activity, null, R.style.Theme_AskApp);
             checkBox.setAddOn(creator);
             keyboardsGroup.addPreference(checkBox);
         }

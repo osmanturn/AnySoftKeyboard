@@ -161,6 +161,8 @@ public class MainFragment extends Fragment {
         if (themeScreenShot == null)
             themeScreenShot = ContextCompat.getDrawable(getActivity(), R.drawable.lean_dark_theme_screenshot);
         screenShotHolder.setImageDrawable(themeScreenShot);
+
+
         mPaletteTask = new AsyncTask<Drawable, Void, Palette.Swatch>() {
             @Override
             protected Palette.Swatch doInBackground(Drawable... params) {
