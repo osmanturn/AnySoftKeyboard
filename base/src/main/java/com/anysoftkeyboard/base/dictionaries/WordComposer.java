@@ -24,8 +24,8 @@ import java.util.List;
  * A place to store the currently composing word with information such as adjacent key codes as well
  */
 public class WordComposer {
-    private static final String CHEWBACCAONTHEDRUMS = "chewbacca";
     public static final int NOT_A_KEY_INDEX = -1;
+    public static final char START_TAGS_SEARCH_CHARACTER = ':';
     /**
      * The list of unicode values for each keystroke (including surrounding keys)
      */
@@ -44,7 +44,6 @@ public class WordComposer {
     private final StringBuilder mTypedWord = new StringBuilder(Dictionary.MAX_WORD_LENGTH);
 
     private int mCursorPosition;
-    private int mGlobalCursorPosition;
 
     private int mCapsCount;
 
@@ -57,16 +56,6 @@ public class WordComposer {
 
     public WordComposer() {
     }
-/*
-    WordComposer(WordComposer copy) {
-        mCodes = new ArrayList<int[]>(copy.mCodes);
-        mPreferredWord = copy.mPreferredWord;
-        mTypedWord = new StringBuilder(copy.mTypedWord);
-        mCapsCount = copy.mCapsCount;
-        mAutoCapitalized = copy.mAutoCapitalized;
-        mIsFirstCharCapitalized = copy.mIsFirstCharCapitalized;
-    }
-*/
 
     /**
      * Clear out the keys registered so far.
@@ -82,7 +71,6 @@ public class WordComposer {
         mTypedWord.setLength(0);
         mCapsCount = 0;
         mCursorPosition = 0;
-        mGlobalCursorPosition = 0;
     }
 
     /**
@@ -99,14 +87,6 @@ public class WordComposer {
      */
     public int cursorPosition() {
         return mCursorPosition;
-    }
-
-    public int globalCursorPosition() {
-        return mGlobalCursorPosition;
-    }
-
-    public void setGlobalCursorPosition(int position) {
-        mGlobalCursorPosition = position;
     }
 
     public boolean setCursorPosition(int position/*, int candidatesStartPosition*/) {
@@ -128,7 +108,7 @@ public class WordComposer {
         }
         return (cursorPosition != (mCursorPosition + mCandidatesStartPosition));
     }
-
+    
     public boolean hasUserMovedCursorInsideOfWord(int cursorPosition)
     {
         if (AnyApplication.DEBUG)
@@ -155,31 +135,16 @@ public class WordComposer {
      *
      * @param codes the array of unicode values
      */
-    public boolean add(int primaryCode, int[] codes) {
+    public void add(int primaryCode, int[] codes) {
 
         mTypedWord.insert(mCursorPosition, (char) primaryCode);
-        /*if (codes != null)
-        {
-            for(int i=0; i<codes.length; i++)
-            {
-                if (codes[i] > 32) codes[i] = Character.toLowerCase(codes[i]);
-            }
-        }*/
 
         correctPrimaryJuxtapos(primaryCode, codes);
-        //this will return a copy of the codes array, stored in an array with sufficent storage
+        //this will return a copy of the codes array, stored in an array with sufficent storage 
         int[] reusableArray = getReusableArray(codes);
         mCodes.add(mCursorPosition, reusableArray);
         mCursorPosition++;
         if (Character.isUpperCase((char) primaryCode)) mCapsCount++;
-
-        if (mTypedWord.length() == CHEWBACCAONTHEDRUMS.length()) {
-            if (mTypedWord.toString().equalsIgnoreCase(CHEWBACCAONTHEDRUMS)) {
-                return true;
-            }
-        }
-
-        return false;
     }
 
     private int[] getReusableArray(int[] codes) {
@@ -255,6 +220,10 @@ public class WordComposer {
             return "";
         }
         return mTypedWord;
+    }
+
+    public boolean isAtTagsSearchState() {
+        return mTypedWord.length() > 0 && mTypedWord.charAt(0) == ':';
     }
 
     public void setFirstCharCapitalized(boolean capitalized) {

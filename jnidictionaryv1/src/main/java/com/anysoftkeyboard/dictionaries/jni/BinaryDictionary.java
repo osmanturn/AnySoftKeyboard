@@ -16,11 +16,15 @@
 
 package com.anysoftkeyboard.dictionaries.jni;
 
+import android.content.Context;
 import android.content.res.AssetFileDescriptor;
+import android.os.SystemClock;
+import android.support.annotation.NonNull;
 import android.util.Log;
 
 import com.anysoftkeyboard.base.dictionaries.Dictionary;
 import com.anysoftkeyboard.base.dictionaries.WordComposer;
+import com.anysoftkeyboard.base.utils.CompatUtils;
 
 import java.io.FileDescriptor;
 import java.util.Arrays;
@@ -40,22 +44,9 @@ public class BinaryDictionary extends Dictionary {
     private char[] mOutputChars = new char[MAX_WORD_LENGTH * MAX_WORDS];
     private int[] mFrequencies = new int[MAX_WORDS];
 
-    static {
-        try {
-            System.loadLibrary("anysoftkey_jni");
-        } catch (UnsatisfiedLinkError ule) {
-            Log.e(TAG, "******** Could not load native library anysoftkey_jni ********");
-            Log.e(TAG, "******** Could not load native library anysoftkey_jni ********", ule);
-            Log.e(TAG, "******** Could not load native library anysoftkey_jni ********");
-        } catch (Throwable t) {
-            Log.e(TAG, "******** Failed to load native dictionary library anysoftkey_jni ********");
-            Log.e(TAG, "******** Failed to load native dictionary library anysoftkey_jni *******", t);
-            Log.e(TAG, "******** Failed to load native dictionary library anysoftkey_jni ********");
-        }
-    }
-
-    public BinaryDictionary(String dictionaryName, AssetFileDescriptor afd) {
+    public BinaryDictionary(@NonNull Context context, @NonNull String dictionaryName, @NonNull AssetFileDescriptor afd, boolean isDebug) {
         super(dictionaryName);
+        CompatUtils.loadNativeLibrary(context, "anysoftkey_jni", "1.0", isDebug);
         mAfd = afd;
     }
 
@@ -64,9 +55,9 @@ public class BinaryDictionary extends Dictionary {
         //The try-catch is for issue 878: http://code.google.com/p/softkeyboard/issues/detail?id=878
         try {
             mNativeDict = 0;
-            long startTime = System.currentTimeMillis();
+            long startTime = SystemClock.uptimeMillis();
             mNativeDict = openNative(mAfd.getFileDescriptor(), mAfd.getStartOffset(), mAfd.getLength(), Dictionary.TYPED_LETTER_MULTIPLIER, Dictionary.FULL_WORD_FREQ_MULTIPLIER);
-            Log.d(TAG, "Loaded dictionary in " + (System.currentTimeMillis() - startTime) + "ms");
+            Log.d(TAG, "Loaded dictionary in " + (SystemClock.uptimeMillis() - startTime) + "ms");
         } catch (UnsatisfiedLinkError ex) {
             Log.w(TAG, "Failed to load binary JNI connection! Error: " + ex.getMessage());
         }

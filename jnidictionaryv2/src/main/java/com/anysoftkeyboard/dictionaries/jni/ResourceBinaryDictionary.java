@@ -19,10 +19,13 @@ package com.anysoftkeyboard.dictionaries.jni;
 import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
+import android.support.annotation.NonNull;
+import android.support.annotation.XmlRes;
 import android.util.Log;
 
 import com.anysoftkeyboard.base.dictionaries.Dictionary;
 import com.anysoftkeyboard.base.dictionaries.WordComposer;
+import com.anysoftkeyboard.base.utils.CompatUtils;
 import com.anysoftkeyboard.base.utils.GCUtils;
 
 import java.io.IOException;
@@ -55,26 +58,14 @@ public class ResourceBinaryDictionary extends Dictionary {
     private final char[] mOutputChars = new char[MAX_WORD_LENGTH * MAX_WORDS];
     private final int[] mFrequencies = new int[MAX_WORDS];
 
-    /** NOTE!
+    /**
+     * NOTE!
      * Keep a reference to the native dict direct buffer in Java to avoid
-     * unexpected de-allocation of the direct buffer. */
+     * unexpected de-allocation of the direct buffer.
+     */
     @SuppressWarnings("FieldCanBeLocal")
     private ByteBuffer mNativeDictDirectBuffer;
     private volatile long mNativeDict;
-
-    static {
-        try {
-            System.loadLibrary("anysoftkey2_jni");
-        } catch (UnsatisfiedLinkError ule) {
-            Log.e(TAG, "******** Could not load native library anysoftkey2_jni ********");
-            Log.e(TAG, "******** Could not load native library anysoftkey2_jni ********", ule);
-            Log.e(TAG, "******** Could not load native library anysoftkey2_jni ********");
-        } catch (Throwable t) {
-            Log.e(TAG, "******** Failed to load native dictionary anysoftkey2_jni ********");
-            Log.e(TAG, "******** Failed to load native dictionary anysoftkey2_jni *******", t);
-            Log.e(TAG, "******** Failed to load native dictionary anysoftkey2_jni ********");
-        }
-    }
 
     /**
      * Create a dictionary from a raw resource file
@@ -82,8 +73,9 @@ public class ResourceBinaryDictionary extends Dictionary {
      * @param context application context for reading resources
      * @param resId   the resource containing the raw binary dictionary
      */
-    public ResourceBinaryDictionary(String dictionaryName, Context context, int resId/* , int dicTypeId */) {
+    public ResourceBinaryDictionary(@NonNull String dictionaryName, @NonNull Context context, @XmlRes int resId, boolean isDebug) {
         super(dictionaryName);
+        CompatUtils.loadNativeLibrary(context, "anysoftkey2_jni", "1.0", isDebug);
         mAppContext = context;
         mDictResId = resId;
     }
@@ -113,7 +105,7 @@ public class ResourceBinaryDictionary extends Dictionary {
 
             a.recycle();
         }
-
+        if (isClosed()) return;
         GCUtils.getInstance().performOperationWithMemRetry(TAG, new GCUtils.MemRelatedOperation() {
             public void operation() {
                 // The try-catch is for issue 878:
@@ -138,6 +130,7 @@ public class ResourceBinaryDictionary extends Dictionary {
                 // http://ponystyle.com/blog/2010/03/26/dealing-with-asset-compression-in-android-apps/
                 // NOTE: the resource file can not be larger than 1MB
                 is[i] = mAppContext.getResources().openRawResource(resId[i]);
+                if (isClosed()) return;
                 final int dictSize = is[i].available();
                 Log.d(TAG, "Will load a resource dictionary id " + resId[i] + " whose size is " + dictSize + " bytes.");
                 total += dictSize;
@@ -147,6 +140,7 @@ public class ResourceBinaryDictionary extends Dictionary {
             int got = 0;
             for (int i = 0; i < resId.length; i++) {
                 got += Channels.newChannel(is[i]).read(mNativeDictDirectBuffer);
+                if (isClosed()) return;
             }
             if (got != total) {
                 Log.e(TAG, "Read " + got + " bytes, expected " + total);
@@ -160,7 +154,7 @@ public class ResourceBinaryDictionary extends Dictionary {
             if (is != null) {
                 for (InputStream i1 : is) {
                     try {
-                        i1.close();
+                        if (i1 != null) i1.close();
                     } catch (IOException e) {
                         Log.w(TAG, "Failed to close input stream");
                     }

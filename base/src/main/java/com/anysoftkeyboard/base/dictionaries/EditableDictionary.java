@@ -33,7 +33,5 @@ public abstract class EditableDictionary extends Dictionary {
      */
     public abstract boolean addWord(String word, int frequency);
 
-    public abstract WordsCursor getWordsCursor();
-
     public abstract void deleteWord(String word);
 }

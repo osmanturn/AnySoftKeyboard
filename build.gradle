@@ -1,12 +1,9 @@
-import com.android.build.OutputFile
-import localproperties.LocalPropertiesFile
+ext.androidBuildTools = '25.0.2'
+ext.supportLibVersion = '24.1.1'
+ext.AnySoftKeyboardApiVersion = '96aa819'
 
-ext.androidBuildTools = '23.0.3'
-ext.supportLibVersion = '25.0.0'
-ext.AnySoftKeyboardApiVersion = '1.3.1'
-
-ext.sdkTargetVersion = 23
-ext.sdkCompileVersion = 23
+ext.sdkTargetVersion = 25
+ext.sdkCompileVersion = 25
 ext.sdkMinimumVersion = 13
 
 buildscript {
@@ -16,185 +13,33 @@ buildscript {
         mavenCentral()
         maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
         maven { url 'https://jitpack.io' }
+        maven { url "https://plugins.gradle.org/m2/" }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.2.3'
-        classpath 'com.github.JakeWharton:sdk-manager-plugin:e05218601b1274ea0721e13b33a426f641156f69'
+        classpath "net.ltgt.gradle:gradle-errorprone-plugin:0.0.8"
+        classpath 'com.github.triplet.gradle:play-publisher:1.1.5'
+        classpath 'com.github.AnySoftKeyboard.AnySoftKeyboardTools:makedictionary:d60a5b6'
+        classpath 'com.github.AnySoftKeyboard.AnySoftKeyboardTools:generatewordslist:d60a5b6'
+        classpath 'org.jsoup:jsoup:1.9.1'
+        classpath 'com.github.gfx.ribbonizer:plugin:0.6.0'
     }
 }
 
-apply plugin: 'android-sdk-manager'
-apply plugin: 'com.android.application'
+apply plugin: "net.ltgt.errorprone"
 apply plugin: 'pmd'
-apply plugin: 'jacoco'
 
-version versionbuilder.VersionBuilder.buildGitVersionName()
-group 'net.evendanan'
-
-println "Building AnySoftKeyboard "+version
-
-def localExtraProperties = new LocalPropertiesFile(new File(projectDir, 'local.extra.properties'))
-def localSigningProperties = new LocalPropertiesFile(new File(projectDir, 'local.signing.properties'))
-
-//support for density split
-ext.versionCodes = [all:0, ldpi:1, mdpi:2, hdpi:3, xhdpi:4]
-android.applicationVariants.all { variant ->
-    // assign different version code for each output
-    variant.outputs.each { output ->
-        def key = output.getFilter(OutputFile.DENSITY) == null ? "all" : output.getFilter(org.gradle.api.tasks.OutputFile.DENSITY)
-        output.versionCodeOverride = project.ext.versionCodes.get(key) + android.defaultConfig.versionCode
-        output.versionNameOverride = android.defaultConfig.versionName+"-"+key
-        def fileName = output.outputFile.name.replace(".apk", "-" + output.versionNameOverride + ".apk")
-        output.outputFile = new File(output.outputFile.parent, fileName)
-    }
+configurations.errorprone {
+    resolutionStrategy.force 'com.google.errorprone:error_prone_core:2.0.13'
 }
 
-android {
-    packagingOptions {
-        exclude 'LICENSE.txt'
-        exclude 'META-INF/LICENSE'
-        exclude 'META-INF/LICENSE.txt'
-        exclude 'META-INF/NOTICE'
-    }
-
-    compileSdkVersion sdkCompileVersion
-    buildToolsVersion androidBuildTools
-
-    defaultConfig {
-        applicationId 'com.yek.keyboard'
-        versionCode versionbuilder.VersionBuilder.buildGitVersionNumber()
-        versionName versionbuilder.VersionBuilder.buildGitVersionName()
-
-        minSdkVersion sdkMinimumVersion
-        targetSdkVersion sdkTargetVersion
-        //adding additional fields to the BuildConfig class.
-
-        //extra details - from local
-        def String support_email_address = localExtraProperties.getValueWithConsoleFallback('CRASH_REPORT_EMAIL', 'osmanturanpc@gmail.com', 'Support email address')
-        println 'crash report email is: '+support_email_address
-
-        buildConfigField "String", "CRASH_REPORT_EMAIL_ADDRESS", '"'+support_email_address+'"'
-
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-    }
-
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_7
-        targetCompatibility JavaVersion.VERSION_1_7
-    }
-
-    signingConfigs {
-        release {
-            def String keystore_file = localSigningProperties.getValueWithConsoleFallback('STORE_FILE', 'Key-Store file name')
-            def String keystore_password = localSigningProperties.getValueWithConsoleFallback('STORE_PASSWORD', 'Key-Store file password')
-            def String key_alias = localSigningProperties.getValueWithConsoleFallback('KEY_ALIAS', 'App key alias')
-            def String key_alias_password = localSigningProperties.getValueWithConsoleFallback('KEY_PASSWORD', 'App key password')
-
-            if (    utils.Utils.isEmpty(keystore_file) || utils.Utils.isEmpty(keystore_password) ||
-                    utils.Utils.isEmpty(key_alias) || utils.Utils.isEmpty(key_alias_password)) {
-                //missing signing details, so I'll use debug signingConfigs details.
-                println "Missing release build-type signing details, I'll use DEBUG signing for the release."
-                storeFile signingConfigs.debug.storeFile
-                storePassword signingConfigs.debug.storePassword
-                keyAlias signingConfigs.debug.keyAlias
-                keyPassword signingConfigs.debug.keyPassword
-            } else {
-                println 'For signing, will use key-store file '+keystore_file+', with key '+key_alias
-                storeFile file(keystore_file)
-                storePassword keystore_password
-                keyAlias key_alias
-                keyPassword key_alias_password
-            }
-        }
-    }
-
-    buildTypes {
-        release {
-            signingConfig signingConfigs.release
-            zipAlignEnabled true
-
-            minifyEnabled true
-            proguardFiles 'proguard-android-optimize.txt', 'proguard-rules.txt'
-        }
-
-        debug {
-            signingConfig signingConfigs.release
-            zipAlignEnabled true
-            debuggable true
-            testCoverageEnabled true
-
-            useLibrary 'org.apache.http.legacy'
-        }
-    }
-    splits {
-        density {
-            enable false
-            //these will merged into the universal APK
-            //I'm trying to really reduce the size of the low densities.
-            exclude "tvdpi", "xxhdpi", "xxxhdpi"
-        }
-    }
-}
-
-// Define coverage source.
-// If you have rs/aidl etc... add them here.
-def coverageSourceDirs = [
-        'src/main/java',
-]
-
-task jacocoTestReport(type: JacocoReport, dependsOn: "check") {
-    group = "Reporting"
-    description = "Generate Jacoco coverage reports after running tests."
-    reports {
-        xml.enabled = true
-        html.enabled = true
-    }
-    classDirectories = fileTree(
-            dir: './build/intermediates/classes/debug',
-            excludes: ['**/R*.class',
-                       '**/*$InjectAdapter.class',
-                       '**/*$ModuleAdapter.class',
-                       '**/*$ViewInjector*.class'
-            ])
-    sourceDirectories = files(coverageSourceDirs)
-    executionData = files("$buildDir/jacoco/testDebug.exec")
-    // Bit hacky but fixes https://code.google.com/p/android/issues/detail?id=69174.
-    // We iterate through the compiled .class tree and rename $$ to $.
-    doFirst {
-        new File("$buildDir/intermediates/classes/").eachFileRecurse { file ->
-            if (file.name.contains('$$')) {
-                file.renameTo(file.path.replace('$$', '$'))
-            }
-        }
-    }
-}
-
-dependencies {
+allprojects {
     repositories {
+        jcenter()
         mavenCentral()
         maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
         maven { url "https://jitpack.io" }
     }
-    compile project(':base')
-    compile project(':nextword')
-    compile project(':jnidictionaryv1')
-    compile project(':jnidictionaryv2')
-
-    compile "com.github.AnySoftKeyboard:AnySoftKeyboard-API:$AnySoftKeyboardApiVersion"
-    compile 'com.github.menny:FrankenRobot:1.1.5'
-    compile "com.android.support:support-v4:$supportLibVersion"
-    compile "com.android.support:appcompat-v7:$supportLibVersion"
-    compile "com.android.support:design:$supportLibVersion"
-    compile "com.android.support:cardview-v7:$supportLibVersion"
-    compile "com.android.support:recyclerview-v7:$supportLibVersion"
-    compile "com.android.support:support-annotations:$supportLibVersion"
-    compile "com.android.support:palette-v7:$supportLibVersion"
-    compile "com.android.support:percent:$supportLibVersion"
-    compile 'com.github.menny:Chauffeur:0.0.8'
-    compile fileTree(dir: 'libs', include: '*.jar')
-
-    testCompile 'junit:junit:4.12'
-    testCompile 'org.robolectric:robolectric:3.0'
-    testCompile 'org.mockito:mockito-core:1.9.5'
-
 }
+
+
