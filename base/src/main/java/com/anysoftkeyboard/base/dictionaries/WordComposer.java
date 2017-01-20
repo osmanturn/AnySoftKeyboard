@@ -128,7 +128,7 @@ public class WordComposer {
         }
         return (cursorPosition != (mCursorPosition + mCandidatesStartPosition));
     }
-    
+
     public boolean hasUserMovedCursorInsideOfWord(int cursorPosition)
     {
         if (AnyApplication.DEBUG)
@@ -167,7 +167,7 @@ public class WordComposer {
         }*/
 
         correctPrimaryJuxtapos(primaryCode, codes);
-        //this will return a copy of the codes array, stored in an array with sufficent storage 
+        //this will return a copy of the codes array, stored in an array with sufficent storage
         int[] reusableArray = getReusableArray(codes);
         mCodes.add(mCursorPosition, reusableArray);
         mCursorPosition++;
