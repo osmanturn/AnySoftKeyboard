@@ -185,9 +185,6 @@
     <string name="auto_pick_suggestion_aggressiveness_high">High aggressiveness</string>
     <string name="auto_pick_suggestion_aggressiveness_extreme">Extreme aggressiveness</string>
     <string name="auto_pick_suggestion_aggressiveness_summary">Aggressiveness level: %s</string>
-    <string name="use_contacts_dictionary">Contacts dictionary</string>
-    <string name="use_contacts_dictionary_on_summary">Suggest names from contacts list</string>
-    <string name="use_contacts_dictionary_off_summary" />
     <string name="tweaks_group">Tweaks</string>
     <string name="tweak_sound_group">Sound related tweaks</string>
     <string name="tweak_physical_keyboard_group">Physical keyboard tweaks</string>
@@ -267,7 +264,6 @@
     <string name="allow_suggestions_restart_summary">Restart word suggestion upon cursor movement</string>
     <string name="keyboards_group_extra_template"><xliff:g id="enabledLayouts">%s</xliff:g>/<xliff:g id="totalLayouts">%s</xliff:g></string>
     <string name="keyboards_group">Keyboards</string>
-    <string name="keyboards_group_summary">Keyboard layouts for use in AnySoftKeyboard</string>
     <string name="symbols_keyboard">123!#()</string>
     <string name="symbols_alt_keyboard">{}\_</string>
     <string name="symbols_alt_num_keyboard">123</string>
@@ -297,12 +293,6 @@
     <string name="keyboard_theme_dialog_title">Select theme</string>
     <string name="keyboard_theme_summary">Selected theme: %s</string>
     <string name="keyboard_theme_list_title">Select theme</string>
-    <string name="dark_plain_keyboard_theme_name">Plain dark theme</string>
-    <string name="dark_plain_keyboard_theme_description">Dark colors, simple graphics</string>
-    <string name="light_plain_keyboard_theme_name">Plain light theme</string>
-    <string name="light_plain_keyboard_theme_description">Light colors, simple graphics</string>
-    <string name="blacktheme_keyboard_theme_name">Simple black glow</string>
-    <string name="blacktheme_keyboard_theme_description">Simple black theme with color highlights</string>
     <string name="lean_dark_keyboard_theme_name">Lean Dark</string>
     <string name="lean_dark_keyboard_theme_description">Dark theme, with minimal UI elements</string>
     <string name="lean_dark_2_keyboard_theme_name">Lean Dark - Option 2</string>
@@ -476,11 +466,11 @@
     <string name="clipboard_paste_entries_title">Pick text to paste</string>
 
 
-    <string-array name="physical_keyboard_change_notification_types">
-        <item>Always show layout icon</item>
-        <item>On physical keyboard change</item>
-        <item>No notification</item>
-    </string-array>
+    <string name="short_smiley_key_name">Shorter Smiley key</string>
+    <string name="unicode_flags_quick_text_key_name">Flags</string>
+    <string name="unicode_scape_quick_text_key_name">Scape</string>
+
+
     <string-array name="vibrate_on_key_press_types">
         <item>None</item>
         <item>Light</item>
@@ -498,5 +488,7 @@
         <item>Center</item>
         <item>Right</item>
     </string-array>
+
+
 
 </resources>

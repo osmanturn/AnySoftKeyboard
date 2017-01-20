@@ -183,9 +183,6 @@ bulamıyorum. Maalesef bu özellik cihazınızda çalışmıyor.</string>
     <string name="auto_pick_suggestion_aggressiveness_high">Yüksek düzey agresif</string>
     <string name="auto_pick_suggestion_aggressiveness_extreme">Aşırı agresif</string>
     <string name="auto_pick_suggestion_aggressiveness_summary">Agresiflik düzeyi: %s</string>
-    <string name="use_contacts_dictionary">Kişiler sözlüğü</string>
-    <string name="use_contacts_dictionary_on_summary">Kişilerinizden isim önerileri</string>
-    <string name="use_contacts_dictionary_off_summary" />
     <string name="tweaks_group">Ayrıntılı Ayarlar</string>
     <string name="tweak_sound_group">Ses ayarları</string>
     <string name="tweak_physical_keyboard_group">Gerçek klavye ayarları</string>
@@ -265,7 +262,6 @@ bulamıyorum. Maalesef bu özellik cihazınızda çalışmıyor.</string>
     <string name="allow_suggestions_restart_summary">İmleç hareket ettiğinde sözcük önerilerini yeniden başlat</string>
     <string name="keyboards_group_extra_template"><xliff:g id="enabledLayouts">%s</xliff:g>/<xliff:g id="totalLayouts">%s</xliff:g></string>
     <string name="keyboards_group">Klavyeler</string>
-    <string name="keyboards_group_summary">Kurdî Klavye için klavye yerleşimleri</string>
     <string name="symbols_keyboard">123!#()</string>
     <string name="symbols_alt_keyboard">{}\_</string>
     <string name="symbols_alt_num_keyboard">123</string>
@@ -295,12 +291,6 @@ bulamıyorum. Maalesef bu özellik cihazınızda çalışmıyor.</string>
     <string name="keyboard_theme_dialog_title">Tema seç</string>
     <string name="keyboard_theme_summary">Seçili tema: %s</string>
     <string name="keyboard_theme_list_title">Tema seç</string>
-    <string name="dark_plain_keyboard_theme_name">Sade koyu tema</string>
-    <string name="dark_plain_keyboard_theme_description">Koyu renkler, basit grafikler</string>
-    <string name="light_plain_keyboard_theme_name">Sade açık tema</string>
-    <string name="light_plain_keyboard_theme_description">Açık renkler, basit grafikler</string>
-    <string name="blacktheme_keyboard_theme_name">Basit siyah parlak</string>
-    <string name="blacktheme_keyboard_theme_description">Parlak renkli basit siyah tema</string>
     <string name="lean_dark_keyboard_theme_name">İnce Koyu</string>
     <string name="lean_dark_keyboard_theme_description">Koyu tema, minimal UI öğeleri</string>
     <string name="lean_dark_2_keyboard_theme_name">İnce Koyu - Seçenek 2</string>
@@ -474,11 +464,6 @@ bulamıyorum. Maalesef bu özellik cihazınızda çalışmıyor.</string>
     <string name="clipboard_paste_entries_title">Yapıştırmak için metin seçin</string>
 
 
-    <string-array name="physical_keyboard_change_notification_types">
-        <item>Yerleşim simgesini her zaman göster</item>
-        <item>Gerçek klavye değişiminde</item>
-        <item>Bildirim yok</item>
-    </string-array>
     <string-array name="vibrate_on_key_press_types">
         <item>Hiçbiri</item>
         <item>Hafif</item>

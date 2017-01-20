@@ -5,46 +5,42 @@
     <!-- Generic bottom row -->
     <Row
         android:keyHeight="@integer/key_normal_height"
-        android:keyWidth="10%p"
+        android:keyWidth="8%p"
         android:keyboardMode="@integer/keyboard_mode_normal"
         android:rowEdgeFlags="bottom">
         <Key
             android:codes="@integer/key_code_mode_symbols"
             android:keyEdgeFlags="left"
-            android:keyWidth="15%p"
+            android:keyWidth="12%p"
             ask:isFunctional="true"
             ask:keyDynamicEmblem="text" />
 
         <Key
             android:codes="@integer/key_code_mode_alphabet"
-            android:keyWidth="10%p"
             ask:isFunctional="true"
             ask:keyDynamicEmblem="icon"
             ask:longPressCode="-98" />
 
         <Key
             android:codes="@integer/key_code_quick_text"
-            android:keyWidth="10%p"
             ask:isFunctional="true" />
 
         <Key
             android:codes="@integer/key_code_space"
-            android:keyWidth="30%p" />
+            android:keyWidth="40%p" />
 
         <Key
             android:codes="46"
-            android:keyLabel="."
-            android:keyWidth="10%p" />
+            android:keyLabel="." />
         <Key
             android:codes="44"
             android:keyLabel=","
-            android:keyWidth="10%p"
             android:popupCharacters=".!\?\u00bf\u00a1'&#34;" />
 
         <Key
             android:codes="@integer/key_code_enter"
             android:keyEdgeFlags="right"
-            android:keyWidth="15%p"
+            android:keyWidth="16%p"
             ask:isFunctional="true"
             ask:longPressCode="-100" />
     </Row>
