@@ -87,7 +87,7 @@ public class TutorialEnabledKeyboardFragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        ((AppCompatActivity) getActivity()).getSupportActionBar().hide();
+
     }
 
     @Override
@@ -137,6 +137,7 @@ public class TutorialEnabledKeyboardFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
+        ((AppCompatActivity) getActivity()).getSupportActionBar().hide();
         if (isStepCompleted())
             TutorialSwitchKeyboardFragment.getInstance(getActivity().getSupportFragmentManager());
     }

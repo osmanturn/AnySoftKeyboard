@@ -20,8 +20,8 @@
 
             <ImageView
                 android:id="@+id/addon_image"
-                android:layout_width="148dp"
-                android:layout_height="148dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 android:layout_alignParentLeft="true"
                 android:layout_gravity="center_vertical"
                 android:adjustViewBounds="true"

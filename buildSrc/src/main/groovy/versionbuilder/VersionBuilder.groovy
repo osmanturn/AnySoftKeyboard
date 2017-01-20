@@ -1,8 +1,8 @@
 package versionbuilder
 
 class VersionBuilder {
-    static final int GIT_COMMIT_COUNT_NORMALIZE = 2733;
-    static final int GIT_COMMIT_COUNT_MINOR_NORMALIZE = 1;
+    static final int GIT_COMMIT_COUNT_NORMALIZE = 2329;
+    static final int GIT_COMMIT_COUNT_MINOR_NORMALIZE = 404;
 
     static def buildGitVersionNumber() {
         int k=Integer.parseInt('git rev-list --count HEAD'.execute().text.trim());
