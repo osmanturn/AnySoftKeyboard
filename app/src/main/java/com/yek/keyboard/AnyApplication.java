@@ -36,7 +36,6 @@ import com.yek.keyboard.devicespecific.DeviceSpecific_V19;
 import com.yek.keyboard.devicespecific.DeviceSpecific_V3;
 import com.yek.keyboard.devicespecific.DeviceSpecific_V8;
 import com.yek.keyboard.devicespecific.StrictModeAble;
-import com.yek.keyboard.ui.tutorials.TutorialsProvider;
 import com.yek.keyboard.utils.LogCatLogProvider;
 import com.yek.keyboard.utils.Logger;
 
@@ -75,7 +74,7 @@ public class AnyApplication extends Application implements OnSharedPreferenceCha
 
         msCloudBackupRequester = msFrank.embody(new CloudBackupRequesterDiagram(getApplicationContext()));
 
-        TutorialsProvider.showDragonsIfNeeded(getApplicationContext());
+       // TutorialsProvider.showDragonsIfNeeded(getApplicationContext());
     }
 
     private DeviceSpecific createDeviceSpecificImplementation() {
