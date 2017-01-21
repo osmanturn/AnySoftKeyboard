@@ -16,7 +16,8 @@
 
 package com.anysoftkeyboard.dictionaries;
 
-import com.menny.android.anysoftkeyboard.R;
+import com.yek.keyboard.R;
+import com.yek.keyboard.anysoftkeyboard.dictionaries.BTreeDictionary;
 
 import org.junit.Assert;
 import org.junit.Before;

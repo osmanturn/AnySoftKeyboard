@@ -2,6 +2,8 @@ package com.anysoftkeyboard.ui.settings.setup;
 
 import android.content.ComponentName;
 
+import com.yek.keyboard.anysoftkeyboard.ui.settings.setup.SetupSupport;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RobolectricTestRunner;

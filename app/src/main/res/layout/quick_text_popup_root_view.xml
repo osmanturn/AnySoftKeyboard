@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.anysoftkeyboard.quicktextkeys.ui.QuickTextPagerView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.yek.keyboard.quicktextkeys.ui.QuickTextPagerView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/quick_text_pager_root"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:weightSum="1">
 
-    <com.anysoftkeyboard.ui.ViewPagerWithDisable
+    <com.yek.keyboard.ui.ViewPagerWithDisable
         android:id="@+id/quick_text_keyboards_pager"
                                        android:layout_width="0px"
                                        android:layout_weight="1"
@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="top"
             android:paddingTop="4dp"/>
-    </com.anysoftkeyboard.ui.ViewPagerWithDisable>
+    </com.yek.keyboard.ui.ViewPagerWithDisable>
 
     <include layout="@layout/quick_text_general_actions" />
-</com.anysoftkeyboard.quicktextkeys.ui.QuickTextPagerView>
+</com.yek.keyboard.quicktextkeys.ui.QuickTextPagerView>

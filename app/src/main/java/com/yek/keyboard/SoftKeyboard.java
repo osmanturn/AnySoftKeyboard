@@ -18,7 +18,7 @@ package com.yek.keyboard;
 
 import android.content.ComponentName;
 
-import com.anysoftkeyboard.AnySoftKeyboard;
+import com.yek.keyboard.anysoftkeyboard.AnySoftKeyboard;
 
 /*
  * Why is this class exists?

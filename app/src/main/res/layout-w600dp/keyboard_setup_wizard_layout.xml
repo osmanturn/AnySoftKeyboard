@@ -54,7 +54,7 @@
             android:text="@string/setup_wizard_step_two"/>
 
         <!-- replaces
-            android:name="com.anysoftkeyboard.ui.settings.setup.WizardPageSwitchToKeyboardFragment"
+            android:name="WizardPageSwitchToKeyboardFragment"
             tools:layout="@layout/keyboard_setup_wizard_page_switch_to_layout"
         -->
         <FrameLayout
@@ -105,7 +105,7 @@
             android:text="@string/setup_wizard_step_three"/>
 
         <!-- replaces
-            android:name="com.anysoftkeyboard.ui.settings.setup.WizardPageDoneAndMoreSettingsFragment"
+            android:name="WizardPageDoneAndMoreSettingsFragment"
             tools:layout="@layout/keyboard_setup_wizard_page_additional_settings_layout"
             -->
         <FrameLayout

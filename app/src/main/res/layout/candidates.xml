@@ -21,7 +21,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <com.anysoftkeyboard.keyboards.views.CandidateView
+    <com.yek.keyboard.keyboards.views.CandidateView
         android:id="@+id/candidates"
         android:layout_width="match_parent"
         android:layout_height="@dimen/candidate_strip_height"

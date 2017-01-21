@@ -1,5 +1,7 @@
 package com.anysoftkeyboard.utils;
 
+import com.yek.keyboard.anysoftkeyboard.utils.ModifierKeyState;
+
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -4,10 +4,11 @@ import android.content.Context;
 import android.view.inputmethod.EditorInfo;
 
 import com.anysoftkeyboard.base.dictionaries.Dictionary;
-import com.anysoftkeyboard.dictionaries.DictionaryAddOnAndBuilder;
-import com.anysoftkeyboard.dictionaries.UserDictionary;
-import com.anysoftkeyboard.keyboards.AnyKeyboard;
-import com.anysoftkeyboard.keyboards.views.AnyKeyboardView;
+import com.yek.keyboard.anysoftkeyboard.AnySoftKeyboard;
+import com.yek.keyboard.anysoftkeyboard.dictionaries.DictionaryAddOnAndBuilder;
+import com.yek.keyboard.anysoftkeyboard.dictionaries.UserDictionary;
+import com.yek.keyboard.anysoftkeyboard.keyboards.AnyKeyboard;
+import com.yek.keyboard.anysoftkeyboard.keyboards.views.AnyKeyboardView;
 
 import org.junit.After;
 import org.junit.Assert;

@@ -3,10 +3,10 @@ package com.anysoftkeyboard;
 import android.content.res.Configuration;
 import android.view.inputmethod.EditorInfo;
 
-import com.anysoftkeyboard.keyboards.KeyboardAddOnAndBuilder;
-import com.anysoftkeyboard.keyboards.KeyboardSwitcher;
-import com.anysoftkeyboard.keyboards.views.AnyKeyboardView;
-import com.menny.android.anysoftkeyboard.R;
+import com.yek.keyboard.anysoftkeyboard.keyboards.KeyboardAddOnAndBuilder;
+import com.yek.keyboard.anysoftkeyboard.keyboards.KeyboardSwitcher;
+import com.yek.keyboard.anysoftkeyboard.keyboards.views.AnyKeyboardView;
+import com.yek.keyboard.R;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -15,8 +15,8 @@ import org.mockito.Mockito;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 
-import static com.anysoftkeyboard.keyboards.Keyboard.KEYBOARD_ROW_MODE_NORMAL;
-import static com.anysoftkeyboard.keyboards.Keyboard.KEYBOARD_ROW_MODE_PASSWORD;
+import static com.yek.keyboard.anysoftkeyboard.keyboards.Keyboard.KEYBOARD_ROW_MODE_NORMAL;
+import static com.yek.keyboard.anysoftkeyboard.keyboards.Keyboard.KEYBOARD_ROW_MODE_PASSWORD;
 
 @RunWith(RobolectricTestRunner.class)
 public class AnySoftKeyboardKeyboardSwitcherTest extends AnySoftKeyboardBaseTest {

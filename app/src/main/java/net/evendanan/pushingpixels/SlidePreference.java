@@ -32,7 +32,7 @@ import android.view.ViewGroup;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import com.menny.android.anysoftkeyboard.R;
+import com.yek.keyboard.R;
 
 
 public class SlidePreference extends Preference implements SeekBar.OnSeekBarChangeListener {

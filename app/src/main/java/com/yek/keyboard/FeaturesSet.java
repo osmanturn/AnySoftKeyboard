@@ -17,7 +17,7 @@
 package com.yek.keyboard;
 
 
-import com.menny.android.anysoftkeyboard.BuildConfig;
+
 
 public class FeaturesSet {
 

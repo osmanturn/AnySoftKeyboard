@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/keyboard_demo_shadow">
-        <com.anysoftkeyboard.keyboards.views.DemoAnyKeyboardView
+        <com.yek.keyboard.keyboards.views.DemoAnyKeyboardView
             android:id="@+id/demo_keyboard_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />

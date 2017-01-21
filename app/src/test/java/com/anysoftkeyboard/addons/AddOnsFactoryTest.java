@@ -3,7 +3,10 @@ package com.anysoftkeyboard.addons;
 import android.content.Context;
 import android.util.AttributeSet;
 
-import com.menny.android.anysoftkeyboard.R;
+import com.yek.keyboard.R;
+import com.yek.keyboard.anysoftkeyboard.addons.AddOn;
+import com.yek.keyboard.anysoftkeyboard.addons.AddOnImpl;
+import com.yek.keyboard.anysoftkeyboard.addons.AddOnsFactory;
 
 import org.junit.Assert;
 import org.junit.Test;

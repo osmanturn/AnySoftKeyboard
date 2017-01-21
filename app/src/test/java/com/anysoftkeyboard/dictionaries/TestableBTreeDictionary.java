@@ -4,6 +4,8 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.database.ContentObserver;
 
+import com.yek.keyboard.anysoftkeyboard.dictionaries.BTreeDictionary;
+
 import java.lang.reflect.Field;
 
 public class TestableBTreeDictionary extends BTreeDictionary {

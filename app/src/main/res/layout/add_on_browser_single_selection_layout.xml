@@ -13,7 +13,7 @@
         android:layout_margin="8dp"
         android:background="@drawable/keyboard_demo_shadow">
 
-        <com.anysoftkeyboard.keyboards.views.DemoAnyKeyboardView
+        <com.yek.keyboard.keyboards.views.DemoAnyKeyboardView
             android:id="@+id/selected_demo_keyboard_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />

@@ -29,11 +29,9 @@ import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 import android.text.format.DateFormat;
 
-import com.anysoftkeyboard.ui.SendBugReportUiActivity;
-import com.anysoftkeyboard.ui.dev.DeveloperUtils;
-import com.anysoftkeyboard.utils.Logger;
-import com.menny.android.anysoftkeyboard.BuildConfig;
-import com.menny.android.anysoftkeyboard.R;
+import com.yek.keyboard.ui.SendBugReportUiActivity;
+import com.yek.keyboard.ui.dev.DeveloperUtils;
+import com.yek.keyboard.utils.Logger;
 
 import java.io.File;
 import java.lang.Thread.UncaughtExceptionHandler;

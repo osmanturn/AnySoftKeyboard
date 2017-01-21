@@ -27,9 +27,9 @@
 //import android.view.animation.AnimationUtils;
 //import android.view.animation.ScaleAnimation;
 //
-//import com.anysoftkeyboard.utils.Logger;
+//import Logger;
 //import com.anysoftkeyboard.utils.PointFCompat;
-//import com.menny.android.anysoftkeyboard.R;
+//import com.yek.keyboard.R;
 //
 //public abstract class PassengerFragmentSupport {
 //

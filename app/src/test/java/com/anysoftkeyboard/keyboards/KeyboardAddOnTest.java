@@ -1,5 +1,8 @@
 package com.anysoftkeyboard.keyboards;
 
+import com.yek.keyboard.anysoftkeyboard.keyboards.KeyboardAddOnAndBuilder;
+import com.yek.keyboard.anysoftkeyboard.keyboards.KeyboardFactory;
+
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

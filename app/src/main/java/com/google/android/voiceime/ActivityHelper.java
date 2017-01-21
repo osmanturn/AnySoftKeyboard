@@ -26,7 +26,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 
-import com.menny.android.anysoftkeyboard.BuildConfig;
+import com.yek.keyboard.BuildConfig;
 
 import java.util.ArrayList;
 

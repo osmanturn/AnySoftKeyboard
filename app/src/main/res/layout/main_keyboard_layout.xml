@@ -17,7 +17,7 @@
 ** limitations under the License.
 */
 -->
-<com.anysoftkeyboard.keyboards.views.KeyboardViewContainerView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.yek.keyboard.keyboards.views.KeyboardViewContainerView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/AnyKeyboardContainerView"
     android:layout_width="match_parent"
@@ -25,10 +25,10 @@
     android:animateLayoutChanges="false"
     tools:ignore="UnusedAttribute">
 
-    <com.anysoftkeyboard.keyboards.views.AnyKeyboardView
+    <com.yek.keyboard.keyboards.views.AnyKeyboardView
         android:id="@+id/AnyKeyboardMainView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="0px"
         android:padding="0px" />
-</com.anysoftkeyboard.keyboards.views.KeyboardViewContainerView>
+</com.yek.keyboard.keyboards.views.KeyboardViewContainerView>

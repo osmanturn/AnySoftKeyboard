@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools"
-          package="com.menny.android.anysoftkeyboard">
+          package="com.yek.keyboard">
 
     <supports-screens
         android:anyDensity="true"
@@ -28,10 +28,10 @@
     <uses-sdk tools:overrideLibrary="com.astuetz.pagerslidingtabstrip"/>
 
     <application
-        android:name="com.yek.keyboard.AnyApplication"
+        android:name=".AnyApplication"
         android:allowBackup="true"
         android:fullBackupContent="true"
-        android:backupAgent="com.anysoftkeyboard.backup.AnyBackupAgent"
+        android:backupAgent=".backup.AnyBackupAgent"
         android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_ask_launcher"
         android:installLocation="internalOnly"
@@ -47,7 +47,7 @@
 
         <!-- this is the IME with the pointer to the settings ui (xml/method) -->
         <service
-            android:name="com.yek.keyboard.SoftKeyboard"
+            android:name=".SoftKeyboard"
             android:permission="android.permission.BIND_INPUT_METHOD">
             <intent-filter>
                 <action android:name="android.view.InputMethod"/>
@@ -64,7 +64,7 @@
         I use this, so I can 'disable' this activity at runtime, and so remove ASK from the launcher's icons -->
         <activity
             android:theme="@style/Theme.AskApp"
-            android:name="com.yek.keyboard.LauncherSettingsActivity"
+            android:name=".LauncherSettingsActivity"
             android:icon="@mipmap/ic_ask_launcher"
             android:launchMode="singleTop"
             android:label="@string/ime_name">
@@ -78,7 +78,7 @@
         </activity>
         <activity
             android:theme="@style/Theme.AskApp"
-            android:name="com.anysoftkeyboard.ui.settings.MainSettingsActivity"
+            android:name=".ui.settings.MainSettingsActivity"
             android:icon="@mipmap/ic_ask_launcher"
             android:launchMode="singleTask"
             android:windowSoftInputMode="adjustPan"
@@ -86,7 +86,7 @@
         </activity>
 
         <activity
-            android:name="com.anysoftkeyboard.ui.tutorials.TestersNoticeActivity"
+            android:name=".ui.tutorials.TestersNoticeActivity"
             android:icon="@mipmap/ic_ask_launcher"
             android:label="@string/testers_version"
             android:launchMode="singleTop"
@@ -96,7 +96,7 @@
         <!-- ui when a crash happens -->
         <activity
             android:theme="@style/Theme.AskApp.NoTitle"
-            android:name="com.anysoftkeyboard.ui.SendBugReportUiActivity"
+            android:name=".ui.SendBugReportUiActivity"
             android:icon="@mipmap/ic_ask_launcher"
             android:label="@string/ime_name">
         </activity>
@@ -114,7 +114,7 @@
             android:launchMode="singleInstance"
             android:configChanges="keyboard|keyboardHidden|navigation|orientation"/>
         <activity
-            android:name="com.anysoftkeyboard.ui.VoiceInputNotInstalledActivity"
+            android:name=".ui.VoiceInputNotInstalledActivity"
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
             android:icon="@mipmap/ic_ask_launcher"
             android:label="@string/ime_name"/>

@@ -5,10 +5,10 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.anysoftkeyboard.keyboards.views.AnyKeyboardView;
-import com.anysoftkeyboard.keyboards.views.CandidateView;
-import com.anysoftkeyboard.keyboards.views.KeyboardViewContainerView;
-import com.menny.android.anysoftkeyboard.R;
+import com.yek.keyboard.anysoftkeyboard.keyboards.views.AnyKeyboardView;
+import com.yek.keyboard.anysoftkeyboard.keyboards.views.CandidateView;
+import com.yek.keyboard.anysoftkeyboard.keyboards.views.KeyboardViewContainerView;
+import com.yek.keyboard.R;
 import com.yek.keyboard.SoftKeyboard;
 
 import org.junit.After;

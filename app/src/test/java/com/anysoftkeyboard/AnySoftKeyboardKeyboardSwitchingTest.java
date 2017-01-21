@@ -4,15 +4,15 @@ import android.content.Context;
 import android.content.res.Configuration;
 import android.view.inputmethod.EditorInfo;
 
-import com.anysoftkeyboard.addons.AddOn;
-import com.anysoftkeyboard.addons.DefaultAddOn;
+import com.yek.keyboard.anysoftkeyboard.addons.AddOn;
+import com.yek.keyboard.anysoftkeyboard.addons.DefaultAddOn;
 import com.anysoftkeyboard.api.KeyCodes;
-import com.anysoftkeyboard.dictionaries.DictionaryAddOnAndBuilder;
-import com.anysoftkeyboard.keyboards.AnyKeyboard;
-import com.anysoftkeyboard.keyboards.Keyboard;
-import com.anysoftkeyboard.keyboards.KeyboardAddOnAndBuilder;
-import com.anysoftkeyboard.keyboards.KeyboardSwitcher;
-import com.menny.android.anysoftkeyboard.R;
+import com.yek.keyboard.anysoftkeyboard.dictionaries.DictionaryAddOnAndBuilder;
+import com.yek.keyboard.anysoftkeyboard.keyboards.AnyKeyboard;
+import com.yek.keyboard.anysoftkeyboard.keyboards.Keyboard;
+import com.yek.keyboard.anysoftkeyboard.keyboards.KeyboardAddOnAndBuilder;
+import com.yek.keyboard.anysoftkeyboard.keyboards.KeyboardSwitcher;
+import com.yek.keyboard.R;
 
 import org.junit.Assert;
 import org.junit.Test;
