@@ -17,12 +17,8 @@
 package com.anysoftkeyboard.theme;
 
 import android.content.Context;
-import android.content.res.Resources;
-import android.graphics.drawable.Drawable;
-import android.support.annotation.Nullable;
 import android.support.annotation.StringRes;
 import android.support.annotation.StyleRes;
-import android.util.Log;
 
 import com.anysoftkeyboard.addons.AddOnImpl;
 
@@ -66,22 +62,5 @@ public class KeyboardTheme extends AddOnImpl {
     @StyleRes
     public int getPopupIconsThemeResId() {
         return mPopupIconsThemeResId;
-    }
-
-
-    @Nullable
-    public Drawable getScreenshot() {
-        try {
-            if (mPopupIconsThemeResId != INVALID_RES_ID) {
-                Context packageContext = getPackageContext();
-                if (packageContext == null) return null;
-                return packageContext.getResources().getDrawable(mPopupIconsThemeResId);
-            } else {
-                return null;
-            }
-        } catch (Resources.NotFoundException n) {
-
-            return null;
-        }
     }
 }

@@ -25,7 +25,7 @@ import android.util.AttributeSet;
 
 import com.anysoftkeyboard.addons.AddOnsFactory;
 import com.anysoftkeyboard.utils.Logger;
-import com.yek.keyboard.R;
+import com.menny.android.anysoftkeyboard.R;
 
 import java.util.List;
 import java.util.Locale;
@@ -114,15 +114,5 @@ public class KeyboardThemeFactory extends AddOnsFactory<KeyboardTheme> {
             return true;
         }
         return false;
-    }
-
-    public static void setCurrentKeyboardTheme(Context context, String themeId) {
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
-        String settingKey = context.getString(R.string.settings_key_keyboard_theme_key);
-
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString(settingKey, themeId);
-        editor.apply();
-
     }
 }

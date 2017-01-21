@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 
-import com.yek.keyboard.R;
+import com.menny.android.anysoftkeyboard.R;
 
 public class WizardPageSwitchToKeyboardFragment extends WizardPageBaseFragment {
 

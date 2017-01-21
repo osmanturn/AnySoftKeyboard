@@ -12,7 +12,7 @@ import com.anysoftkeyboard.api.KeyCodes;
 import com.anysoftkeyboard.devicespecific.Clipboard;
 import com.anysoftkeyboard.keyboards.Keyboard;
 import com.yek.keyboard.AnyApplication;
-import com.yek.keyboard.R;
+import com.menny.android.anysoftkeyboard.R;
 
 public abstract class AnySoftKeyboardClipboard extends AnySoftKeyboardSwipeListener {
     private static final String PREF_KEY_TIMES_SHOWED_LONG_PRESS_TIP = "PREF_KEY_TIMES_SHOWED_LONG_PRESS_TIP";

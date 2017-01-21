@@ -18,7 +18,7 @@ package com.anysoftkeyboard.utils;
 
 import android.support.annotation.NonNull;
 
-import com.yek.keyboard.BuildConfig;
+import com.menny.android.anysoftkeyboard.BuildConfig;
 
 import java.util.ArrayList;
 import java.util.Locale;

@@ -2,15 +2,11 @@ package com.anysoftkeyboard.dictionaries;
 
 import android.content.ContentResolver;
 import android.content.Context;
-import android.database.AbstractCursor;
 import android.database.ContentObserver;
-
-import com.anysoftkeyboard.base.dictionaries.WordsCursor;
-import com.anysoftkeyboard.dictionaries.sqlite.WordsSQLiteConnection;
 
 import java.lang.reflect.Field;
 
-public class TestableBTreeDictionary extends BTreeDictionary{
+public class TestableBTreeDictionary extends BTreeDictionary {
     public static final Object[][] STORAGE = {
             {1, "hello", 255, "en"},
             {2, "AnySoftKeyboard", 255, "en"},
@@ -52,64 +48,14 @@ public class TestableBTreeDictionary extends BTreeDictionary{
     }
 
     @Override
-    public WordsCursor getWordsCursor() {
-        storageIsClosed = false;
-        return new WordsCursor(new AbstractCursor() {
-
-            @Override
-            public int getCount() {
-                return STORAGE.length;
-            }
-
-            @Override
-            public String[] getColumnNames() {
-                return new String[]
-                        {       WordsSQLiteConnection.Words._ID,
-                                WordsSQLiteConnection.Words.WORD,
-                                WordsSQLiteConnection.Words.FREQUENCY,
-                                WordsSQLiteConnection.Words.LOCALE
-                        };
-            }
-
-            @Override
-            public String getString(int column) {
-                return (String)STORAGE[getPosition()][column];
-            }
-
-            @Override
-            public short getShort(int column) {
-                return (Short)STORAGE[getPosition()][column];
-            }
-
-            @Override
-            public int getInt(int column) {
-                return (Integer)STORAGE[getPosition()][column];
-            }
-
-            @Override
-            public long getLong(int column) {
-                return (Long)STORAGE[getPosition()][column];
-            }
-
-            @Override
-            public float getFloat(int column) {
-                return (Float)STORAGE[getPosition()][column];
-            }
-
-            @Override
-            public double getDouble(int column) {
-                return (Double)STORAGE[getPosition()][column];
-            }
-
-            @Override
-            public boolean isNull(int column) {
-                return STORAGE[getPosition()][column] == null;
-            }
-        });
+    protected void readWordsFromActualStorage(WordReadListener listener) {
+        for (Object[] row : STORAGE) {
+            listener.onWordRead((String) row[1], (int) row[2]);
+        }
     }
 
     @Override
-    protected void AddWordToStorage(String word, int frequency) {
+    protected void addWordToStorage(String word, int frequency) {
         wordRequestedToAddedToStorage = word;
         wordFrequencyRequestedToAddedToStorage = frequency;
     }

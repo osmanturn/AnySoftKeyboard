@@ -4,15 +4,15 @@ import android.view.View;
 
 import com.anysoftkeyboard.api.KeyCodes;
 import com.anysoftkeyboard.keyboards.views.OnKeyboardActionListener;
-import com.yek.keyboardAskGradleTestRunner;
-import com.yek.keyboard.R;
+import com.menny.android.anysoftkeyboard.R;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 
-@RunWith(AskGradleTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 public class FrameKeyboardViewClickListenerTest {
 
     @Test

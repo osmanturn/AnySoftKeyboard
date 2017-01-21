@@ -39,7 +39,8 @@ import com.anysoftkeyboard.devicespecific.StrictModeAble;
 import com.anysoftkeyboard.ui.tutorials.TutorialsProvider;
 import com.anysoftkeyboard.utils.LogCatLogProvider;
 import com.anysoftkeyboard.utils.Logger;
-import com.yek.keyboard.ui.LauncherSettingsActivity;
+import com.menny.android.anysoftkeyboard.BuildConfig;
+import com.menny.android.anysoftkeyboard.R;
 
 import net.evendanan.frankenrobot.FrankenRobot;
 import net.evendanan.frankenrobot.Lab;
@@ -97,7 +98,7 @@ public class AnyApplication extends Application implements OnSharedPreferenceCha
 
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
         ((AskPrefsImpl) msConfig).onSharedPreferenceChanged(sharedPreferences, key);
-        //should we disable the Settings App? com.yek.keyboardLauncherSettingsActivity
+        //should we disable the Settings App? com.yek.keyboard.LauncherSettingsActivity
         if (key.equals(getString(R.string.settings_key_show_settings_app))) {
             PackageManager pm = getPackageManager();
             boolean showApp = sharedPreferences.getBoolean(key, getResources().getBoolean(R.bool.settings_default_show_settings_app));

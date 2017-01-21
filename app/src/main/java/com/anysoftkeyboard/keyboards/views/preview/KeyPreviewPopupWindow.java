@@ -19,7 +19,7 @@ import com.anysoftkeyboard.AskPrefs;
 import com.anysoftkeyboard.base.utils.CompatUtils;
 import com.anysoftkeyboard.keyboards.Keyboard;
 import com.yek.keyboard.AnyApplication;
-import com.yek.keyboard.R;
+import com.menny.android.anysoftkeyboard.R;
 
 public class KeyPreviewPopupWindow implements KeyPreview {
 

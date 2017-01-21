@@ -41,8 +41,8 @@ import com.anysoftkeyboard.keyboards.views.OnKeyboardActionListener;
 import com.anysoftkeyboard.ui.dev.DeveloperUtils;
 import com.anysoftkeyboard.utils.Logger;
 import com.yek.keyboard.AnyApplication;
-import com.yek.keyboard.BuildConfig;
-import com.yek.keyboard.R;
+import com.menny.android.anysoftkeyboard.BuildConfig;
+import com.menny.android.anysoftkeyboard.R;
 
 public abstract class AnySoftKeyboardBase
         extends InputMethodService

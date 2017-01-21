@@ -20,7 +20,7 @@ import com.anysoftkeyboard.PermissionsRequestCodes;
 import com.anysoftkeyboard.ui.settings.MainSettingsActivity;
 import com.anysoftkeyboard.utils.Logger;
 import com.yek.keyboard.AnyApplication;
-import com.yek.keyboard.R;
+import com.menny.android.anysoftkeyboard.R;
 
 import net.evendanan.chauffeur.lib.permissions.PermissionsRequest;
 

@@ -22,7 +22,7 @@ import android.support.annotation.Nullable;
 
 import com.anysoftkeyboard.addons.AddOn;
 import com.anysoftkeyboard.keyboardextensions.KeyboardExtension;
-import com.yek.keyboard.R;
+import com.menny.android.anysoftkeyboard.R;
 
 import java.util.List;
 

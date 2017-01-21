@@ -24,7 +24,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.preference.PreferenceFragment;
 import android.view.View;
 
-import com.yek.keyboard.R;
+import com.menny.android.anysoftkeyboard.R;
 
 import net.evendanan.chauffeur.lib.FragmentChauffeurActivity;
 import net.evendanan.chauffeur.lib.experiences.TransitionExperiences;

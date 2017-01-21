@@ -17,9 +17,10 @@
 package com.yek.keyboard;
 
 
+import com.menny.android.anysoftkeyboard.BuildConfig;
+
 public class FeaturesSet {
 
-    public static final boolean DEBUG_LOG = BuildConfig.DEBUG;
     public static final boolean CUTTING_EDGE = BuildConfig.DEBUG;
 
 }

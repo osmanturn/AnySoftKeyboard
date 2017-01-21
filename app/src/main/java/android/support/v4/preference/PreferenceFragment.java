@@ -33,7 +33,7 @@ import android.view.View.OnKeyListener;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-import com.yek.keyboard.R;
+import com.menny.android.anysoftkeyboard.R;
 
 import java.lang.ref.WeakReference;
 
@@ -107,10 +107,8 @@ public abstract class PreferenceFragment extends Fragment implements
     }
 
     @Override
-    public View onCreateView(LayoutInflater paramLayoutInflater, ViewGroup paramViewGroup,
-                             Bundle paramBundle) {
-        return paramLayoutInflater.inflate(R.layout.preference_list_fragment, paramViewGroup,
-                false);
+    public View onCreateView(LayoutInflater paramLayoutInflater, ViewGroup paramViewGroup, Bundle paramBundle) {
+        return paramLayoutInflater.inflate(R.layout.preference_list_fragment, paramViewGroup, false);
     }
 
     @Override

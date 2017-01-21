@@ -39,7 +39,7 @@ import com.anysoftkeyboard.base.utils.CompatUtils;
 import com.anysoftkeyboard.keyboards.AnyPopupKeyboard;
 import com.anysoftkeyboard.keyboards.Keyboard;
 import com.yek.keyboard.AnyApplication;
-import com.yek.keyboard.R;
+import com.menny.android.anysoftkeyboard.R;
 
 /**
  * Supports popup keyboard when {@link com.anysoftkeyboard.keyboards.AnyKeyboard.AnyKey} says it has
@@ -130,8 +130,8 @@ public class AnyKeyboardViewWithMiniKeyboard extends SizeSensitiveAnyKeyboardVie
         }
 
         mMiniKeyboard.measure(
-                View.MeasureSpec.makeMeasureSpec(getWidth(), View.MeasureSpec.AT_MOST),
-                View.MeasureSpec.makeMeasureSpec(getHeight(), View.MeasureSpec.AT_MOST));
+                MeasureSpec.makeMeasureSpec(getWidth(), MeasureSpec.AT_MOST),
+                MeasureSpec.makeMeasureSpec(getHeight(), MeasureSpec.AT_MOST));
     }
 
     @Override

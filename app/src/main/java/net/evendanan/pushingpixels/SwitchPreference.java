@@ -31,7 +31,7 @@ import android.view.accessibility.AccessibilityManager;
 import android.widget.CompoundButton;
 import android.widget.TextView;
 
-import com.yek.keyboard.R;
+import com.menny.android.anysoftkeyboard.R;
 
 /**
  * A {@link Preference} that provides Switch widget. Or a ToggleButton in API 13 or prior.

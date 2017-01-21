@@ -23,7 +23,7 @@ import com.anysoftkeyboard.base.dictionaries.Dictionary;
 import com.anysoftkeyboard.dictionaries.jni.BinaryDictionary;
 import com.anysoftkeyboard.dictionaries.jni.ResourceBinaryDictionary;
 import com.anysoftkeyboard.utils.Logger;
-import com.yek.keyboard.BuildConfig;
+import com.menny.android.anysoftkeyboard.BuildConfig;
 
 import java.util.Arrays;
 import java.util.List;

@@ -32,7 +32,7 @@ import com.anysoftkeyboard.keyboards.KeyboardDimens;
 import com.anysoftkeyboard.quicktextkeys.QuickTextKey;
 import com.anysoftkeyboard.quicktextkeys.QuickTextKeyFactory;
 import com.anysoftkeyboard.quicktextkeys.TagsExtractor;
-import com.yek.keyboard.R;
+import com.menny.android.anysoftkeyboard.R;
 
 import java.util.ArrayList;
 import java.util.Collection;

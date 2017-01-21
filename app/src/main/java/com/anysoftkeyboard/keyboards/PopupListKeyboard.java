@@ -4,7 +4,7 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 
 import com.anysoftkeyboard.addons.AddOn;
-import com.yek.keyboard.R;
+import com.menny.android.anysoftkeyboard.R;
 
 public class PopupListKeyboard extends AnyPopupKeyboard {
 	private final int mAdditionalWidth;
@@ -12,8 +12,8 @@ public class PopupListKeyboard extends AnyPopupKeyboard {
 	public PopupListKeyboard(@NonNull AddOn keyboardAddOn, Context askContext, KeyboardDimens keyboardDimens, String[] keysNames, String[] keyValues, String name) {
 		super(keyboardAddOn, askContext, askContext, R.xml.quick_text_list_popup, keyboardDimens, name);
 		int rowWidth = 0;
-		Keyboard.Key baseKey = getKeys().get(0);
-		Keyboard.Row row = baseKey.row;
+		Key baseKey = getKeys().get(0);
+		Row row = baseKey.row;
 		//now adding the popups
 		final float y = baseKey.y;
 		final float keyHorizontalGap = row.defaultHorizontalGap;
@@ -21,7 +21,7 @@ public class PopupListKeyboard extends AnyPopupKeyboard {
 		baseKey.label = keysNames[0];
 		baseKey.text = keyValues[0];
 		float x = baseKey.width;
-		Keyboard.Key aKey = null;
+		Key aKey = null;
 		for (int entryIndex = 1; entryIndex < keysNames.length; entryIndex++) {
 			x += (keyHorizontalGap / 2);
 

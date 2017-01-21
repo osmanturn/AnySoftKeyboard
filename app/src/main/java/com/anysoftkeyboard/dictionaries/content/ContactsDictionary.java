@@ -34,7 +34,7 @@ import com.anysoftkeyboard.dictionaries.BTreeDictionary;
 import com.anysoftkeyboard.nextword.NextWord;
 import com.anysoftkeyboard.nextword.NextWordGetter;
 import com.anysoftkeyboard.ui.settings.MainSettingsActivity;
-import com.yek.keyboard.R;
+import com.menny.android.anysoftkeyboard.R;
 
 import net.evendanan.chauffeur.lib.permissions.PermissionsFragmentChauffeurActivity;
 

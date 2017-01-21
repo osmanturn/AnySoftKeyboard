@@ -19,7 +19,6 @@ package com.anysoftkeyboard.dictionaries.sqlite;
 import android.content.Context;
 import android.support.annotation.NonNull;
 
-import com.anysoftkeyboard.base.dictionaries.Dictionary;
 import com.anysoftkeyboard.base.dictionaries.WordComposer;
 
 import java.util.ArrayList;
@@ -48,7 +47,7 @@ public class AbbreviationsDictionary extends SQLiteUserDictionaryBase {
     }
 
     @Override
-    public void getWords(WordComposer codes, Dictionary.WordCallback callback) {
+    public void getWords(WordComposer codes, WordCallback callback) {
         if (isClosed() || isLoading()) return;
 
         String word = codes.getTypedWord().toString();
@@ -60,7 +59,7 @@ public class AbbreviationsDictionary extends SQLiteUserDictionaryBase {
         }
     }
 
-    private void reportExplodedWords(Dictionary.WordCallback callback, String word) {
+    private void reportExplodedWords(WordCallback callback, String word) {
         List<String> explodedStringsList = mAbbreviationsMap.get(word);
         if (explodedStringsList != null) {
             for(String explodedString : explodedStringsList)

@@ -38,8 +38,8 @@ import com.anysoftkeyboard.keyboards.views.KeyDrawableStateProvider;
 import com.anysoftkeyboard.utils.Logger;
 import com.anysoftkeyboard.utils.Workarounds;
 import com.yek.keyboard.AnyApplication;
-import com.yek.keyboard.BuildConfig;
-import com.yek.keyboard.R;
+import com.menny.android.anysoftkeyboard.BuildConfig;
+import com.menny.android.anysoftkeyboard.R;
 
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -625,7 +625,7 @@ public abstract class AnyKeyboard extends Keyboard {
         // filling popup res for external keyboards
         if (aKey.popupCharacters != null) {
             if (aKey.popupCharacters.length() > 0) {
-                aKey.popupResId = com.yek.keyboard.R.xml.popup_one_row;
+                aKey.popupResId = com.menny.android.anysoftkeyboard.R.xml.popup_one_row;
             }
             return true;
         }

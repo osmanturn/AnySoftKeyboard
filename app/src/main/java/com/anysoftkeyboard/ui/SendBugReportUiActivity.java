@@ -28,8 +28,8 @@ import android.widget.Toast;
 
 import com.anysoftkeyboard.ui.dev.LogCatViewFragment;
 import com.anysoftkeyboard.utils.Logger;
-import com.yek.keyboard.BuildConfig;
-import com.yek.keyboard.R;
+import com.menny.android.anysoftkeyboard.BuildConfig;
+import com.menny.android.anysoftkeyboard.R;
 
 
 public class SendBugReportUiActivity extends FragmentActivity {
@@ -56,7 +56,7 @@ public class SendBugReportUiActivity extends FragmentActivity {
             dest.writeString(crashReportText);
         }
 
-        public static final Creator CREATOR = new Creator() {
+        public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {
             public BugReportDetails createFromParcel(Parcel in) {
                 return new BugReportDetails(in);
             }

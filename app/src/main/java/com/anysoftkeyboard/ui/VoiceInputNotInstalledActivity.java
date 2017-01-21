@@ -23,9 +23,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-import com.yek.keyboard.R;
+import com.menny.android.anysoftkeyboard.R;
 
-public class VoiceInputNotInstalledActivity extends Activity implements View.OnClickListener {
+public class VoiceInputNotInstalledActivity extends Activity implements android.view.View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

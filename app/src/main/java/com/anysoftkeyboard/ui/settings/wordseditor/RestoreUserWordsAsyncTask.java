@@ -24,7 +24,7 @@ import android.widget.Toast;
 
 import com.anysoftkeyboard.dictionaries.UserDictionary;
 import com.anysoftkeyboard.utils.Logger;
-import com.yek.keyboard.R;
+import com.menny.android.anysoftkeyboard.R;
 
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;

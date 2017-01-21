@@ -31,7 +31,7 @@ import android.support.v4.content.SharedPreferencesCompat;
 
 import com.anysoftkeyboard.utils.Logger;
 import com.yek.keyboard.AnyApplication;
-import com.yek.keyboard.R;
+import com.menny.android.anysoftkeyboard.R;
 
 import java.io.File;
 import java.io.IOException;

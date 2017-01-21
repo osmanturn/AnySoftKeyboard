@@ -29,7 +29,7 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.yek.keyboard.R;
+import com.menny.android.anysoftkeyboard.R;
 
 public class AddOnStoreSearchPreference extends Preference {
 

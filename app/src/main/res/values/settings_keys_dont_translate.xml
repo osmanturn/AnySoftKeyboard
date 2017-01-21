@@ -258,16 +258,4 @@
     <string name="settings_key_always_hide_language_key">settings_key_always_hide_language_key</string>
 
     <string name="settings_key_support_password_keyboard_type_state">settings_key_support_password_keyboard_type_state</string>
-    <string-array name="settings_key_should_swap_punctuation_and_space_names">
-        <item>@string/should_swap_punctuation_and_space_yes</item>
-        <item>@string/should_swap_punctuation_and_space_no</item>
-    </string-array>
-    <string-array name="settings_key_should_swap_punctuation_and_space_values">
-        <item>yes</item>
-        <item>no</item>
-    </string-array>
-
-    <string name="settings_key_should_swap_punctuation_and_space">settings_key_should_swap_punctuation_and_space</string>
-
-
 </resources>

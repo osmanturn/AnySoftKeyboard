@@ -16,9 +16,8 @@ import com.anysoftkeyboard.quicktextkeys.QuickTextKey;
 import com.anysoftkeyboard.quicktextkeys.QuickTextKeyFactory;
 import com.anysoftkeyboard.ui.settings.MainSettingsActivity;
 import com.anysoftkeyboard.utils.Logger;
-import com.dragsortrecycler.DragSortRecycler;
-import com.dragsortrecycler.DragSortRecycler;
-import com.yek.keyboard.R;
+import com.emtronics.dragsortrecycler.DragSortRecycler;
+import com.menny.android.anysoftkeyboard.R;
 
 import java.util.ArrayList;
 import java.util.HashSet;

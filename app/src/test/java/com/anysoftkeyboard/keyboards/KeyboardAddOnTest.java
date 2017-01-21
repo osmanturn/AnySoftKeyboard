@@ -1,10 +1,9 @@
 package com.anysoftkeyboard.keyboards;
 
-import com.yek.keyboardAskGradleTestRunner;
-
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 
 import java.util.HashMap;
@@ -15,7 +14,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
-@RunWith(AskGradleTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 public class KeyboardAddOnTest {
 
     public static final String ASK_ENGLISH_1_ID = "keyboard_c7535083-4fe6-49dc-81aa-c5438a1a343a";
@@ -75,27 +74,6 @@ public class KeyboardAddOnTest {
         KeyboardAddOnAndBuilder testerEnglish = getKeyboardFromFactory(ASK_ENGLISH_16_KEYS_ID);
         assertNotNull(testerEnglish);
         assertEquals(testerEnglish.getKeyboardLocale(), "en");
-    }
-
-    @Test
-    public void testGetIcon() throws Exception {
-
-    }
-
-    @Test
-    public void testHasScreenshot() throws Exception {
-        KeyboardAddOnAndBuilder askEnglish = getKeyboardFromFactory(ASK_ENGLISH_1_ID);
-        assertNotNull(askEnglish);
-        assertTrue(askEnglish.hasScreenshot());
-
-        KeyboardAddOnAndBuilder testerEnglish = getKeyboardFromFactory(ASK_ENGLISH_16_KEYS_ID);
-        assertNotNull(testerEnglish);
-        assertTrue(askEnglish.hasScreenshot());
-    }
-
-    @Test
-    public void testGetScreenshot() throws Exception {
-
     }
 
     @Test

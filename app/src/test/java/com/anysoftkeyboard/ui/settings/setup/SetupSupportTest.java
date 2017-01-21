@@ -2,15 +2,14 @@ package com.anysoftkeyboard.ui.settings.setup;
 
 import android.content.ComponentName;
 
-import com.yek.keyboardAskGradleTestRunner;
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.robolectric.RobolectricTestRunner;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-@RunWith(AskGradleTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 public class SetupSupportTest {
 
     @Test
@@ -26,6 +25,7 @@ public class SetupSupportTest {
         assertTrue(SetupSupport.isThisKeyboardSetAsDefaultIME(new ComponentName(MY_IME_PACKAGE, ".IME").flattenToString(), MY_IME_PACKAGE));
     }
 
+	@Test
     public void testIsThisKeyboardEnabled() throws Exception {
         final String MY_IME_PACKAGE = "net.evendanan.ime";
         assertFalse(SetupSupport.isThisKeyboardEnabled("", MY_IME_PACKAGE));

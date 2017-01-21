@@ -32,6 +32,8 @@ import android.text.format.DateFormat;
 import com.anysoftkeyboard.ui.SendBugReportUiActivity;
 import com.anysoftkeyboard.ui.dev.DeveloperUtils;
 import com.anysoftkeyboard.utils.Logger;
+import com.menny.android.anysoftkeyboard.BuildConfig;
+import com.menny.android.anysoftkeyboard.R;
 
 import java.io.File;
 import java.lang.Thread.UncaughtExceptionHandler;

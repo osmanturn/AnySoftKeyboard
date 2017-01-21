@@ -4,19 +4,19 @@ import org.gradle.api.plugins.ExtensionContainer
 
 public abstract class VersionBuilder {
 
-    public static versionbuilder.VersionBuilder getVersionBuilder(int major, int minor, ExtensionContainer exts) {
+    public static VersionBuilder getVersionBuilder(int major, int minor, ExtensionContainer exts) {
         if (ShippableVersionBuilder.isShippableEnvironment()) {
             println("Using ShippableVersionBuilder for versioning.")
             return new ShippableVersionBuilder(major, minor, exts)
-        } else if (versionbuilder.CircleCIVersionBuilder.isCircleCiEnvironment()) {
+        } else if (CircleCIVersionBuilder.isCircleCiEnvironment()) {
             println("Using CircleCIVersionBuilder for versioning.")
-            return new versionbuilder.CircleCIVersionBuilder(major, minor, exts)
+            return new CircleCIVersionBuilder(major, minor, exts)
         } else if (GitVersionBuilder.isGitEnvironment()) {
             println("Using GitVersionBuilder for versioning.")
             return new GitVersionBuilder(major, minor, exts)
         } else {
             println("Using fallback StaticVersionBuilder for versioning.")
-            return new versionbuilder.StaticVersionBuilder(major, minor, exts)
+            return new StaticVersionBuilder(major, minor, exts)
         }
     }
 

@@ -2,9 +2,7 @@ package versionbuilder
 
 import org.gradle.api.plugins.ExtensionContainer;
 
-/*package*/
-
-class GitVersionBuilder extends versionbuilder.VersionBuilder {
+/*package*/ class GitVersionBuilder extends VersionBuilder {
     static boolean isGitEnvironment() {
         try {
             return getGitHistoryLength() > 0

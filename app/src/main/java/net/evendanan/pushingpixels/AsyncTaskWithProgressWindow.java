@@ -21,7 +21,7 @@ import android.app.Dialog;
 import android.os.AsyncTask;
 import android.util.Log;
 
-import com.yek.keyboard.R;
+import com.menny.android.anysoftkeyboard.R;
 
 import java.lang.ref.WeakReference;
 
@@ -50,8 +50,7 @@ public abstract class AsyncTaskWithProgressWindow<Params, Progress, Result, A ex
     }
 
     protected final A getOwner() {
-        A a = mActivity.get();
-        return a;
+        return mActivity.get();
     }
 
     @Override

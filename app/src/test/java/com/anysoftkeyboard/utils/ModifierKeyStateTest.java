@@ -1,13 +1,12 @@
 package com.anysoftkeyboard.utils;
 
-import com.yek.keyboardAskGradleTestRunner;
-
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.shadows.ShadowSystemClock;
 
-@RunWith(AskGradleTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 public class ModifierKeyStateTest {
 
     @Test

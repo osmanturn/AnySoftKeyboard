@@ -1,16 +1,15 @@
 package com.anysoftkeyboard.nextword;
 
-import com.yek.keyboardAskGradleTestRunner;
-
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 
 import java.util.Iterator;
 
-@RunWith(AskGradleTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 public class NextWordDictionaryTest {
     private NextWordDictionary mNextWordDictionaryUnderTest;
 

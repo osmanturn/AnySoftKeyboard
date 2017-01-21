@@ -2,11 +2,10 @@ package com.anysoftkeyboard.nextword;
 
 import android.content.Context;
 
-import com.yek.keyboardAskGradleTestRunner;
-
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 
 import java.io.InputStream;
@@ -16,7 +15,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-@RunWith(AskGradleTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 public class NextWordsFileParserV1Test {
 
     @Test

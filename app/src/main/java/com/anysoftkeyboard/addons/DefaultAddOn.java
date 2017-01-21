@@ -2,7 +2,7 @@ package com.anysoftkeyboard.addons;
 
 import android.content.Context;
 
-import com.yek.keyboard.R;
+import com.menny.android.anysoftkeyboard.R;
 
 /**
  * Empty add-on which is to be used to hold simple implementation for context mapping

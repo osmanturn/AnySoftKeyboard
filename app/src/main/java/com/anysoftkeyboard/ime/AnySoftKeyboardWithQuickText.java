@@ -12,7 +12,7 @@ import com.anysoftkeyboard.quicktextkeys.QuickTextKey;
 import com.anysoftkeyboard.quicktextkeys.QuickTextKeyFactory;
 import com.anysoftkeyboard.quicktextkeys.ui.QuickTextPagerView;
 import com.anysoftkeyboard.quicktextkeys.ui.QuickTextViewFactory;
-import com.yek.keyboard.R;
+import com.menny.android.anysoftkeyboard.R;
 
 public abstract class AnySoftKeyboardWithQuickText extends AnySoftKeyboardClipboard {
 

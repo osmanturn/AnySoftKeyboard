@@ -31,6 +31,14 @@
         android:title="@string/tweak_ui_group">
 
         <CheckBoxPreference
+            android:defaultValue="@bool/settings_default_keyboard_icon_in_status_bar"
+            android:key="@string/settings_key_keyboard_icon_in_status_bar"
+            android:persistent="true"
+            android:summaryOff="@string/show_keyboard_icon_in_status_bar_off_summary"
+            android:summaryOn="@string/show_keyboard_icon_in_status_bar_on_summary"
+            android:title="@string/show_keyboard_icon_in_status_bar_title"/>
+
+        <CheckBoxPreference
             android:defaultValue="@bool/settings_default_is_sticky_extesion_keyboard"
             android:key="@string/settings_key_is_sticky_extesion_keyboard"
             android:persistent="true"
@@ -122,6 +130,14 @@
             android:persistent="true"
             android:singleLine="true"
             android:title="@string/default_smiley_text"/>
+
+        <CheckBoxPreference
+            android:defaultValue="@bool/settings_default_always_hide_language_key"
+            android:key="@string/settings_key_always_hide_language_key"
+            android:persistent="true"
+            android:summaryOff="@string/always_hide_language_key_off_summary"
+            android:summaryOn="@string/always_hide_language_key_on_summary"
+            android:title="@string/always_hide_language_key"/>
 
         <net.evendanan.pushingpixels.ListPreference
             android:defaultValue="@string/settings_default_default_split_state"

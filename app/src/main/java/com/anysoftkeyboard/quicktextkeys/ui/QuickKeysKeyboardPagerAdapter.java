@@ -18,7 +18,7 @@ import com.anysoftkeyboard.quicktextkeys.HistoryQuickTextKey;
 import com.anysoftkeyboard.quicktextkeys.QuickTextKey;
 import com.anysoftkeyboard.ui.ScrollViewWithDisable;
 import com.anysoftkeyboard.ui.ViewPagerWithDisable;
-import com.yek.keyboard.R;
+import com.menny.android.anysoftkeyboard.R;
 
 import java.util.List;
 

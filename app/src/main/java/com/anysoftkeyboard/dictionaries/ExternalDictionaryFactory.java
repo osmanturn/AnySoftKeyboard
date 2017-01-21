@@ -24,7 +24,7 @@ import android.util.AttributeSet;
 import com.anysoftkeyboard.addons.AddOn;
 import com.anysoftkeyboard.addons.AddOnsFactory;
 import com.anysoftkeyboard.utils.Logger;
-import com.yek.keyboard.R;
+import com.menny.android.anysoftkeyboard.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -62,7 +62,7 @@ public class ExternalDictionaryFactory extends AddOnsFactory<DictionaryAddOnAndB
     private final Map<String, DictionaryAddOnAndBuilder> mBuildersByLocale = new ArrayMap<>();
 
     private ExternalDictionaryFactory() {
-        super(TAG, "com.yek.keyboardDICTIONARY", "com.yek.keyboarddictionaries",
+        super(TAG, "com.menny.android.anysoftkeyboard.DICTIONARY", "com.menny.android.anysoftkeyboard.dictionaries",
                 "Dictionaries", "Dictionary",
                 R.xml.dictionaries, true);
     }

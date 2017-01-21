@@ -25,7 +25,7 @@ extensions.add("versionNumberBuilderGitOffset", -2268)
 extensions.add("versionNumberBuilderShippableOffset", 852)
 extensions.add("versionNumberBuilderCircleCiOffset", 1650)
 
-def versionBuilder = VersionBuilder.getVersionBuilder(1, 6, extensions)
+def versionBuilder = VersionBuilder.getVersionBuilder(1, 8, extensions)
 
 version versionBuilder.getVersionName()
 group 'net.evendanan'
@@ -155,14 +155,10 @@ dependencies {
 
     compile "com.github.AnySoftKeyboard:AnySoftKeyboard-API:$AnySoftKeyboardApiVersion"
     compile 'com.github.menny:FrankenRobot:1.1.5'
-    compile "com.android.support:support-v4:$supportLibVersion"
     compile "com.android.support:appcompat-v7:$supportLibVersion"
-    compile "com.android.support:design:$supportLibVersion"
-    compile "com.android.support:cardview-v7:$supportLibVersion"
     compile "com.android.support:recyclerview-v7:$supportLibVersion"
     compile "com.android.support:support-annotations:$supportLibVersion"
     compile "com.android.support:palette-v7:$supportLibVersion"
-    compile "com.android.support:percent:$supportLibVersion"
     compile 'com.jpardogo.materialtabstrip:library:1.1.0'
     compile ('com.github.menny.Chauffeur:permissions:118539bb4cde0420928d60766dd0fdac9be9c6ba') {
         exclude group: 'com.android.support'

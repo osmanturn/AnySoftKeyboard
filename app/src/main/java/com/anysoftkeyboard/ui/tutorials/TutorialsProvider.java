@@ -29,8 +29,8 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.content.SharedPreferencesCompat;
 
 import com.anysoftkeyboard.utils.Logger;
-import com.yek.keyboard.BuildConfig;
-import com.yek.keyboard.R;
+import com.menny.android.anysoftkeyboard.BuildConfig;
+import com.menny.android.anysoftkeyboard.R;
 
 public class TutorialsProvider {
     private static final String TAG = "ASK Tutorial";

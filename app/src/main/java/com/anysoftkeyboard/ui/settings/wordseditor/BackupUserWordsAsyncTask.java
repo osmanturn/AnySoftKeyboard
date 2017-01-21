@@ -22,13 +22,12 @@ import android.support.annotation.NonNull;
 import android.text.TextUtils;
 import android.widget.Toast;
 
-import com.anysoftkeyboard.dictionaries.BTreeDictionary;
 import com.anysoftkeyboard.dictionaries.UserDictionary;
 import com.anysoftkeyboard.dictionaries.content.AndroidUserDictionary;
 import com.anysoftkeyboard.dictionaries.sqlite.FallbackUserDictionary;
 import com.anysoftkeyboard.utils.Logger;
 import com.anysoftkeyboard.utils.XmlWriter;
-import com.yek.keyboard.R;
+import com.menny.android.anysoftkeyboard.R;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -158,9 +157,9 @@ final class BackupUserWordsAsyncTask extends UserWordsEditorAsyncTask {
         }
 
         @Override
-        protected void readWordsFromActualStorage(final BTreeDictionary.WordReadListener listener) {
+        protected void readWordsFromActualStorage(final WordReadListener listener) {
             mLoadedWords.clear();
-            BTreeDictionary.WordReadListener myListener = new BTreeDictionary.WordReadListener() {
+            WordReadListener myListener = new WordReadListener() {
                 @Override
                 public boolean onWordRead(String word, int frequency) {
                     mLoadedWords.add(new UserDictionaryEditorFragment.LoadedWord(word, frequency));

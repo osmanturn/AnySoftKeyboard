@@ -29,7 +29,7 @@ import android.util.Xml;
 
 import com.anysoftkeyboard.AnySoftKeyboard;
 import com.anysoftkeyboard.utils.Logger;
-import com.yek.keyboard.BuildConfig;
+import com.menny.android.anysoftkeyboard.BuildConfig;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;

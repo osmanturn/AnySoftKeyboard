@@ -5,7 +5,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
-import com.yek.keyboard.R;
+import com.menny.android.anysoftkeyboard.R;
 
 public class QuickTextViewFactory {
 

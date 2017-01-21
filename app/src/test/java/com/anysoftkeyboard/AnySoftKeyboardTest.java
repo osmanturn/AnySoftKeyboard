@@ -1,13 +1,15 @@
 package com.anysoftkeyboard;
 
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.anysoftkeyboard.keyboards.views.AnyKeyboardView;
 import com.anysoftkeyboard.keyboards.views.CandidateView;
-import com.yek.keyboardAskGradleTestRunner;
-import com.yek.keyboard.R;
+import com.anysoftkeyboard.keyboards.views.KeyboardViewContainerView;
+import com.menny.android.anysoftkeyboard.R;
+import com.yek.keyboard.SoftKeyboard;
 
 import org.junit.After;
 import org.junit.Assert;
@@ -15,18 +17,19 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.Shadows;
 import org.robolectric.shadows.ShadowSystemClock;
 import org.robolectric.util.ServiceController;
 
-@RunWith(AskGradleTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 public class AnySoftKeyboardTest {
 
-    private ServiceController<AnySoftKeyboard> mAnySoftKeyboardUnderTest;
+    private ServiceController<SoftKeyboard> mAnySoftKeyboardUnderTest;
 
     @Before
     public void setUp() throws Exception {
-        mAnySoftKeyboardUnderTest = Robolectric.buildService(AnySoftKeyboard.class);
+        mAnySoftKeyboardUnderTest = Robolectric.buildService(SoftKeyboard.class);
     }
 
     @After
@@ -43,7 +46,11 @@ public class AnySoftKeyboardTest {
     public void testOnCreateInputView() throws Exception {
         View mainKeyboardView = mAnySoftKeyboardUnderTest.attach().create().get().onCreateInputView();
         Assert.assertNotNull(mainKeyboardView);
-        Assert.assertTrue(mainKeyboardView instanceof AnyKeyboardView);
+        Assert.assertTrue(mainKeyboardView instanceof KeyboardViewContainerView);
+        KeyboardViewContainerView containerView = (KeyboardViewContainerView) mainKeyboardView;
+        Assert.assertEquals(1, containerView.getChildCount());
+        Assert.assertNotNull(containerView.getChildAt(0));
+        Assert.assertTrue(containerView.getChildAt(0) instanceof AnyKeyboardView);
     }
 
     @Test
@@ -53,6 +60,9 @@ public class AnySoftKeyboardTest {
         View candidateView = candidatesRootView.findViewById(R.id.candidates);
         Assert.assertNotNull(candidateView);
         Assert.assertTrue(candidateView instanceof CandidateView);
+
+        mAnySoftKeyboardUnderTest.get().setCandidatesView(candidatesRootView);
+
         View closeStripView = candidatesRootView.findViewById(R.id.close_suggestions_strip_icon);
         Assert.assertNotNull(closeStripView);
         Assert.assertTrue(closeStripView instanceof ImageView);
@@ -64,6 +74,8 @@ public class AnySoftKeyboardTest {
     @Test
     public void testCandidateViewCloseTextAnimation() throws Exception {
         View candidatesRootView = mAnySoftKeyboardUnderTest.attach().create().get().onCreateCandidatesView();
+        mAnySoftKeyboardUnderTest.get().setCandidatesView(candidatesRootView);
+
         View closeStripTextView = candidatesRootView.findViewById(R.id.close_suggestions_strip_text);
         View closeStripView = candidatesRootView.findViewById(R.id.close_suggestions_strip_icon);
         View.OnClickListener closeListener = Shadows.shadowOf(closeStripView).getOnClickListener();
@@ -84,6 +96,8 @@ public class AnySoftKeyboardTest {
     @Test
     public void testCandidateViewCloseBehavior() throws Exception {
         View candidatesRootView = mAnySoftKeyboardUnderTest.attach().create().get().onCreateCandidatesView();
+        mAnySoftKeyboardUnderTest.get().setCandidatesView(candidatesRootView);
+
         View closeStripTextView = candidatesRootView.findViewById(R.id.close_suggestions_strip_text);
         View closeStripView = candidatesRootView.findViewById(R.id.close_suggestions_strip_icon);
         View.OnClickListener closeIconListener = Shadows.shadowOf(closeStripView).getOnClickListener();
@@ -94,6 +108,40 @@ public class AnySoftKeyboardTest {
         closeListener.onClick(closeStripTextView);
 
         Assert.assertEquals(View.GONE, closeStripTextView.getVisibility());
+    }
+
+    @Test
+    public void testKeyboardHiddenBehavior() throws Exception {
+        ServiceController<TestableAnySoftKeyboard> testableAnySoftKeyboardServiceController = Robolectric.buildService(TestableAnySoftKeyboard.class);
+        TestableAnySoftKeyboard testableAnySoftKeyboard = testableAnySoftKeyboardServiceController.attach().create().get();
+        Assert.assertTrue(testableAnySoftKeyboard.isKeyboardViewHidden());
+
+        final EditorInfo editorInfo = TestableAnySoftKeyboard.createEditorInfoTextWithSuggestions();
+
+        testableAnySoftKeyboard.onCreateInputView();
+        testableAnySoftKeyboard.onStartInput(editorInfo, false);
+
+        Assert.assertTrue(testableAnySoftKeyboard.isKeyboardViewHidden());
+        testableAnySoftKeyboard.onStartInputView(editorInfo, false);
+        Assert.assertFalse(testableAnySoftKeyboard.isKeyboardViewHidden());
+
+        testableAnySoftKeyboardServiceController.destroy();
+        Assert.assertTrue(testableAnySoftKeyboard.isKeyboardViewHidden());
+    }
+
+    @Test
+    public void testKeyboardDoesNotCloseWhenUserCancelKey() throws Exception {
+        ServiceController<TestableAnySoftKeyboard> testableAnySoftKeyboardServiceController = Robolectric.buildService(TestableAnySoftKeyboard.class);
+        TestableAnySoftKeyboard testableAnySoftKeyboard = testableAnySoftKeyboardServiceController.attach().create().get();
+        final EditorInfo editorInfo = TestableAnySoftKeyboard.createEditorInfoTextWithSuggestions();
+
+        testableAnySoftKeyboard.onCreateInputView();
+        testableAnySoftKeyboard.onStartInput(editorInfo, false);
+        testableAnySoftKeyboard.onStartInputView(editorInfo, false);
+        Assert.assertFalse(testableAnySoftKeyboard.isKeyboardViewHidden());
+
+        testableAnySoftKeyboard.onCancel();
+        Assert.assertFalse(testableAnySoftKeyboard.isKeyboardViewHidden());
     }
 
 }

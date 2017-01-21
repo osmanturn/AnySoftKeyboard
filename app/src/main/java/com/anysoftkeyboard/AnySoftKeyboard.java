@@ -25,7 +25,6 @@ import android.content.SharedPreferences.Editor;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
-import android.inputmethodservice.AbstractInputMethodService;
 import android.inputmethodservice.InputMethodService;
 import android.media.AudioManager;
 import android.os.Build;
@@ -88,8 +87,8 @@ import com.anysoftkeyboard.utils.ModifierKeyState;
 import com.anysoftkeyboard.utils.Workarounds;
 import com.google.android.voiceime.VoiceRecognitionTrigger;
 import com.yek.keyboard.AnyApplication;
-import com.yek.keyboard.BuildConfig;
-import com.yek.keyboard.R;
+import com.menny.android.anysoftkeyboard.BuildConfig;
+import com.menny.android.anysoftkeyboard.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -208,8 +207,8 @@ public abstract class AnySoftKeyboard extends AnySoftKeyboardWithQuickText imple
 
     @Override
     @NonNull
-    public AbstractInputMethodService.AbstractInputMethodImpl onCreateInputMethodInterface() {
-        return new InputMethodService.InputMethodImpl() {
+    public AbstractInputMethodImpl onCreateInputMethodInterface() {
+        return new InputMethodImpl() {
             @Override
             public void attachToken(IBinder token) {
                 super.attachToken(token);

@@ -28,9 +28,9 @@ import android.view.Gravity;
 
 import com.anysoftkeyboard.api.KeyCodes;
 import com.anysoftkeyboard.utils.Logger;
-import com.yek.keyboard.BuildConfig;
+import com.menny.android.anysoftkeyboard.BuildConfig;
 import com.yek.keyboard.FeaturesSet;
-import com.yek.keyboard.R;
+import com.menny.android.anysoftkeyboard.R;
 
 import java.util.LinkedList;
 
@@ -567,7 +567,7 @@ public class AskPrefsImpl implements AskPrefs, OnSharedPreferenceChangeListener 
     }
 
     private boolean getAlwaysUseDrawTextDefault() {
-        if (Build.BRAND.contains("SEMC")//SE phones have fix for that, but more important, their StaticLayout class is bugged
+        if (android.os.Build.BRAND.contains("SEMC")//SE phones have fix for that, but more important, their StaticLayout class is bugged
                 || Build.VERSION.SDK_INT > Build.VERSION_CODES.HONEYCOMB) //Android has native fix for API level 11! Ya
             return true;
         else

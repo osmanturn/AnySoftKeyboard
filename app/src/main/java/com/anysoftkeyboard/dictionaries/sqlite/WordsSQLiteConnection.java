@@ -137,9 +137,9 @@ public class WordsSQLiteConnection extends SQLiteOpenHelper {
     }
 
     public static final class Words {
-        public static final String _ID = "_id";
-        public static final String WORD = "word";
-        public static final String FREQUENCY = "frequency";
-        public static final String LOCALE = "locale";
+        public static final java.lang.String _ID = "_id";
+        public static final java.lang.String WORD = "word";
+        public static final java.lang.String FREQUENCY = "frequency";
+        public static final java.lang.String LOCALE = "locale";
     }
 }

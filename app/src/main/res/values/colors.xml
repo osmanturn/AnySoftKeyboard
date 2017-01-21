@@ -73,23 +73,4 @@
 
     <color name="notification_background_error">#F33</color>
     <color name="notification_background_debug_version">#FF3399</color>
-
-    <color name="colorPrimary">#17C5AD</color>
-    <color name="colorPrimaryDark">#129e8b</color>
-    <color name="colorAccent">#F5A623</color>
-    <color name="primary_text">#212121</color>
-    <color name="secondary_text">#757575</color>
-
-
-    <color name="colorYekKeyboardBackground">#404C5B</color>
-    <color name="colorYekKeyboardBackgroundDark">#242b33</color>
-    <color name="colorYekKeyboardBackgroundAcent">#5e7086</color>
-
-    <color name="colorYekKeyboardPurple">#7A6DFC</color>
-    <color name="colorYekKeyboardOrange">#FF9F00</color>
-    <color name="colorYekKeyboardPink">#FF3E74</color>
-    <color name="colorYekKeyboardBlue">#4E93E3</color>
-    <color name="colorYekKeyboardGreen">#00B28C</color>
-
-
 </resources>

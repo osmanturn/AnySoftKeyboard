@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
-    <string name="keyboard_ku">Kürtçe</string>
-    <string name="keyboard_tr">Türkçe</string>
-    <string name="keyboard_ing">İngilizce</string>
-    <string name="eng_dictionary">English</string>
-    <string name="ku_dictionary">Kurdish</string>
-    <string name="tr_dictionary">Turkish</string>
-    <string name="ime_name">Kurdî Keyboard</string>
+    <string name="ime_name">AnySoftKeyboard</string>
     <string name="spell_checker_settings">AnySoftKeyboard Speller Settings</string>
     <string name="copyright_text">Copyright\u0020©\u0020<xliff:g id="year">%d</xliff:g>\u0020<xliff:g id="owner">%s</xliff:g></string>
     <string name="debug_tracing_starting">Tracing started!\nMake sure you stop it at some point</string>
@@ -467,6 +461,7 @@
 
     <string name="select_keyboard_popup_title">Select keyboard</string>
     <!-- dictionaries -->
+    <string name="eng_dictionary">English</string>
 
     <string name="simley_key_name">Smiley key</string>
     <string name="short_smiley_key_name">Shorter Smiley key</string>

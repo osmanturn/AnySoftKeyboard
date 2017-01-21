@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <array name="wordls_dicts_ku">
-        <item>@raw/words</item>
-    </array>
-    <array name="wordls_dicts_tr">
-        <item>@raw/words_tr_1</item>
-        <item>@raw/words_tr_2</item>
-    </array>
-    <array name="wordls_dicts_en">
-        <item>@raw/words_1_2</item>
+    <array name="words_dict_array">
+        <item>@raw/words_1</item>
+        <item>@raw/words_2</item>
     </array>
 </resources>

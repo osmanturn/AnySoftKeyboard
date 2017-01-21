@@ -17,7 +17,7 @@
 package com.anysoftkeyboard.dictionaries;
 
 import com.anysoftkeyboard.utils.Logger;
-import com.yek.keyboard.BuildConfig;
+import com.menny.android.anysoftkeyboard.BuildConfig;
 
 public class TextEntryState {
 

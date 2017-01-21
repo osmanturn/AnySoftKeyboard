@@ -17,7 +17,7 @@ Android (f/w 1.5+) on screen keyboard for multiple languages.
  * special key-press effects:
   * Sound on key press (if phone is not muted).
   * Vibrate on key press.
- * Voice input. 
+ * Voice input.
  * More on AnySoftKeyboard can be found [here](http://softkeyboard.googlecode.com)
 
 License

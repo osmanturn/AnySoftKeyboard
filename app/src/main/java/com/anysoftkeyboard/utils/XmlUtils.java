@@ -183,7 +183,7 @@ public class XmlUtils {
      * @see #readListXml
      */
     public static void writeListXml(List val, OutputStream out)
-            throws XmlPullParserException, IOException {
+            throws XmlPullParserException, java.io.IOException {
         XmlSerializer serializer = Xml.newSerializer();
         serializer.setOutput(out, "utf-8");
         serializer.startDocument(null, true);
@@ -205,7 +205,7 @@ public class XmlUtils {
      * @see #readMapXml
      */
     public static void writeMapXml(Map val, String name, XmlSerializer out)
-            throws XmlPullParserException, IOException {
+            throws XmlPullParserException, java.io.IOException {
         if (val == null) {
             out.startTag(null, "null");
             out.endTag(null, "null");
@@ -242,7 +242,7 @@ public class XmlUtils {
      * @see #readListXml
      */
     public static void writeListXml(List val, String name, XmlSerializer out)
-            throws XmlPullParserException, IOException {
+            throws XmlPullParserException, java.io.IOException {
         if (val == null) {
             out.startTag(null, "null");
             out.endTag(null, "null");
@@ -265,7 +265,7 @@ public class XmlUtils {
     }
 
     public static void writeSetXml(Set val, String name, XmlSerializer out)
-            throws XmlPullParserException, IOException {
+            throws XmlPullParserException, java.io.IOException {
         if (val == null) {
             out.startTag(null, "null");
             out.endTag(null, "null");
@@ -297,7 +297,7 @@ public class XmlUtils {
      */
     public static void writeByteArrayXml(byte[] val, String name,
                                          XmlSerializer out)
-            throws XmlPullParserException, IOException {
+            throws XmlPullParserException, java.io.IOException {
 
         if (val == null) {
             out.startTag(null, "null");
@@ -340,7 +340,7 @@ public class XmlUtils {
      */
     public static void writeIntArrayXml(int[] val, String name,
                                         XmlSerializer out)
-            throws XmlPullParserException, IOException {
+            throws XmlPullParserException, java.io.IOException {
 
         if (val == null) {
             out.startTag(null, "null");
@@ -381,7 +381,7 @@ public class XmlUtils {
      * @see #readValueXml
      */
     public static void writeValueXml(Object v, String name, XmlSerializer out)
-            throws XmlPullParserException, IOException {
+            throws XmlPullParserException, java.io.IOException {
         String typeStr;
         if (v == null) {
             out.startTag(null, "null");
@@ -458,7 +458,7 @@ public class XmlUtils {
      * #see #writeMapXml
      */
     public static HashMap readMapXml(InputStream in)
-            throws XmlPullParserException, IOException {
+            throws XmlPullParserException, java.io.IOException {
         XmlPullParser parser = Xml.newPullParser();
         parser.setInput(in, null);
         return (HashMap) readValueXml(parser, new String[1]);
@@ -476,7 +476,7 @@ public class XmlUtils {
      * @see #writeListXml
      */
     public static ArrayList readListXml(InputStream in)
-            throws XmlPullParserException, IOException {
+            throws XmlPullParserException, java.io.IOException {
         XmlPullParser parser = Xml.newPullParser();
         parser.setInput(in, null);
         return (ArrayList) readValueXml(parser, new String[1]);
@@ -490,13 +490,13 @@ public class XmlUtils {
      * @param in The InputStream from which to read.
      * @return HashSet The resulting set.
      * @throws XmlPullParserException
-     * @throws IOException
+     * @throws java.io.IOException
      * @see #readValueXml
      * @see #readThisSetXml
      * @see #writeSetXml
      */
     public static HashSet readSetXml(InputStream in)
-            throws XmlPullParserException, IOException {
+            throws XmlPullParserException, java.io.IOException {
         XmlPullParser parser = Xml.newPullParser();
         parser.setInput(in, null);
         return (HashSet) readValueXml(parser, new String[1]);
@@ -515,7 +515,7 @@ public class XmlUtils {
      * @see #readMapXml
      */
     public static HashMap readThisMapXml(XmlPullParser parser, String endTag, String[] name)
-            throws XmlPullParserException, IOException {
+            throws XmlPullParserException, java.io.IOException {
         HashMap<String, Object> map = new HashMap<>();
 
         int eventType = parser.getEventType();
@@ -555,7 +555,7 @@ public class XmlUtils {
      * @see #readListXml
      */
     public static ArrayList readThisListXml(XmlPullParser parser, String endTag, String[] name)
-            throws XmlPullParserException, IOException {
+            throws XmlPullParserException, java.io.IOException {
         ArrayList<Object> list = new ArrayList<>();
 
         int eventType = parser.getEventType();
@@ -588,11 +588,11 @@ public class XmlUtils {
      *               of the set's tag.
      * @return HashSet The newly generated set.
      * @throws XmlPullParserException
-     * @throws IOException
+     * @throws java.io.IOException
      * @see #readSetXml
      */
     public static HashSet readThisSetXml(XmlPullParser parser, String endTag, String[] name)
-            throws XmlPullParserException, IOException {
+            throws XmlPullParserException, java.io.IOException {
         HashSet<Object> set = new HashSet<>();
 
         int eventType = parser.getEventType();
@@ -627,7 +627,7 @@ public class XmlUtils {
      * @see #readListXml
      */
     public static int[] readThisIntArrayXml(XmlPullParser parser, String endTag, String[] name)
-            throws XmlPullParserException, IOException {
+            throws XmlPullParserException, java.io.IOException {
 
         int num;
         try {
@@ -694,7 +694,7 @@ public class XmlUtils {
      * @see #writeValueXml
      */
     public static Object readValueXml(XmlPullParser parser, String[] name)
-            throws XmlPullParserException, IOException {
+            throws XmlPullParserException, java.io.IOException {
         int eventType = parser.getEventType();
         do {
             if (eventType == XmlPullParser.START_TAG) {
@@ -714,7 +714,7 @@ public class XmlUtils {
     }
 
     private static Object readThisValueXml(XmlPullParser parser, String[] name)
-            throws XmlPullParserException, IOException {
+            throws XmlPullParserException, java.io.IOException {
         final String valueName = parser.getAttributeValue(null, "name");
         final String tagName = parser.getName();
 

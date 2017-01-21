@@ -29,7 +29,7 @@ public class ClipboardV3 implements Clipboard {
     private final ClipboardManager mClipboardManager;
 
     public ClipboardV3(ClipboardDiagram diagram) {
-        mClipboardManager = (ClipboardManager)
+        mClipboardManager = (android.text.ClipboardManager)
                 diagram.getContext().getSystemService(Context.CLIPBOARD_SERVICE);
     }
 

@@ -29,10 +29,10 @@ import com.anysoftkeyboard.AskPrefs.AnimationsLevel;
 import com.anysoftkeyboard.api.KeyCodes;
 import com.anysoftkeyboard.ime.AnySoftKeyboardBase;
 import com.yek.keyboard.AnyApplication;
-import com.yek.keyboard.R;
+import com.menny.android.anysoftkeyboard.R;
 
 public class LayoutSwitchAnimationListener implements
-        Animation.AnimationListener, OnSharedPreferenceChangeListener {
+        android.view.animation.Animation.AnimationListener, OnSharedPreferenceChangeListener {
 
     public enum AnimationType {
         InPlaceSwitch,

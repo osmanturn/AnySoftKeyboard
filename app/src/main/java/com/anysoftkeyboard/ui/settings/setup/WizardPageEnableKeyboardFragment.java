@@ -15,7 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.yek.keyboard.R;
+import com.menny.android.anysoftkeyboard.R;
 
 public class WizardPageEnableKeyboardFragment extends WizardPageBaseFragment {
 
@@ -84,7 +84,7 @@ public class WizardPageEnableKeyboardFragment extends WizardPageBaseFragment {
                 mGetBackHereHandler.removeMessages(KEY_MESSAGE_UNREGISTER_LISTENER);
                 mGetBackHereHandler.sendMessageDelayed(mGetBackHereHandler.obtainMessage(KEY_MESSAGE_UNREGISTER_LISTENER),
                         45*1000/*45 seconds to change a checkbox is enough. After that, I wont listen to changes anymore.*/);
-                Intent startSettings = new Intent(Settings.ACTION_INPUT_METHOD_SETTINGS);
+                Intent startSettings = new Intent(android.provider.Settings.ACTION_INPUT_METHOD_SETTINGS);
                 startSettings.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startSettings.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                 startSettings.addFlags(Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS);
