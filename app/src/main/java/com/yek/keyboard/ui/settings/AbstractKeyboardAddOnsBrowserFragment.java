@@ -34,11 +34,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.yek.keyboard.R;
 import com.yek.keyboard.addons.AddOn;
 import com.yek.keyboard.keyboards.views.DemoAnyKeyboardView;
-import com.yek.keyboard.ui.settings.widget.AddOnStoreSearchView;
 import com.yek.keyboard.utils.Logger;
-import com.yek.keyboard.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -106,7 +105,6 @@ public abstract class AbstractKeyboardAddOnsBrowserFragment<E extends AddOn> ext
         super.onCreateOptionsMenu(menu, inflater);
         if (hasOptionsMenu()) {
             inflater.inflate(R.menu.add_on_selector_menu, menu);
-            menu.findItem(R.id.add_on_market_search_menu_option).setVisible(getMarketSearchTitle() != 0);
             menu.findItem(R.id.tweaks_menu_option).setVisible(mHasTweaksOption);
         }
     }
@@ -117,9 +115,7 @@ public abstract class AbstractKeyboardAddOnsBrowserFragment<E extends AddOn> ext
             case R.id.tweaks_menu_option:
                 onTweaksOptionSelected();
                 return true;
-            case R.id.add_on_market_search_menu_option:
-                AddOnStoreSearchView.startMarketActivity(getContext(), getMarketSearchKeyword());
-                return true;
+
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -237,16 +233,8 @@ public abstract class AbstractKeyboardAddOnsBrowserFragment<E extends AddOn> ext
 
         @Override
         public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            if (viewType == 0) {
-                View itemView = mLayoutInflater.inflate(R.layout.add_on_browser_view_item, parent, false);
-                return new KeyboardAddOnViewHolder(itemView);
-            } else {
-                AddOnStoreSearchView searchView = new AddOnStoreSearchView(getActivity(), null);
-                searchView.setTag(getMarketSearchKeyword());
-                searchView.setTitle(getText(getMarketSearchTitle()));
-                return new RecyclerView.ViewHolder(searchView) {/*empty implementation*/
-                };
-            }
+            View itemView = mLayoutInflater.inflate(R.layout.add_on_browser_view_item, parent, false);
+            return new KeyboardAddOnViewHolder(itemView);
         }
 
         @Override
@@ -266,8 +254,8 @@ public abstract class AbstractKeyboardAddOnsBrowserFragment<E extends AddOn> ext
 
         @Override
         public int getItemCount() {
-            final int extra = getMarketSearchKeyword() != null ? 1 : 0;
-            return (mAllAddOns == null? 0 : mAllAddOns.size()) + extra;
+
+            return (mAllAddOns == null? 0 : mAllAddOns.size()) ;
         }
     }
 }

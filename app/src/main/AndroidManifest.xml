@@ -33,7 +33,7 @@
         android:fullBackupContent="true"
         android:backupAgent=".backup.AnyBackupAgent"
         android:hardwareAccelerated="true"
-        android:icon="@mipmap/ic_ask_launcher"
+        android:icon="@mipmap/ic_app_icon"
         android:installLocation="internalOnly"
         android:label="@string/ime_name"
         android:restoreAnyVersion="true"
@@ -65,7 +65,7 @@
         <activity
             android:theme="@style/Theme.AskApp"
             android:name=".LauncherSettingsActivity"
-            android:icon="@mipmap/ic_ask_launcher"
+            android:icon="@mipmap/ic_app_icon"
             android:launchMode="singleTop"
             android:label="@string/ime_name">
             <intent-filter>
@@ -79,15 +79,15 @@
         <activity
             android:theme="@style/Theme.AskApp"
             android:name=".ui.settings.MainSettingsActivity"
-            android:icon="@mipmap/ic_ask_launcher"
+            android:icon="@mipmap/ic_app_icon"
             android:launchMode="singleTask"
             android:windowSoftInputMode="adjustPan"
-            android:label="@string/ime_name">
-        </activity>
+            android:label="@string/ime_name"/>
+
 
         <activity
             android:name=".ui.tutorials.TestersNoticeActivity"
-            android:icon="@mipmap/ic_ask_launcher"
+            android:icon="@mipmap/ic_app_icon"
             android:label="@string/testers_version"
             android:launchMode="singleTop"
             android:noHistory="true"
@@ -97,7 +97,7 @@
         <activity
             android:theme="@style/Theme.AskApp.NoTitle"
             android:name=".ui.SendBugReportUiActivity"
-            android:icon="@mipmap/ic_ask_launcher"
+            android:icon="@mipmap/ic_app_icon"
             android:label="@string/ime_name">
         </activity>
         <!-- for voice -->
@@ -116,7 +116,7 @@
         <activity
             android:name=".ui.VoiceInputNotInstalledActivity"
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
-            android:icon="@mipmap/ic_ask_launcher"
+            android:icon="@mipmap/ic_app_icon"
             android:label="@string/ime_name"/>
     </application>
 

@@ -52,7 +52,7 @@ public class WizardPageDoneAndMoreSettingsFragment extends WizardPageBaseFragmen
                 }
                 break;
             case R.id.go_to_home_fragment_action:
-                activity.onNavigateToRootClicked(v);
+
                 break;
             case R.id.go_to_languages_action:
                 activity.addFragmentToUi(new KeyboardAddOnBrowserFragment(), TransitionExperiences.DEEPER_EXPERIENCE_TRANSITION);
@@ -61,8 +61,7 @@ public class WizardPageDoneAndMoreSettingsFragment extends WizardPageBaseFragmen
                 activity.addFragmentToUi(new KeyboardThemeSelectorFragment(), TransitionExperiences.DEEPER_EXPERIENCE_TRANSITION);
                 break;
             case R.id.go_to_all_settings_action:
-                activity.onNavigateToRootClicked(v);
-                activity.openDrawer();
+
                 break;
         }
     }

@@ -10,7 +10,7 @@ import android.view.View;
 
 import com.anysoftkeyboard.RobolectricFragmentTestCase;
 import com.yek.keyboard.R;
-import com.yek.keyboard.anysoftkeyboard.ui.settings.KeyboardAddOnBrowserFragment;
+import com.yek.keyboard.ui.settings.KeyboardAddOnBrowserFragment;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -76,14 +76,12 @@ public class MultiSelectionAddOnsBrowserFragmentTest extends RobolectricFragment
     @Test
     public void testHasTweaksAndMarket() {
         KeyboardAddOnBrowserFragment fragment = startFragment();
-        Assert.assertNotEquals(0, fragment.getMarketSearchTitle());
+
         Menu menu = Shadows.shadowOf(fragment.getActivity()).getOptionsMenu();
         Assert.assertNotNull(menu);
         Assert.assertNotNull(menu.findItem(R.id.tweaks_menu_option));
         Assert.assertFalse(menu.findItem(R.id.tweaks_menu_option).isVisible());
 
         Assert.assertNotNull(menu);
-        Assert.assertNotNull(menu.findItem(R.id.add_on_market_search_menu_option));
-        Assert.assertTrue(menu.findItem(R.id.add_on_market_search_menu_option).isVisible());
     }
 }

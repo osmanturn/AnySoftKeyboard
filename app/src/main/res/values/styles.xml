@@ -84,7 +84,19 @@
         <item name="android:disableDependentsState">false</item>
     </style>
 
-    <style name="Theme.AskApp" parent="Theme.AppCompat.Light">
+    <style name="Theme.AskApp" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="toolbarStyle">@style/ActionBarTheme</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/primary_text</item>
+        <item name="android:textColorSecondary">@color/secondary_text</item>
+        <item name="android:textAppearance">@style/AppTheme.TextApprance.List.Title</item>
+        <item name="android:textAppearanceMedium">@style/AppTheme.TextApprance.List.Title</item>
+        <item name="android:textAppearanceSmall">@style/AppTheme.TextApprance.List.Desctiption</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
 
     </style>
 
@@ -280,4 +292,33 @@
         <item name="android:layout_marginTop">8dp</item>
         <item name="android:layout_marginBottom">8dp</item>
     </style>
+
+    <style name="AppTheme.TextApprance.Title" parent="Base.TextAppearance.AppCompat.Medium">
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="AppTheme.TextApprance.Desctiption" parent="Base.TextAppearance.AppCompat.Subhead">
+        <item name="android:textStyle">normal</item>
+    </style>
+
+
+    <style name="AppTheme.TextApprance.List.Title" parent="Ask.Text.Title">
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="AppTheme.TextApprance.List.Desctiption" parent="Ask.Text.Normal">
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="AppTheme.Button" parent="Base.Widget.AppCompat.ActionButton">
+        <item name="background">@color/colorAccent</item>
+        <item name="android:background">@color/colorAccent</item>
+    </style>
+    <style name="ActionBarTheme" parent="Base.Widget.AppCompat.Toolbar">
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="selectableItemBackground">?android:selectableItemBackground</item>
+        <item name="selectableItemBackgroundBorderless">?android:selectableItemBackground</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="contentInsetRight">16dp</item>
+
+    </style>
+
 </resources>

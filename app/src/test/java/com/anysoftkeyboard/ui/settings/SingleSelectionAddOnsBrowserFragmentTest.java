@@ -11,9 +11,9 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
 import com.anysoftkeyboard.RobolectricFragmentTestCase;
-import com.yek.keyboard.anysoftkeyboard.keyboards.views.DemoAnyKeyboardView;
 import com.yek.keyboard.R;
-import com.yek.keyboard.anysoftkeyboard.ui.settings.KeyboardThemeSelectorFragment;
+import com.yek.keyboard.keyboards.views.DemoAnyKeyboardView;
+import com.yek.keyboard.ui.settings.KeyboardThemeSelectorFragment;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -128,7 +128,7 @@ public class SingleSelectionAddOnsBrowserFragmentTest extends RobolectricFragmen
     @Test
     public void testHasTweaksAndMarket() {
         KeyboardThemeSelectorFragment fragment = startFragment();
-        Assert.assertNotEquals(0, fragment.getMarketSearchTitle());
+
 
         Menu menu = Shadows.shadowOf(fragment.getActivity()).getOptionsMenu();
         Assert.assertNotNull(menu);
@@ -136,7 +136,5 @@ public class SingleSelectionAddOnsBrowserFragmentTest extends RobolectricFragmen
         Assert.assertTrue(menu.findItem(R.id.tweaks_menu_option).isVisible());
 
         Assert.assertNotNull(menu);
-        Assert.assertNotNull(menu.findItem(R.id.add_on_market_search_menu_option));
-        Assert.assertTrue(menu.findItem(R.id.add_on_market_search_menu_option).isVisible());
     }
 }

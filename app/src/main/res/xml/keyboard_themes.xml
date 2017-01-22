@@ -3,9 +3,8 @@
     <KeyboardTheme
         id="8774f99e-fb4a-49fa-b8d0-4083f762250a"
         nameResId="@string/yochees_dark_keyboard_theme_name"
-        themeRes="@style/YocheesDarkTheme"
-        popupThemeRes="@style/YocheesDarkPopup"
-        iconsThemeRes="@style/YocheesDarkKeyIconTheme"
+        themeRes="@style/yekTheme"
+        popupThemeRes="@style/yekThemePopup"
         description="@string/yochees_dark_keyboard_theme_description"
         devOnly="true"
         index="1"/>
