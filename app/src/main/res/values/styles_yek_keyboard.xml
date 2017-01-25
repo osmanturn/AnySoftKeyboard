@@ -18,6 +18,9 @@
         <item name="keyTextStyle">normal</item>
         <item name="shadowRadius">0px</item>
     </style>
+    <style name="yekIcon" parent="@style/AnyKeyboardBaseKeyIconTheme">
+        <item name="suggestionCloseImage">@drawable/ic_av_mic_light</item>
+    </style>
 
 
 

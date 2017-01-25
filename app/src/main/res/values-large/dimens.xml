@@ -42,7 +42,7 @@
 
     <dimen name="keyboard_name_text_size">12sp</dimen>
 
-    <dimen name="candidate_strip_height">44sp</dimen>
+    <dimen name="candidate_strip_height">48sp</dimen>
     <dimen name="candidate_font_height">24sp</dimen>
 
     <dimen name="key_corner_radius">3dp</dimen>

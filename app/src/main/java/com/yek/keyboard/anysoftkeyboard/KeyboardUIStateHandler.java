@@ -4,7 +4,6 @@ import android.os.Handler;
 import android.os.Message;
 import android.view.View;
 import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.view.inputmethod.InputConnection;
 
 import com.yek.keyboard.R;
@@ -68,13 +67,13 @@ final class KeyboardUIStateHandler extends Handler {
                 ask.performRestartWordSuggestion(ic);
                 break;
             case MSG_REMOVE_CLOSE_SUGGESTIONS_HINT:
-                final View closeText = ask.mCandidateCloseText;
+              /*  final View closeText = ask.mCandidateCloseText;
                 if (closeText != null) {// in API3, this variable is null
                     mCloseTextAnimationListener.setCloseText(closeText);
                     Animation gone = AnimationUtils.loadAnimation(ask.getApplicationContext(), R.anim.close_candidates_hint_out);
                     gone.setAnimationListener(mCloseTextAnimationListener);
                     closeText.startAnimation(gone);
-                }
+                }*/
                 break;
             case MSG_CLOSE_DICTIONARIES:
                 ask.closeDictionaries();

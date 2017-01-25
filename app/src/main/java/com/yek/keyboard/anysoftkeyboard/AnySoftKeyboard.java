@@ -38,7 +38,6 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.content.SharedPreferencesCompat;
 import android.text.TextUtils;
 import android.util.SparseBooleanArray;
-import android.util.TypedValue;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -50,7 +49,6 @@ import android.view.inputmethod.ExtractedTextRequest;
 import android.view.inputmethod.InputConnection;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.anysoftkeyboard.api.KeyCodes;
@@ -112,7 +110,9 @@ public abstract class AnySoftKeyboard extends AnySoftKeyboardWithQuickText imple
     protected IBinder mImeToken = null;
 
     @Nullable//this field is set at a undetermine point in service life-cycle
-    /*package*/ TextView mCandidateCloseText;
+    /*package*/
+
+            //TextView mCandidateCloseText;
     private View mCandidatesParent;
     private CandidateView mCandidateView;
     private CompletionInfo[] mCompletions;
@@ -772,7 +772,7 @@ public abstract class AnySoftKeyboard extends AnySoftKeyboardWithQuickText imple
         }
         a.recycle();
 
-        mCandidateCloseText = (TextView) view.findViewById(R.id.close_suggestions_strip_text);
+       // mCandidateCloseText = (TextView) view.findViewById(R.id.close_suggestions_strip_text);
         ImageView closeIcon = (ImageView) view.findViewById(R.id.close_suggestions_strip_icon);
         if (suggestionCloseDrawable != null) closeIcon.setImageDrawable(suggestionCloseDrawable);
 
@@ -781,13 +781,15 @@ public abstract class AnySoftKeyboard extends AnySoftKeyboardWithQuickText imple
             private final static long DOUBLE_TAP_TIMEOUT = 2 * 1000 - 50;
 
             public void onClick(View v) {
-                mKeyboardHandler.removeMessages(KeyboardUIStateHandler.MSG_REMOVE_CLOSE_SUGGESTIONS_HINT);
-                mCandidateCloseText.setVisibility(View.VISIBLE);
-                mCandidateCloseText.startAnimation(AnimationUtils.loadAnimation(getApplicationContext(), R.anim.close_candidates_hint_in));
-                mKeyboardHandler.sendMessageDelayed(mKeyboardHandler.obtainMessage(KeyboardUIStateHandler.MSG_REMOVE_CLOSE_SUGGESTIONS_HINT), DOUBLE_TAP_TIMEOUT);
+                //mKeyboardHandler.removeMessages(KeyboardUIStateHandler.MSG_REMOVE_CLOSE_SUGGESTIONS_HINT);
+               // mCandidateCloseText.setVisibility(View.VISIBLE);
+               // mCandidateCloseText.startAnimation(AnimationUtils.loadAnimation(getApplicationContext(), R.anim.close_candidates_hint_in));
+                //mKeyboardHandler.sendMessageDelayed(mKeyboardHandler.obtainMessage(KeyboardUIStateHandler.MSG_REMOVE_CLOSE_SUGGESTIONS_HINT), DOUBLE_TAP_TIMEOUT);
+                onFunctionKey(KeyCodes.VOICE_INPUT, null, 0, null, true);
+
             }
         });
-
+        /*
         mCandidateCloseText.setTextColor(closeTextColor);
         mCandidateCloseText.setTextSize(TypedValue.COMPLEX_UNIT_PX, fontSizePixel);
         mCandidateCloseText.setOnClickListener(new OnClickListener() {
@@ -796,7 +798,7 @@ public abstract class AnySoftKeyboard extends AnySoftKeyboardWithQuickText imple
                 mCandidateCloseText.setVisibility(View.GONE);
                 abortCorrectionAndResetPredictionState(true);
             }
-        });
+        });*/
     }
 
     private void clearSuggestions() {
@@ -1930,7 +1932,7 @@ public abstract class AnySoftKeyboard extends AnySoftKeyboardWithQuickText imple
 
     /*package*/ void performUpdateSuggestions() {
         //mCandidateCloseText could be null if setCandidatesView was not called yet
-        if (mCandidateCloseText != null) mCandidateCloseText.setVisibility(View.GONE);
+       // if (mCandidateCloseText != null) mCandidateCloseText.setVisibility(View.GONE);
 
         if (!TextEntryState.isPredicting()) {
             clearSuggestions();
@@ -2070,8 +2072,8 @@ public abstract class AnySoftKeyboard extends AnySoftKeyboardWithQuickText imple
      * retrieval.
      *
      * @param wordToCommit the suggestion picked by the user to be committed to the text
-     *                   field
-     * @param correcting this is a correction commit
+     *                     field
+     * @param correcting   this is a correction commit
      */
     protected void commitWordToInput(@NonNull CharSequence wordToCommit, boolean correcting) {
         mWord.setPreferredWord(wordToCommit);
@@ -2112,7 +2114,7 @@ public abstract class AnySoftKeyboard extends AnySoftKeyboardWithQuickText imple
     }
 
     public void revertLastWord() {
-        final int length = mCommittedWord.length() + (mJustAddedAutoSpace? 1 : 0);
+        final int length = mCommittedWord.length() + (mJustAddedAutoSpace ? 1 : 0);
         if (length > 0) {
             mAutoCorrectOn = false;
             //note: typedWord may be empty

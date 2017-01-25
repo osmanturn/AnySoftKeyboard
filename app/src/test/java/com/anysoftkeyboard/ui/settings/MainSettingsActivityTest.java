@@ -6,15 +6,15 @@ import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 
-import com.yek.keyboard.anysoftkeyboard.PermissionsRequestCodes;
 import com.yek.keyboard.R;
-import com.yek.keyboard.anysoftkeyboard.ui.settings.AdditionalUiSettingsFragment;
-import com.yek.keyboard.anysoftkeyboard.ui.settings.GesturesSettingsFragment;
-import com.yek.keyboard.anysoftkeyboard.ui.settings.KeyboardAddOnBrowserFragment;
-import com.yek.keyboard.anysoftkeyboard.ui.settings.KeyboardThemeSelectorFragment;
-import com.yek.keyboard.anysoftkeyboard.ui.settings.MainFragment;
-import com.yek.keyboard.anysoftkeyboard.ui.settings.MainSettingsActivity;
-import com.yek.keyboard.anysoftkeyboard.ui.settings.QuickTextSettingsFragment;
+import com.yek.keyboard.anysoftkeyboard.PermissionsRequestCodes;
+import com.yek.keyboard.ui.settings.AdditionalUiSettingsFragment;
+import com.yek.keyboard.ui.settings.GesturesSettingsFragment;
+import com.yek.keyboard.ui.settings.KeyboardAddOnBrowserFragment;
+import com.yek.keyboard.ui.settings.KeyboardThemeSelectorFragment;
+import com.yek.keyboard.ui.settings.MainNewFragment;
+import com.yek.keyboard.ui.settings.MainSettingsActivity;
+import com.yek.keyboard.ui.settings.QuickTextSettingsFragment;
 
 import net.evendanan.chauffeur.lib.permissions.PermissionsFragmentChauffeurActivity;
 import net.evendanan.chauffeur.lib.permissions.PermissionsRequest;
@@ -48,7 +48,7 @@ public class MainSettingsActivityTest {
         Fragment fragment = activity.getSupportFragmentManager().findFragmentById(R.id.main_ui_content);
 
         Assert.assertNotNull(fragment);
-        Assert.assertTrue(fragment instanceof MainFragment);
+        Assert.assertTrue(fragment instanceof MainNewFragment);
     }
 
     @Test
@@ -60,7 +60,7 @@ public class MainSettingsActivityTest {
         Fragment fragment = activity.getSupportFragmentManager().findFragmentById(R.id.main_ui_content);
 
         Assert.assertNotNull(fragment);
-        Assert.assertTrue(fragment instanceof MainFragment);
+        Assert.assertTrue(fragment instanceof MainNewFragment);
     }
 
     @Test

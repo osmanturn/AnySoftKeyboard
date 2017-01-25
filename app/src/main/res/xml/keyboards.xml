@@ -3,7 +3,7 @@
     <Keyboard
         defaultDictionaryLocale="ku"
         defaultEnabled="true"
-        description="Kurdish Keyboard"
+        description="@string/desc_ku"
         iconResId="@drawable/ic_language_dark"
         id="c7535083-4fe6-49dc-81aa-c5438a1a343a"
         index="1"
@@ -15,7 +15,7 @@
     <Keyboard
         defaultDictionaryLocale="tr"
         defaultEnabled="true"
-        description="Turkish Keyboard"
+        description="@string/desc_tr"
         iconResId="@drawable/ic_language_dark"
         id="34CC76A3-91B3-4204-BB1B-421BA8FC8430"
         index="2"
@@ -27,7 +27,7 @@
     <Keyboard
         defaultDictionaryLocale="en"
         defaultEnabled="false"
-        description="English Keyboard"
+        description="@string/desc_en"
         iconResId="@drawable/ic_language_dark"
         id="34CC76A4-91B4-4205-BB1C-421BA8FC8431"
         index="3"

@@ -31,10 +31,10 @@ import net.evendanan.chauffeur.lib.experiences.TransitionExperiences;
 public class MainNewFragment extends Fragment implements View.OnClickListener {
 
     public static MainNewFragment getInstance(FragmentManager fm) {
-        MainNewFragment fragment = (MainNewFragment) fm.findFragmentByTag("MainFragment");
+        MainNewFragment fragment = (MainNewFragment) fm.findFragmentByTag("MainNewFragment");
         if (fragment == null) {
             fragment = new MainNewFragment();
-            fm.beginTransaction().replace(R.id.containter, fragment, "MainFragment").commit();
+            fm.beginTransaction().replace(R.id.containter, fragment, "MainNewFragment").commit();
         } else {
             fm.beginTransaction().attach(fragment).commit();
         }
@@ -42,7 +42,7 @@ public class MainNewFragment extends Fragment implements View.OnClickListener {
     }
 
     private DemoAnyKeyboardView demoAnyKeyboardView;
-    private AsyncTask<Bitmap, Void, Palette.Swatch> mPaletteTask;
+
 
 
     @Nullable
@@ -55,7 +55,7 @@ public class MainNewFragment extends Fragment implements View.OnClickListener {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         ((AppCompatActivity) getActivity()).getSupportActionBar().show();
-        demoAnyKeyboardView = (DemoAnyKeyboardView) view.findViewById(R.id.idKeyboard);
+        demoAnyKeyboardView = (DemoAnyKeyboardView) getView().findViewById(R.id.idKeyboard);
     }
 
     @Override
@@ -69,49 +69,15 @@ public class MainNewFragment extends Fragment implements View.OnClickListener {
         AnyKeyboard defaultKeyboard = KeyboardFactory.getEnabledKeyboards(getContext()).get(0).createKeyboard(getContext(), getResources().getInteger(R.integer.keyboard_mode_normal));
         defaultKeyboard.loadKeyboard(demoAnyKeyboardView.getThemedKeyboardDimens());
         demoAnyKeyboardView.setKeyboard(defaultKeyboard, null, null);
-
-        mPaletteTask = new AsyncTask<Bitmap, Void, Palette.Swatch>() {
-            @Override
-            protected Palette.Swatch doInBackground(Bitmap... params) {
-                Bitmap bitmap = params[0];
-                Palette p = Palette.from(bitmap).generate();
-                Palette.Swatch highestSwatch = null;
-                for (Palette.Swatch swatch : p.getSwatches()) {
-                    if (highestSwatch == null || highestSwatch.getPopulation() < swatch.getPopulation())
-                        highestSwatch = swatch;
-                }
-                return highestSwatch;
-            }
-
-            @Override
-            protected void onPostExecute(Palette.Swatch swatch) {
-                super.onPostExecute(swatch);
-                if (!isCancelled()) {
-                    final View rootView = getView();
-                    if (swatch != null && rootView != null) {
-                        final int backgroundRed = Color.red(swatch.getRgb());
-                        final int backgroundGreed = Color.green(swatch.getRgb());
-                        final int backgroundBlue = Color.blue(swatch.getRgb());
-                        final int backgroundColor = Color.argb(200/*~80% alpha*/, backgroundRed, backgroundGreed, backgroundBlue);
-                        TextView gplusLink = (TextView) rootView.findViewById(R.id.txtTitle);
-                        gplusLink.setTextColor(getResources().getColor(R.color.colorAccent));
-                        gplusLink.setBackgroundColor(backgroundColor);
-                    }
-                }
-            }
-        };
-
-        demoAnyKeyboardView.startPaletteTask(mPaletteTask);
-
-
-        //TextView keyboardsData = (TextView) getView().findViewById(R.id.txtDescLanguage);
-        //final int all = KeyboardFactory.getAllAvailableKeyboards(getActivity().getApplicationContext()).size();
-        //final int enabled = KeyboardFactory.getEnabledKeyboards(getActivity().getApplicationContext()).size();
-        //keyboardsData.setText(getString(R.string.keyboards_group_extra_template, enabled, all));
-        getView().findViewById(R.id.cardLanguage).setOnClickListener(this);
-        getView().findViewById(R.id.changeTheme).setOnClickListener(this);
-        getView().findViewById(R.id.txtSpecialDictional).setOnClickListener(this);
+        demoAnyKeyboardView.setOnClickListener(this);
+        getView().findViewById(R.id.txtTheme).setOnClickListener(this);
         getView().findViewById(R.id.txtEffect).setOnClickListener(this);
+        getView().findViewById(R.id.txtButtomRow).setOnClickListener(this);
+        getView().findViewById(R.id.txtTopRow).setOnClickListener(this);
+        getView().findViewById(R.id.txtInterfaceEventMore).setOnClickListener(this);
+        getView().findViewById(R.id.txtLanguage).setOnClickListener(this);
+        getView().findViewById(R.id.txtSpecialDictionary).setOnClickListener(this);
+        getView().findViewById(R.id.txtLanguageEventMore).setOnClickListener(this);
         getView().findViewById(R.id.txtAbout).setOnClickListener(this);
         getActivity().setTitle(R.string.ime_name);
     }
@@ -119,30 +85,40 @@ public class MainNewFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
+        Fragment fragment=null;
         switch (v.getId()) {
-            case R.id.changeTheme:
-                ((MainSettingsActivity) getActivity()).addFragmentToUi(new KeyboardThemeSelectorFragment(), TransitionExperiences.SUB_ROOT_FRAGMENT_EXPERIENCE_TRANSITION);
-                //((MainActivity) getActivity()).addFragmentToUi(new KeyboardUiThemeFragment(), TransitionExperiences.SUB_ROOT_FRAGMENT_EXPERIENCE_TRANSITION);
-
+            case R.id.idKeyboard:
+                fragment=new KeyboardThemeSelectorFragment();
                 break;
-            case R.id.cardLanguage:
-                //   ((MainActivity) getActivity()).addFragmentToUi(new KeyboardAddOnSettingsFragment(), TransitionExperiences.SUB_ROOT_FRAGMENT_EXPERIENCE_TRANSITION);
-                ((MainSettingsActivity) getActivity()).addFragmentToUi(new KeyboardAddOnBrowserFragment(), TransitionExperiences.SUB_ROOT_FRAGMENT_EXPERIENCE_TRANSITION);
-                break;
-            case R.id.txtSpecialDictional:
-
-                ((MainSettingsActivity) getActivity()).addFragmentToUi(new DictionariesFragment(), TransitionExperiences.SUB_ROOT_FRAGMENT_EXPERIENCE_TRANSITION);
-
+            case R.id.txtTheme:
+                fragment=new KeyboardThemeSelectorFragment();
                 break;
             case R.id.txtEffect:
-                ((MainSettingsActivity) getActivity()).addFragmentToUi(new EffectsSettingsFragment(), TransitionExperiences.SUB_ROOT_FRAGMENT_EXPERIENCE_TRANSITION);
-
+                fragment=new EffectsSettingsFragment();
+                break;
+            case R.id.txtButtomRow:
+                fragment=new AdditionalUiSettingsFragment.BottomRowAddOnBrowserFragment();
+                break;
+            case R.id.txtTopRow:
+                fragment=new AdditionalUiSettingsFragment.TopRowAddOnBrowserFragment();
+                break;
+            case R.id.txtInterfaceEventMore:
+                fragment=new UiTweaksFragment();
+                break;
+            case R.id.txtLanguage:
+                fragment=new KeyboardAddOnBrowserFragment();
+                break;
+            case R.id.txtSpecialDictionary:
+                fragment=new DictionariesFragment();
+                break;
+            case R.id.txtLanguageEventMore:
+                fragment=new AdditionalLanguageSettingsFragment();
                 break;
             case R.id.txtAbout:
-                ((MainSettingsActivity) getActivity()).addFragmentToUi(new AboutAnySoftKeyboardFragment(), TransitionExperiences.SUB_ROOT_FRAGMENT_EXPERIENCE_TRANSITION);
-
+                fragment=new AboutAnySoftKeyboardFragment();
                 break;
-
         }
+
+        ((MainSettingsActivity) getActivity()).addFragmentToUi(fragment,TransitionExperiences.SUB_ROOT_FRAGMENT_EXPERIENCE_TRANSITION);
     }
 }

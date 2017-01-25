@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <KeyboardThemes>
     <KeyboardTheme
-        id="8774f99e-fb4a-49fa-b8d0-4083f762250a"
-        nameResId="@string/yochees_dark_keyboard_theme_name"
+        id="a8d293ea-4866-4677-a35f-e5c45d576547"
+        nameResId="@string/yek_dark_keyboard_theme_name"
         themeRes="@style/yekTheme"
         popupThemeRes="@style/yekThemePopup"
+        iconsThemeRes="@style/yekIcon"
         description="@string/yochees_dark_keyboard_theme_description"
         devOnly="true"
         index="1"/>
+
     <KeyboardTheme
         id="18c558ef-bc8c-433a-a36e-92c3ca3be4dd"
         nameResId="@string/yochees_light_keyboard_theme_name"
@@ -115,4 +117,14 @@
         description="@string/yochees_light_keyboard_theme_description"
         devOnly="true"
         index="20"/>
+    <KeyboardTheme
+        id="8774f99e-fb4a-49fa-b8d0-4083f762250a"
+        nameResId="@string/yochees_dark_keyboard_theme_name"
+        themeRes="@style/YocheesDarkTheme"
+        popupThemeRes="@style/YocheesDarkPopup"
+        description="@string/yochees_dark_keyboard_theme_description"
+        devOnly="true"
+        index="13"/>
+
+
 </KeyboardThemes>

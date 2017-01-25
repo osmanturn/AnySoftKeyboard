@@ -22,7 +22,6 @@ import java.util.Calendar;
 
 public class AboutAnySoftKeyboardFragment extends Fragment {
 
-    private static final String TAG = "AboutAnySoftKeyboardFragment";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -47,22 +46,6 @@ public class AboutAnySoftKeyboardFragment extends Fragment {
         TextView version = (TextView) view.findViewById(R.id.about_app_version);
         version.setText(getString(R.string.version_text, appVersionName, appVersionNumber));
 
-        /*
-        view.findViewById(R.id.about_donate_paypal).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=KDYBGNUNMMN94&lc=US&item_name=AnySoftKeyboard&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted"));
-                try {
-                    getActivity().startActivity(intent);
-                } catch (ActivityNotFoundException e) {
-                    //this means that there is nothing on the device
-                    //that can handle Intent.ACTION_VIEW with "https" schema..
-                    //silently swallowing it
-                    Logger.w(TAG, "Can not open '%' since there is nothing on the device that can handle it.", intent.getData());
-                }
-            }
-        });
-        */
     }
 
     @Override

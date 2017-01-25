@@ -13,27 +13,6 @@
         android:orientation="vertical"
         android:padding="10dp">
 
-        <TextView
-            android:id="@+id/txtSpecialDictional"
-            style="@style/AppTheme.TextApprance.List.Title"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:text="@string/special_dictionaries_group"
-            android:layout_marginBottom="@dimen/window_popup_corner_radius"
-            android:gravity="center_vertical" />
-
-        <View style="@style/Ask.Menu.Item.Divider" />
-
-        <TextView
-            android:id="@+id/txtEffect"
-            style="@style/AppTheme.TextApprance.List.Title"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_marginBottom="@dimen/window_popup_corner_radius"
-            android:gravity="center_vertical"
-            android:text="@string/effects_group"   />
-
-        <View style="@style/Ask.Menu.Item.Divider" />
 
         <TextView
             android:id="@+id/txtAbout"

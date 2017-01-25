@@ -39,7 +39,7 @@
     <dimen name="key_hint_text_size">7sp</dimen>
     <dimen name="keyboard_name_text_size">10sp</dimen>
 
-    <dimen name="candidate_strip_height">36dp</dimen>
+    <dimen name="candidate_strip_height">40dp</dimen>
     <dimen name="candidate_font_height">18sp</dimen>
 
     <dimen name="candidate_min_touchable_width">0.3in</dimen>

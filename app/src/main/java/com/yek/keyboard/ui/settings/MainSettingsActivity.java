@@ -141,17 +141,6 @@ public class MainSettingsActivity extends PermissionsFragmentChauffeurActivity {
     //side menu navigation methods
 
 
-
-    public void setFullScreen(boolean fullScreen) {
-        if (fullScreen) {
-            getSupportActionBar().hide();
-        } else {
-            getSupportActionBar().show();
-        }
-    }
-
-
-
     /**
      * Will set the title in the hosting Activity's title.
      * Will only set the title if the fragment is hosted by the Activity's manager, and not inner one.

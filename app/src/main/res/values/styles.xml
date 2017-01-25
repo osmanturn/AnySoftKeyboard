@@ -117,7 +117,6 @@
     <style name="Ask"/>
 
     <style name="Ask.Menu" parent="Ask">
-        <item name="android:background">@drawable/menu_background</item>
         <item name="android:textColor">?android:textColorPrimary</item>
         <item name="android:padding">4dp</item>
         <item name="android:paddingLeft">8dp</item>
@@ -129,7 +128,7 @@
         <item name="android:layout_margin">6dp</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1dp</item>
-        <item name="android:background">@color/menu_divider</item>
+        <item name="android:background">@color/colorAccent</item>
     </style>
 
     <style name="Ask.Menu.Item.Divider" parent="Ask.Menu.Divider">

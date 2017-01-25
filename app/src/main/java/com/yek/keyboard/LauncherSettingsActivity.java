@@ -21,10 +21,6 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.yek.keyboard.ui.settings.MainSettingsActivity;
-import com.yek.keyboard.ui.settings.setup.SetUpKeyboardWizardFragment;
-import com.yek.keyboard.ui.settings.setup.SetupSupport;
-
-import net.evendanan.chauffeur.lib.experiences.TransitionExperiences;
 
 /*
  * Why is this class exists?
@@ -51,14 +47,7 @@ public class LauncherSettingsActivity extends Activity {
         if (mLaunched) {
             finish();
         } else {
-            if (SetupSupport.isThisKeyboardEnabled(getApplication())) {
-                startActivity(new Intent(this, MainSettingsActivity.class));
-            } else {
-                Intent startSetupWizard = MainSettingsActivity.createStartActivityIntentForAddingFragmentToUi(
-                        this, MainSettingsActivity.class,
-                        new SetUpKeyboardWizardFragment(), TransitionExperiences.ROOT_FRAGMENT_EXPERIENCE_TRANSITION);
-                startActivity(startSetupWizard);
-            }
+            startActivity(new Intent(this, MainSettingsActivity.class));
         }
 
         mLaunched = true;
