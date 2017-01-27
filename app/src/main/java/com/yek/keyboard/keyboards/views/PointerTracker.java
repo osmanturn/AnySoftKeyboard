@@ -27,7 +27,7 @@ import com.yek.keyboard.keyboards.Keyboard;
 
 import java.util.Locale;
 
-class PointerTracker {
+public class PointerTracker {
     static class SharedPointerTrackersData {
         int lastSentKeyIndex = NOT_A_KEY;
     }

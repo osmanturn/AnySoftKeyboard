@@ -1,8 +1,6 @@
 package com.yek.keyboard.keyboards.views;
 
 import android.content.Context;
-import android.os.Build;
-import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -26,10 +24,6 @@ public class KeyboardViewContainerView extends FrameLayout {
         super(context, attrs, defStyleAttr);
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    public KeyboardViewContainerView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
-    }
 
     @Override
     public void onViewAdded(View child) {

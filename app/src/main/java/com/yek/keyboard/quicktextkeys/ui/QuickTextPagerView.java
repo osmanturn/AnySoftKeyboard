@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.res.ColorStateList;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-import android.support.annotation.RequiresApi;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.PagerTabStrip;
 import android.support.v4.view.ViewPager;
@@ -14,14 +13,14 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.astuetz.PagerSlidingTabStrip;
+import com.yek.keyboard.R;
 import com.yek.keyboard.ime.InputViewActionsProvider;
 import com.yek.keyboard.keyboards.views.OnKeyboardActionListener;
 import com.yek.keyboard.quicktextkeys.HistoryQuickTextKey;
 import com.yek.keyboard.quicktextkeys.QuickTextKey;
 import com.yek.keyboard.quicktextkeys.QuickTextKeyFactory;
 import com.yek.keyboard.ui.ViewPagerWithDisable;
-import com.astuetz.PagerSlidingTabStrip;
-import com.yek.keyboard.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,15 +41,6 @@ public class QuickTextPagerView extends LinearLayout implements InputViewActions
         super(context, attrs);
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.HONEYCOMB)
-    public QuickTextPagerView(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-    }
-
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    public QuickTextPagerView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
-    }
 
     public void setThemeValues(float tabTextSize, ColorStateList tabTextColor, Drawable closeKeyboardIcon, Drawable backspaceIcon, Drawable settingsIcon) {
         mTabTitleTextSize = tabTextSize;

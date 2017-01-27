@@ -92,7 +92,7 @@ public class AnyKeyboardView extends AnyKeyboardViewWithMiniKeyboard implements 
     }
 
     @Override
-    protected boolean onLongPress(AddOn keyboardAddOn, Keyboard.Key key, boolean isSticky, @NonNull PointerTracker tracker) {
+    public boolean onLongPress(AddOn keyboardAddOn, Keyboard.Key key, boolean isSticky, @NonNull PointerTracker tracker) {
         if (mAnimationLevel == AskPrefs.AnimationsLevel.None) {
             mMiniKeyboardPopup.setAnimationStyle(0);
         } else if (mExtensionVisible && mMiniKeyboardPopup.getAnimationStyle() != R.style.ExtensionKeyboardAnimation) {

@@ -7,7 +7,6 @@
         popupThemeRes="@style/yekThemePopup"
         iconsThemeRes="@style/yekIcon"
         description="@string/yochees_dark_keyboard_theme_description"
-        devOnly="true"
         index="1"/>
 
     <KeyboardTheme

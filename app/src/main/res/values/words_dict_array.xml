@@ -5,7 +5,8 @@
         <item>@raw/words_2</item>
     </array>
     <array name="wordls_dicts_ku">
-        <item>@raw/words_ku</item>
+        <item>@raw/words_ku_1</item>
+        <item>@raw/words_ku_2</item>
     </array>
     <array name="wordls_dicts_tr">
         <item>@raw/words_tr_1</item>

@@ -27,8 +27,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.PopupWindow;
 
-import com.getkeepsafe.relinker.ReLinker;
-
 import java.lang.reflect.Method;
 import java.util.Locale;
 
@@ -98,7 +96,19 @@ public class CompatUtils {
 
     public static void loadNativeLibrary(@NonNull Context context, @NonNull String library, @NonNull String libraryVersion, final boolean isDebug) {
         if (Build.VERSION.SDK_INT >= 9 && !isDebug) {
-            ReLinker.loadLibrary(context, library, libraryVersion);
+            try {
+                //ReLinker.loadLibrary(context, library, libraryVersion);
+                Log.e(TAG, "******** Could not load native library "+library+" ********");
+                System.loadLibrary(library);
+            } catch (UnsatisfiedLinkError ule) {
+                Log.e(TAG, "******** Could not load native library "+library+" ********");
+                Log.e(TAG, "******** Could not load native library "+library+" ********", ule);
+                Log.e(TAG, "******** Could not load native library "+library+" ********");
+            } catch (Throwable t) {
+                Log.e(TAG, "******** Failed to load native dictionary library "+library+" ********");
+                Log.e(TAG, "******** Failed to load native dictionary library "+library+" *******", t);
+                Log.e(TAG, "******** Failed to load native dictionary library "+library+" ********");
+            }
         } else {
             try {
                 System.loadLibrary(library);

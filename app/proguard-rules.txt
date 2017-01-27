@@ -54,6 +54,9 @@
      <init>(...);
 }
 
+-keep class com.getkeepsafe.relinker.**
+-keep class com.yek.keyboard.**
+
 #for crashlytics
 -keepattributes SourceFile,LineNumberTable,*Annotation*
 -keep public class * extends java.lang.Exception

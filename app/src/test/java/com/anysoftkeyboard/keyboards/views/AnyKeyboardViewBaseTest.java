@@ -9,14 +9,14 @@ import android.support.annotation.Nullable;
 import android.view.MotionEvent;
 
 import com.anysoftkeyboard.ViewTestUtils;
-import com.yek.keyboard.anysoftkeyboard.keyboards.AnyKeyboard;
-import com.yek.keyboard.anysoftkeyboard.keyboards.Keyboard;
-import com.yek.keyboard.anysoftkeyboard.keyboards.KeyboardFactory;
 import com.yek.keyboard.R;
-import com.yek.keyboard.anysoftkeyboard.keyboards.views.AnyKeyboardViewBase;
-import com.yek.keyboard.anysoftkeyboard.keyboards.views.KeyDrawableStateProvider;
-import com.yek.keyboard.anysoftkeyboard.keyboards.views.OnKeyboardActionListener;
-import com.yek.keyboard.anysoftkeyboard.keyboards.views.PointerTracker;
+import com.yek.keyboard.keyboards.AnyKeyboard;
+import com.yek.keyboard.keyboards.Keyboard;
+import com.yek.keyboard.keyboards.KeyboardFactory;
+import com.yek.keyboard.keyboards.views.AnyKeyboardViewBase;
+import com.yek.keyboard.keyboards.views.KeyDrawableStateProvider;
+import com.yek.keyboard.keyboards.views.OnKeyboardActionListener;
+import com.yek.keyboard.keyboards.views.PointerTracker;
 
 import org.junit.Assert;
 import org.junit.Before;

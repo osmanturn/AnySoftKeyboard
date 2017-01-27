@@ -5,7 +5,7 @@ import android.os.SystemClock;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.yek.keyboard.anysoftkeyboard.keyboards.Keyboard;
+import com.yek.keyboard.keyboards.Keyboard;
 
 import org.junit.Assert;
 import org.junit.Test;

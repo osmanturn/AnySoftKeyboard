@@ -1540,7 +1540,7 @@ public class AnyKeyboardViewBase extends View implements
      * should call the method on the base class if the subclass doesn't
      * wish to handle the call.
      */
-    protected boolean onLongPress(AddOn keyboardAddOn, Keyboard.Key key, boolean isSticky, @NonNull PointerTracker tracker) {
+    public boolean onLongPress(AddOn keyboardAddOn, Keyboard.Key key, boolean isSticky, @NonNull PointerTracker tracker) {
         if (key instanceof AnyKeyboard.AnyKey) {
             AnyKeyboard.AnyKey anyKey = (AnyKeyboard.AnyKey) key;
             if (anyKey.getKeyTags().size() > 0) {

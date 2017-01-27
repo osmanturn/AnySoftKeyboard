@@ -176,7 +176,7 @@ public class AnyKeyboardViewWithMiniKeyboard extends SizeSensitiveAnyKeyboardVie
     }
 
     @Override
-    protected boolean onLongPress(AddOn keyboardAddOn, Keyboard.Key key, boolean isSticky, @NonNull PointerTracker tracker) {
+    public boolean onLongPress(AddOn keyboardAddOn, Keyboard.Key key, boolean isSticky, @NonNull PointerTracker tracker) {
         if (super.onLongPress(keyboardAddOn, key, isSticky, tracker)) return true;
         if (key.popupResId == 0) return false;
 
