@@ -2,8 +2,8 @@ package com.anysoftkeyboard.keyboardextensions;
 
 import com.anysoftkeyboard.SharedPrefsHelper;
 import com.yek.keyboard.R;
-import com.yek.keyboard.anysoftkeyboard.keyboardextensions.KeyboardExtension;
-import com.yek.keyboard.anysoftkeyboard.keyboardextensions.KeyboardExtensionFactory;
+import com.yek.keyboard.keyboardextensions.KeyboardExtension;
+import com.yek.keyboard.keyboardextensions.KeyboardExtensionFactory;
 
 import org.junit.Assert;
 import org.junit.Test;

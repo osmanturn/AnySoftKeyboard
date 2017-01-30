@@ -54,8 +54,8 @@
      <init>(...);
 }
 
--keep class com.getkeepsafe.relinker.**
--keep class com.yek.keyboard.**
+#-keep class com.getkeepsafe.relinker.**
+#-keep class com.yek.keyboard.**
 
 #for crashlytics
 -keepattributes SourceFile,LineNumberTable,*Annotation*

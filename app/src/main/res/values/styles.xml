@@ -317,7 +317,10 @@
         <item name="selectableItemBackgroundBorderless">?android:selectableItemBackground</item>
         <item name="android:background">@color/colorPrimary</item>
         <item name="contentInsetRight">16dp</item>
-
+        <item name="titleTextAppearance">@style/ActionBarTheme.Title</item>
+    </style>
+    <style name="ActionBarTheme.Title" parent="TextAppearance.AppCompat.Title">
+        <item name="android:textColor">@android:color/white</item>
     </style>
 
 </resources>

@@ -51,12 +51,8 @@ android {
 
         minSdkVersion sdkMinimumVersion
         targetSdkVersion sdkTargetVersion
-        //adding additional fields to the BuildConfig class.
 
-        def String support_email_address = System.getenv("osmanturanpc@gmail.com")
-        println 'crash report email is: ' + support_email_address
-
-        buildConfigField "String", "CRASH_REPORT_EMAIL_ADDRESS", '"' + support_email_address + '"'
+        buildConfigField "String", "CRASH_REPORT_EMAIL_ADDRESS", '"kurdikeyboard@gmail.com"'
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
@@ -134,6 +130,7 @@ android {
             systemProperties['robolectric.logging.enabled'] = true
         }
     }
+
 }
 
 ribbonizer {

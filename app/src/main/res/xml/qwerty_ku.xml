@@ -3,7 +3,7 @@
 <Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:ask="http://schemas.android.com/apk/res-auto"
     android:keyHeight="@integer/key_normal_height"
-    android:keyWidth="9%p">
+    android:keyWidth="9.09%p">
     <!-- for testing shiftCodes
     <Row>
         <Key android:codes="113" android:keyLabel="q" ask:shiftedCodes="80" android:keyEdgeFlags="left"/>
@@ -58,7 +58,7 @@
     </Row>
 -->
 
-    <Row>
+    <Row >
         <Key
             android:codes="113"
             android:keyEdgeFlags="left"
@@ -129,13 +129,13 @@
             android:keyLabel="û" />
     </Row>
 
-    <Row>
+    <Row android:keyWidth="8.4%p">
         <Key
             android:codes="-1"
             android:isModifier="true"
             android:isSticky="true"
             android:keyEdgeFlags="left"
-            android:keyWidth="10%p" />
+            android:keyWidth="10.5%p" />
         <Key
             android:codes="122"
             android:keyLabel="z" />
@@ -167,6 +167,6 @@
             android:codes="-5"
             android:isRepeatable="true"
             android:keyEdgeFlags="right"
-            android:keyWidth="10%p" />
+            android:keyWidth="14%p" />
     </Row>
 </Keyboard>

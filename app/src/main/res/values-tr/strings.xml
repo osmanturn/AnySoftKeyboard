@@ -299,6 +299,10 @@ bulamıyorum. Maalesef bu özellik cihazınızda çalışmıyor.</string>
     <string name="lean_light_2_keyboard_theme_name">İnce Açık - Seçenek 2</string>
     <string name="lean_light_big_keyboard_theme_name">İnce Açık - Büyük Tuşlar</string>
     <string name="lean_light_big_keyboard_theme_description">Aynı Açık tema, tuşlar daha büyük</string>
+
+    <string name="dark_plain_keyboard_theme_name">Düz koyu tema</string>
+    <string name="dark_plain_keyboard_theme_description">Koyu renkler, basit grafikler.</string>
+
     <string name="extension_kbd_top_none">En üst satır yok</string>
     <string name="extension_kbd_top_small">Küçük tuşlar</string>
     <string name="extension_kbd_top_regular">Normal boyutlu tuşlar</string>
@@ -498,4 +502,7 @@ https://play.google.com/apps/testing/com.yek.keyboard \n\nSürüm yayınlanmadan
     <string name="grammer_group">Dil bilgisi</string>
     <string name="should_swap_punctuation_and_space_yes">Evet</string>
     <string name="should_swap_punctuation_and_space_no">Hayır</string>
+    <string name="yochees_dark_keyboard_theme_description">Leyla Qasım anısına.</string>
+    <string name="yochees_light_keyboard_theme_name">Yochees Light</string>
+    <string name="yochees_light_keyboard_theme_description">Light theme by Algimantas.</string>
 </resources>

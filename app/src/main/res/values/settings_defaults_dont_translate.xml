@@ -50,7 +50,7 @@
     <string name="settings_default_top_row_key">82910c70-ded1-11e0-9572-0800200c9a66</string>
     <string name="settings_default_keyboard_theme_key">a8d293ea-4866-4677-a35f-e5c45d576547</string>
     <string name="settings_default_ext_keyboard_key">6f1ecea0-dee2-11e0-9572-0800200c9a66</string>
-    <string name="settings_default_ext_kbd_bottom_row_key">3659b9e0-dee2-11e0-9572-0800200c9a55</string>
+    <string name="settings_default_ext_kbd_bottom_row_key">d8657c90-d910-11e2-a28f-0800200c9a66</string>
 
     <bool name="settings_default_workaround_disable_rtl_fix">false</bool>
     <string name="settings_default_default_split_state">merged_always</string>
