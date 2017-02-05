@@ -1,27 +1,28 @@
-AnySoftKeyboard
+Kurdî Keyboard
 ====================
 [![Build Status](https://api.shippable.com/projects/540f72bf21c97efdb898a192/badge?branchName=master)](https://app.shippable.com/projects/540f72bf21c97efdb898a192/builds/latest)
 
-Android (f/w 1.5+) on screen keyboard for multiple languages.
+Android çok dilli klavye.
 
 <a href="https://play.google.com/store/apps/details?id=com.yek.keyboard"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge.png" height="80pt"/></a>
 
 Bu klavye kürtçe türkçe ve ingilizce dillerinde kelime tamamlama özellği olan diller arası geçişi kolay estetik bir klavye.
 Kaynak kodları kamuya ve denetime açık tamamen özgür yazılım. https://github.com/osmnturn/AnySoftKeyboard
-1)Otomatik dil değiştirebilme
-2)Emoji desteği
-3)106424 kelimelik kürtçe sözlük.
-4)Kullanım zevkine göre şekillendirebildiğin arayüz desteği.
-5)Sesli yazım desteği,
-6)Mevcut kullanıcı sözlüğünü kullanabilme.
-7)Kendi sözlüğünü oluşturabilme.
-8)Kullandıkça keşfedebileceğin bir çok özellik ile seni bekliyor.
+#Özellikler
+ *Otomatik dil değiştirebilme
+ *Emoji desteği
+ *106424 kelimelik kürtçe sözlük.
+ *Kullanım zevkine göre şekillendirebildiğin arayüz desteği.
+ *Sesli yazım desteği,
+ *Mevcut kullanıcı sözlüğünü kullanabilme.
+ *Kendi sözlüğünü oluşturabilme.
+ *Kullandıkça keşfedebileceğin bir çok özellik ile seni bekliyor.
 
 
-Bu proje AnysoftKeyboard özgür yazılımının kaynak kodları alınıp revize edilerek uygulamamız oluşturulmuştur.
-Özgür yazılıma desteklerinden dolayı Anysoftkeyboar'da teşekkür ederiz.
-Uygulamamız geliştirmeleri devam etmektedir.
-Eksiklikler ve hataları lütfen bizlere bildiriniz bu sayede özgür yazılıma destek sunmuş olursunuz.
+*Bu proje AnysoftKeyboard özgür yazılımının kaynak kodları alınıp revize edilerek uygulamamız oluşturulmuştur.
+*Özgür yazılıma desteklerinden dolayı Anysoftkeyboar'da teşekkür ederiz.
+*Uygulamamız geliştirmeleri devam etmektedir.
+*Eksiklikler ve hataları lütfen bizlere bildiriniz bu sayede özgür yazılıma destek sunmuş olursunuz.
 
 
 License
