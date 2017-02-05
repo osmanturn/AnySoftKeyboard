@@ -88,6 +88,7 @@ public class ContactsDictionary extends BTreeDictionary implements NextWordGette
     @Override
     protected void readWordsFromActualStorage(WordReadListener listener) {
         //we required Contacts permission
+       if (true)return;
         Intent contactsRequired = PermissionsFragmentChauffeurActivity.createIntentToPermissionsRequest(mContext, MainSettingsActivity.class, PermissionsRequestCodes.CONTACTS.getRequestCode(), Manifest.permission.READ_CONTACTS);
         if (contactsRequired != null) {
             //we are running OUTSIDE an Activity

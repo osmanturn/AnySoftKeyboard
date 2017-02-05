@@ -6,19 +6,23 @@ Android (f/w 1.5+) on screen keyboard for multiple languages.
 
 <a href="https://play.google.com/store/apps/details?id=com.yek.keyboard"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge.png" height="80pt"/></a>
 
-# Features
- * All kinds of keyboards:
-  * supporting lots of languages via external packages. E.g., English (QWERTY, DVORAK, AZERTY and Colemak), Hebrew, Russian, Arabic, Lao, Bulgarian, Swiss, German, Swedish, Spanish, Catalan, Belorussian, Portuguese, Ukrainian and many more.
-  * special keyboard for text fields which require only numbers.
-  * special keyboard for text fields which require email or URI addresses.
- * Physical keyboard is supported as-well.
- * Auto capitalization.
- * Word suggestions, and Next-Word suggestions.
- * special key-press effects:
-  * Sound on key press (if phone is not muted).
-  * Vibrate on key press.
- * Voice input.
- * More on AnySoftKeyboard can be found [here](http://softkeyboard.googlecode.com)
+Bu klavye kürtçe türkçe ve ingilizce dillerinde kelime tamamlama özellği olan diller arası geçişi kolay estetik bir klavye.
+Kaynak kodları kamuya ve denetime açık tamamen özgür yazılım. https://github.com/osmnturn/AnySoftKeyboard
+1)Otomatik dil değiştirebilme
+2)Emoji desteği
+3)106424 kelimelik kürtçe sözlük.
+4)Kullanım zevkine göre şekillendirebildiğin arayüz desteği.
+5)Sesli yazım desteği,
+6)Mevcut kullanıcı sözlüğünü kullanabilme.
+7)Kendi sözlüğünü oluşturabilme.
+8)Kullandıkça keşfedebileceğin bir çok özellik ile seni bekliyor.
+
+
+Bu proje AnysoftKeyboard özgür yazılımının kaynak kodları alınıp revize edilerek uygulamamız oluşturulmuştur.
+Özgür yazılıma desteklerinden dolayı Anysoftkeyboar'da teşekkür ederiz.
+Uygulamamız geliştirmeleri devam etmektedir.
+Eksiklikler ve hataları lütfen bizlere bildiriniz bu sayede özgür yazılıma destek sunmuş olursunuz.
+
 
 License
 -------

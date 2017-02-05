@@ -110,7 +110,7 @@ public class TutorialEnabledKeyboardFragment extends Fragment {
                 Intent startSettings = new Intent(Settings.ACTION_INPUT_METHOD_SETTINGS);
                 startSettings.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 try {
-                    mAppContext.startActivity(startSettings);
+                    getActivity().startActivity(startSettings);
                 } catch (ActivityNotFoundException notFoundEx) {
                     //weird.. the device does not have the IME setting activity. Nook?
                     Toast.makeText(mAppContext, R.string.setup_wizard_step_one_action_error_no_settings_activity, Toast.LENGTH_LONG).show();

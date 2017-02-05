@@ -15,8 +15,9 @@
     <!-- required for the user dictionary (long press a word in the suggestions bar) -->
     <uses-permission android:name="android.permission.READ_USER_DICTIONARY"/>
     <uses-permission android:name="android.permission.WRITE_USER_DICTIONARY"/>
-    <!-- REQUIRED FOR THE CONTACTS DICTIONARY -->
+    <!-- REQUIRED FOR THE CONTACTS DICTIONARY
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    -->
     <!-- REQUIRED BACKUP TO/RESTORE FROM SDCARD -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 

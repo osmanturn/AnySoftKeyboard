@@ -18,15 +18,14 @@
 package com.yek.keyboard.ui.settings;
 
 import android.os.Bundle;
-import android.preference.CheckBoxPreference;
 import android.preference.Preference;
 import android.support.annotation.Nullable;
 import android.support.v4.preference.PreferenceFragment;
 import android.view.View;
 
+import com.yek.keyboard.R;
 import com.yek.keyboard.ui.settings.wordseditor.AbbreviationDictionaryEditorFragment;
 import com.yek.keyboard.ui.settings.wordseditor.UserDictionaryEditorFragment;
-import com.yek.keyboard.R;
 
 import net.evendanan.chauffeur.lib.experiences.TransitionExperiences;
 
@@ -44,7 +43,7 @@ public class DictionariesFragment extends PreferenceFragment implements Preferen
         findPreference(getString(R.string.user_dict_editor_key)).setOnPreferenceClickListener(this);
         findPreference(getString(R.string.abbreviation_dict_editor_key)).setOnPreferenceClickListener(this);
         findPreference(getString(R.string.next_word_dict_settings_key)).setOnPreferenceClickListener(this);
-        findPreference(getString(R.string.settings_key_use_contacts_dictionary)).setOnPreferenceClickListener(this);
+       // findPreference(getString(R.string.settings_key_use_contacts_dictionary)).setOnPreferenceClickListener(this);
     }
 
     @Override
@@ -66,13 +65,14 @@ public class DictionariesFragment extends PreferenceFragment implements Preferen
         } else if (preference.getKey().equals(getString(R.string.next_word_dict_settings_key))) {
             activity.addFragmentToUi(new NextWordSettingsFragment(), TransitionExperiences.DEEPER_EXPERIENCE_TRANSITION);
             return true;
-        } else if (preference.getKey().equals(getString(R.string.settings_key_use_contacts_dictionary))) {
-            if (((CheckBoxPreference) preference).isChecked()) {
+        }
+        /*else if (preference.getKey().equals(getString(R.string.settings_key_use_contacts_dictionary))) {
+        if (((CheckBoxPreference) preference).isChecked()) {
                 //user enabled Contacts!
                 //ensuring we have permission to use it
                 activity.startContactsPermissionRequest();
             }
-        }
+        }*/
         return false;
     }
 }
