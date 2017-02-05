@@ -8,21 +8,21 @@ Android çok dilli klavye.
 
 Bu klavye kürtçe türkçe ve ingilizce dillerinde kelime tamamlama özellği olan diller arası geçişi kolay estetik bir klavye.
 Kaynak kodları kamuya ve denetime açık tamamen özgür yazılım. https://github.com/osmnturn/AnySoftKeyboard
-#Özellikler
- *Otomatik dil değiştirebilme
- *Emoji desteği
- *106424 kelimelik kürtçe sözlük.
- *Kullanım zevkine göre şekillendirebildiğin arayüz desteği.
- *Sesli yazım desteği,
- *Mevcut kullanıcı sözlüğünü kullanabilme.
- *Kendi sözlüğünü oluşturabilme.
- *Kullandıkça keşfedebileceğin bir çok özellik ile seni bekliyor.
+# Özellikler
+ * Otomatik dil değiştirebilme
+ * Emoji desteği
+ * 106424 kelimelik kürtçe sözlük.
+ * Kullanım zevkine göre şekillendirebildiğin arayüz desteği.
+ * Sesli yazım desteği,
+ * Mevcut kullanıcı sözlüğünü kullanabilme.
+ * Kendi sözlüğünü oluşturabilme.
+ * Kullandıkça keşfedebileceğin bir çok özellik ile seni bekliyor.
 
 
-*Bu proje AnysoftKeyboard özgür yazılımının kaynak kodları alınıp revize edilerek uygulamamız oluşturulmuştur.
-*Özgür yazılıma desteklerinden dolayı Anysoftkeyboar'da teşekkür ederiz.
-*Uygulamamız geliştirmeleri devam etmektedir.
-*Eksiklikler ve hataları lütfen bizlere bildiriniz bu sayede özgür yazılıma destek sunmuş olursunuz.
+* Bu proje AnysoftKeyboard özgür yazılımının kaynak kodları alınıp revize edilerek uygulamamız oluşturulmuştur.
+* Özgür yazılıma desteklerinden dolayı Anysoftkeyboar'da teşekkür ederiz.
+* Uygulamamız geliştirmeleri devam etmektedir.
+* Eksiklikler ve hataları lütfen bizlere bildiriniz bu sayede özgür yazılıma destek sunmuş olursunuz.
 
 
 License
