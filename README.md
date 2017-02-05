@@ -18,7 +18,7 @@ Kaynak kodları kamuya ve denetime açık tamamen özgür yazılım. https://git
  * Kendi sözlüğünü oluşturabilme.
  * Kullandıkça keşfedebileceğin bir çok özellik ile seni bekliyor.
 
-
+# Açıklama
 * Bu proje AnysoftKeyboard özgür yazılımının kaynak kodları alınıp revize edilerek uygulamamız oluşturulmuştur.
 * Özgür yazılıma desteklerinden dolayı Anysoftkeyboar'da teşekkür ederiz.
 * Uygulamamız geliştirmeleri devam etmektedir.
